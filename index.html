@@ -1,98 +1,248 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terminal CV - Alejandro Esaú Valdez</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600&display=swap');
 
-  <div class="wrapper">
-    <!-- Barra superior tipo terminal -->
-    <div class="top-bar">
-      <div class="window-buttons">
-        <span class="btn-dot close"></span>
-        <span class="btn-dot minimize"></span>
-        <span class="btn-dot expand"></span>
-      </div>
-      <span class="terminal-title">esau_valdez@dev-cv:~</span>
-    </div>
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --primary-accent: #38bdf8;
+  --secondary-accent: #34d399;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
 
-    <!-- Encabezado exclusivo para tu mensaje de presentación -->
-    <header class="profile-header">
-      <div class="hero-message">
-        <p class="prompt-line"><span class="user">guest@system</span>:<span class="path">~</span>$ whoami</p>
-        <h2>Hola, me llamo Alejandro Esau Valdez</h2>
-        <p class="subtitle">&gt; Bachillerato en Ciencias y Letras (Orientación en Computación)_</p>
-      </div>
-    </header>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <!-- Apartado de Botones de Navegación con diseño de Tarjeta -->
-    <div class="nav-container">
-      <section class="card nav-card">
-        <h3>Navegación / Accesos Rápidos</h3>
-        <nav class="nav-bar">
-          <a href="#estudios" class="nav-btn"><span>$</span> ./formacion</a>
-          <a href="#tecnico" class="nav-btn"><span>$</span> ./habilidades</a>
-          <a href="#sobre-mi" class="nav-btn"><span>$</span> ./sobre-mi</a>
-          <a href="#contacto" class="nav-btn"><span>$</span> ./contacto</a>
-        </nav>
-      </section>
-    </div>
+html {
+  scroll-behavior: smooth;
+}
 
-    <main class="columns">
-      
-      <div class="col-main">
-        <section class="card" id="estudios">
-          <h3>Formación Académica</h3>
-          <div class="info-group">
-            <h4>Colegio Salesiano Don Bosco</h4>
-            <p class="date">2014 - actualidad | Kinder a Bachillerato</p>
-          </div>
-        </section>
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  padding: 30px 15px;
+}
 
-        <section class="card" id="tecnico">
-          <h3>Conocimientos Técnicos</h3>
-          <div class="tags">
-            <span>Microsoft Word</span>
-            <span>Microsoft Excel</span>
-            <span>PowerPoint</span>
-            <span>Correo Electrónico</span>
-            <span>Herramientas Digitales</span>
-          </div>
-        </section>
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+}
 
-        <section class="card">
-          <h3>Valores Personales</h3>
-          <div class="tags secondary">
-            <span>Respeto</span>
-            <span>Honestidad</span>
-            <span>Responsabilidad</span>
-            <span>Compromiso</span>
-          </div>
-        </section>
-      </div>
+/* Barra superior */
+.top-bar {
+  height: 38px;
+  background: #111827;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
 
-      <div class="col-side">
-        <section class="card" id="sobre-mi">
-          <h3>Sobre Mí</h3>
-          <p>Persona responsable y comprometida con 12 años de formación en el Colegio Salesiano Don Bosco.</p>
-          <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación.</p>
-        </section>
+.window-buttons {
+  display: flex;
+  gap: 8px;
+}
 
-        <section class="card" id="contacto">
-          <h3>Contacto Directo</h3>
-          <ul>
-            <li><strong>Teléfono:</strong> 5593 6485</li>
-            <li><strong>Correo:</strong> a.valdez.6adb@gmail.com</li>
-            <li><strong>Ubicación:</strong> Zona 21, Justo Rufino Barrios</li>
-          </ul>
-        </section>
-      </div>
+.btn-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
 
-    </main>
-  </div>
+.close { background: #ef4444; }
+.minimize { background: #f59e0b; }
+.expand { background: #10b981; }
 
-</body>
-</html>
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Encabezado Exclusivo para el Saludo */
+.profile-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prompt-line {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.prompt-line .user { color: var(--secondary-accent); }
+.prompt-line .path { color: var(--primary-accent); }
+
+.hero-message h2 {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.hero-message .subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--primary-accent);
+}
+
+/* Contenedor del Apartado de Navegación */
+.nav-container {
+  padding: 25px 25px 0 25px;
+}
+
+.nav-card {
+  margin-bottom: 0 !important;
+}
+
+/* Estilo de los Botones con Formato Terminal */
+.nav-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-main);
+  text-decoration: none;
+  background: #0b0f19;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.nav-btn span {
+  color: var(--secondary-accent);
+}
+
+.nav-btn:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+  background: rgba(56, 189, 248, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Disposición de Columnas */
+.columns {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  padding: 25px;
+}
+
+/* Tarjetas Generales */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.card h3 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-accent);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.card h3::before {
+  content: "# ";
+  color: var(--primary-accent);
+}
+
+.info-group h4 {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.info-group .date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--primary-accent);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.tags.secondary span {
+  background: rgba(52, 211, 153, 0.08);
+  color: var(--secondary-accent);
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+/* Textos y Lista de Contacto */
+.col-side p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.col-side ul {
+  list-style: none;
+}
+
+.col-side li {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+
+.col-side li strong {
+  color: var(--primary-accent);
+}
+
+@media (max-width: 650px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
