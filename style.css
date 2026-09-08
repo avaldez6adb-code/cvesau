@@ -31,7 +31,7 @@ body {
 }
 
 .wrapper {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   background: var(--bg-color);
   border: 1px solid var(--border-color);
@@ -75,7 +75,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Encabezado Exclusivo para el Saludo */
+/* Saludo de bienvenida */
 .profile-header {
   text-align: center;
   padding: 40px 20px;
@@ -106,16 +106,44 @@ body {
   color: var(--primary-accent);
 }
 
-/* Contenedor del Apartado de Navegación */
-.nav-container {
-  padding: 25px 25px 0 25px;
+/* Flujo en fila vertical (Una sola columna) */
+.content-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
 }
 
-.nav-card {
-  margin-bottom: 0 !important;
+/* Tarjetas individuales */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
 }
 
-/* Estilo de los Botones con Formato Terminal */
+.card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.card h3 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-accent);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.card h3::before {
+  content: "# ";
+  color: var(--primary-accent);
+}
+
+/* Botones de navegación */
 .nav-bar {
   display: flex;
   gap: 10px;
@@ -146,44 +174,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Disposición de Columnas */
-.columns {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 20px;
-  padding: 25px;
-}
-
-/* Tarjetas Generales */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  transition: border-color 0.2s ease;
-}
-
-.card:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-}
-
-.card h3 {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--secondary-accent);
-  margin-bottom: 12px;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 6px;
-}
-
-.card h3::before {
-  content: "# ";
-  color: var(--primary-accent);
-}
-
+/* Detalles de información */
 .info-group h4 {
   font-size: 1rem;
   color: #ffffff;
@@ -196,7 +187,7 @@ body {
   margin-top: 2px;
 }
 
-/* Tags */
+/* Badges / Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -219,30 +210,24 @@ body {
   border-color: rgba(52, 211, 153, 0.2);
 }
 
-/* Textos y Lista de Contacto */
-.col-side p {
+/* Texto de contacto y descripciones */
+.card p {
   color: var(--text-muted);
   font-size: 0.88rem;
   margin-bottom: 10px;
 }
 
-.col-side ul {
+.card ul {
   list-style: none;
 }
 
-.col-side li {
+.card li {
   color: var(--text-muted);
   font-size: 0.85rem;
   margin-bottom: 8px;
   font-family: var(--font-mono);
 }
 
-.col-side li strong {
+.card li strong {
   color: var(--primary-accent);
-}
-
-@media (max-width: 650px) {
-  .columns {
-    grid-template-columns: 1fr;
-  }
 }
