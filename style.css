@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-  --bg-color: #0b0f19;
+  --bg-color: #090d16;
   --card-bg: #111827;
   --border-color: #1f2937;
   --primary-accent: #38bdf8;
@@ -26,28 +26,28 @@ body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-sans);
-  line-height: 1.5;
-  padding: 30px 15px;
+  line-height: 1.6;
+  padding: 40px 15px;
 }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   background: var(--bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Barra superior */
 .top-bar {
-  height: 38px;
+  height: 40px;
   background: #111827;
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 16px;
   position: relative;
 }
 
@@ -75,10 +75,10 @@ body {
   color: var(--text-muted);
 }
 
-/* Saludo de bienvenida */
+/* Header / Saludo */
 .profile-header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 45px 20px;
   background: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
 }
@@ -86,7 +86,7 @@ body {
 .prompt-line {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .prompt-line .user { color: var(--secondary-accent); }
@@ -96,7 +96,6 @@ body {
   font-family: var(--font-mono);
   font-size: 1.8rem;
   color: #ffffff;
-  letter-spacing: -0.5px;
   margin-bottom: 8px;
 }
 
@@ -106,21 +105,21 @@ body {
   color: var(--primary-accent);
 }
 
-/* Flujo en fila vertical (Una sola columna) */
+/* Stream de Contenido Vertical */
 .content-stream {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 25px;
+  padding: 30px 20px;
 }
 
-/* Tarjetas individuales */
+/* Tarjetas */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  padding: 20px;
+  padding: 22px;
   border-radius: 8px;
-  transition: border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
@@ -129,21 +128,21 @@ body {
 
 .card h3 {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--secondary-accent);
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 }
 
-.card h3::before {
-  content: "# ";
+.card h3 .icon {
   color: var(--primary-accent);
+  margin-right: 6px;
 }
 
-/* Botones de navegación */
+/* Botones de Navegación */
 .nav-bar {
   display: flex;
   gap: 10px;
@@ -152,15 +151,14 @@ body {
 
 .nav-btn {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-main);
   text-decoration: none;
-  background: #0b0f19;
+  background: #090d16;
   padding: 8px 14px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   transition: all 0.2s ease;
-  display: inline-block;
 }
 
 .nav-btn span {
@@ -170,64 +168,68 @@ body {
 .nav-btn:hover {
   border-color: var(--primary-accent);
   color: var(--primary-accent);
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(56, 189, 248, 0.1);
   transform: translateY(-2px);
 }
 
-/* Detalles de información */
-.info-group h4 {
-  font-size: 1rem;
+/* Bloques de Info y Textos */
+.info-block h4 {
   color: #ffffff;
+  font-size: 1rem;
 }
 
-.info-group .date {
+.info-block .date {
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
   margin-top: 2px;
 }
 
-/* Badges / Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tags span {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  background: rgba(56, 189, 248, 0.08);
-  color: var(--primary-accent);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.tags.secondary span {
-  background: rgba(52, 211, 153, 0.08);
-  color: var(--secondary-accent);
-  border-color: rgba(52, 211, 153, 0.2);
-}
-
-/* Texto de contacto y descripciones */
 .card p {
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
-.card ul {
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Badges / Etiquetas */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--primary-accent);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.tags-container.green .tag {
+  background: rgba(52, 211, 153, 0.08);
+  color: var(--secondary-accent);
+  border-color: rgba(52, 211, 153, 0.25);
+}
+
+/* Lista de Contacto */
+.contact-list {
   list-style: none;
 }
 
-.card li {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-bottom: 8px;
+.contact-list li {
   font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 
-.card li strong {
+.contact-list li strong {
   color: var(--primary-accent);
 }
