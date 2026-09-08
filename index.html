@@ -7,90 +7,97 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <title>Terminal CV - Alejandro Esaú Valdez</title>
-  <link rel="stylesheet" href="./style.css?v=5">
+  <title>Curriculum - Alejandro Esaú Valdez</title>
+  <link rel="stylesheet" href="./style.css?v=6">
 </head>
 <body>
 
-  <div class="wrapper">
-    <!-- Ventana Terminal Bar -->
-    <div class="top-bar">
-      <div class="window-buttons">
-        <span class="btn-dot close"></span>
-        <span class="btn-dot minimize"></span>
-        <span class="btn-dot expand"></span>
-      </div>
-    </div>
-
-    <!-- Saludo / Encabezado -->
-    <header class="profile-header">
-      <div class="hero-message">
-        <h2>Hola, me llamo Alejandro Esau Valdez</h2>
-        <p class="subtitle">&gt; Bachillerato en Ciencias y Letras (Orientación en Computación)_</p>
-      </div>
-
-      <!-- Nueva Barra de Navegación integradita como Menú de Pestañas -->
-      <nav class="nav-bar">
-        <a href="#sobre-mi" class="nav-btn">Sobre Mí</a>
-        <a href="#estudios" class="nav-btn">Formación</a>
-        <a href="#tecnico" class="nav-btn">Habilidades</a>
-        <a href="#valores" class="nav-btn">Valores</a>
-        <a href="#contacto" class="nav-btn">Contacto</a>
+  <div class="app-container">
+    
+    <!-- Encabezado Principal / Hero -->
+    <header class="hero-card">
+      <div class="avatar-placeholder">AV</div>
+      <h1 class="user-name">Alejandro Esaú Valdez</h1>
+      <p class="user-title">Bachiller en Ciencias y Letras con Orientación en Computación</p>
+      
+      <!-- Navegación por Píldoras/Chips -->
+      <nav class="quick-nav">
+        <a href="#sobre-mi" class="chip-btn">Sobre Mí</a>
+        <a href="#estudios" class="chip-btn">Estudios</a>
+        <a href="#habilidades" class="chip-btn">Habilidades</a>
+        <a href="#valores" class="chip-btn">Valores</a>
+        <a href="#contacto" class="chip-btn">Contacto</a>
       </nav>
     </header>
 
-    <main class="content-stream">
+    <!-- Contenido Principal -->
+    <main class="main-content">
 
       <!-- Sobre Mí -->
-      <section class="card" id="sobre-mi">
-        <h3><span class="icon">#</span> Sobre Mí</h3>
-        <p>Persona responsable y comprometida con 12 años de formación continua en el Colegio Salesiano Don Bosco.</p>
-        <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación y alcance de metas grupales.</p>
+      <section class="section-card" id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <p class="text-body">
+          Persona responsable y comprometida con 12 años de formación continua en el Colegio Salesiano Don Bosco.
+        </p>
+        <p class="text-body">
+          Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación y el alcance de metas grupales.
+        </p>
       </section>
 
       <!-- Formación Académica -->
-      <section class="card" id="estudios">
-        <h3><span class="icon">#</span> Formación Académica</h3>
-        <div class="info-block">
-          <h4>Colegio Salesiano Don Bosco</h4>
-          <p class="date">2014 - actualidad | Kinder a Bachillerato</p>
+      <section class="section-card" id="estudios">
+        <h2 class="section-title">Formación Académica</h2>
+        <div class="timeline-item">
+          <div class="badge-year">2014 - Actualidad</div>
+          <h3 class="item-title">Colegio Salesiano Don Bosco</h3>
+          <p class="item-sub">Kinder a Bachillerato</p>
         </div>
       </section>
 
-      <!-- Conocimientos Técnicos -->
-      <section class="card" id="tecnico">
-        <h3><span class="icon">#</span> Conocimientos Técnicos</h3>
-        <div class="tags-container">
-          <span class="tag">Microsoft Word</span>
-          <span class="tag">Microsoft Excel</span>
-          <span class="tag">PowerPoint</span>
-          <span class="tag">Correo Electrónico</span>
-          <span class="tag">Herramientas Digitales</span>
+      <!-- Habilidades / Conocimientos -->
+      <section class="section-card" id="habilidades">
+        <h2 class="section-title">Conocimientos Técnicos</h2>
+        <div class="skills-grid">
+          <div class="skill-box">Microsoft Word</div>
+          <div class="skill-box">Microsoft Excel</div>
+          <div class="skill-box">PowerPoint</div>
+          <div class="skill-box">Correo Electrónico</div>
+          <div class="skill-box">Herramientas Digitales</div>
         </div>
       </section>
 
-      <!-- Valores Personales -->
-      <section class="card" id="valores">
-        <h3><span class="icon">#</span> Valores Personales</h3>
-        <div class="tags-container green">
-          <span class="tag">Respeto</span>
-          <span class="tag">Honestidad</span>
-          <span class="tag">Responsabilidad</span>
-          <span class="tag">Compromiso</span>
+      <!-- Valores -->
+      <section class="section-card" id="valores">
+        <h2 class="section-title">Valores Personales</h2>
+        <div class="skills-grid accent-grid">
+          <div class="skill-box accent">Respeto</div>
+          <div class="skill-box accent">Honestidad</div>
+          <div class="skill-box accent">Responsabilidad</div>
+          <div class="skill-box accent">Compromiso</div>
         </div>
       </section>
 
       <!-- Contacto Directo -->
-      <section class="card" id="contacto">
-        <h3><span class="icon">#</span> Contacto Directo</h3>
-        <ul class="contact-list">
-          <li><strong>Teléfono:</strong> 5593 6485</li>
-          <li><strong>Correo:</strong> a.valdez.6adb@gmail.com</li>
-          <li><strong>Ubicación:</strong> Zona 21, Justo Rufino Barrios</li>
-        </ul>
+      <section class="section-card" id="contacto">
+        <h2 class="section-title">Contacto Directo</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="label">Teléfono:</span>
+            <span class="val">5593 6485</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Correo:</span>
+            <span class="val">a.valdez.6adb@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Ubicación:</span>
+            <span class="val">Zona 21, Justo Rufino Barrios</span>
+          </div>
+        </div>
       </section>
 
     </main>
+
   </div>
 
 </body>
