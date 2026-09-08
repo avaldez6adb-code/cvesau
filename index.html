@@ -3,25 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae - Esaú Valdez</title>
+  <title>Terminal CV - Alejandro Esaú Valdez</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
   <div class="wrapper">
-    <div class="top-bar"></div>
+    <!-- Barra superior tipo terminal -->
+    <div class="top-bar">
+      <div class="window-buttons">
+        <span class="btn-dot close"></span>
+        <span class="btn-dot minimize"></span>
+        <span class="btn-dot expand"></span>
+      </div>
+      <span class="terminal-title">esau_valdez@dev-cv:~</span>
+    </div>
     
+    <!-- Navegación de acceso rápido (Nuevos botones de enlace) -->
+    <nav class="nav-bar">
+      <a href="#estudios" class="nav-link"><span>$</span> ./formacion</a>
+      <a href="#tecnico" class="nav-link"><span>$</span> ./habilidades</a>
+      <a href="#sobre-mi" class="nav-link"><span>$</span> ./sobre-mi</a>
+      <a href="#contacto" class="nav-link"><span>$</span> ./contacto</a>
+    </nav>
+
     <header class="profile-header">
       <div class="hero-message">
+        <p class="prompt-line"><span class="user">guest@system</span>:<span class="path">~</span>$ whoami</p>
         <h2>Hola, me llamo Alejandro Esau Valdez</h2>
-        <p class="subtitle">Bachillerato en Ciencias y Letras (Orientación en Computación)</p>
+        <p class="subtitle">&gt; Bachillerato en Ciencias y Letras (Orientación en Computación)_</p>
       </div>
     </header>
 
     <main class="columns">
       
       <div class="col-main">
-        <section class="card">
+        <section class="card" id="estudios">
           <h3>Formación Académica</h3>
           <div class="info-group">
             <h4>Colegio Salesiano Don Bosco</h4>
@@ -29,7 +46,7 @@
           </div>
         </section>
 
-        <section class="card">
+        <section class="card" id="tecnico">
           <h3>Conocimientos Técnicos</h3>
           <div class="tags">
             <span>Microsoft Word</span>
@@ -52,13 +69,13 @@
       </div>
 
       <div class="col-side">
-        <section class="card">
+        <section class="card" id="sobre-mi">
           <h3>Sobre Mí</h3>
           <p>Persona responsable y comprometida con 12 años de formación en el Colegio Salesiano Don Bosco.</p>
           <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación.</p>
         </section>
 
-        <section class="card">
+        <section class="card" id="contacto">
           <h3>Contacto Directo</h3>
           <ul>
             <li><strong>Teléfono:</strong> 5593 6485</li>
