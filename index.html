@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Esaú Valdez</title>
+  <style>
+    /* Estilos Generales */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
+    body {
+      background-color: #eef2f5;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* Contenedor Principal */
+    .cv-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 850px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .cv-container:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Encabezado */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      border-bottom: 2px solid #222;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #222;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .header-info h1 {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      color: #111;
+      text-transform: uppercase;
+    }
+
+    .header-info p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* Grid de Contenido */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 30px;
+    }
+
+    /* Secciones Interactivas */
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #111;
+    }
+
+    .section-title::before {
+      content: "•";
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 15px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      position: relative;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Interacción Hover en listas */
+    ul li:hover {
+      color: #0056b3;
+      transform: translateX(4px);
+    }
+
+    ul li::before {
+      content: "- ";
+      color: #666;
+    }
+
+    /* Tarjeta Interactiva "Sobre Mí" */
+    .about-card {
+      background-color: #2b2b2b;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .about-card:hover {
+      background-color: #1f1f1f;
+      transform: translateY(-3px);
+    }
+
+    .about-card h3 {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .about-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #ddd;
+    }
+
+    /* Tarjeta de Contacto */
+    .contact-card {
+      background-color: #111;
+      color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .contact-card h3 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      word-break: break-word;
+      transition: opacity 0.2s;
+    }
+
+    .contact-item:hover {
+      opacity: 0.8;
+    }
+
+    /* Adaptabilidad a Pantallas Pequeñas */
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    
+    <!-- Encabezado -->
+    <header>
+      <img src="https://via.placeholder.com/130" alt="Foto de Esaú Valdez" class="profile-img">
+      <div class="header-info">
+        <h1>Esaú Valdez</h1>
+        <p>Estudiante bachillerato en ciencias y letras con orientación en computación</p>
+      </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <div class="content-grid">
+      
+      <!-- Columna Izquierda -->
+      <div class="left-column">
+        
+        <div class="section">
+          <div class="section-title">Estudios</div>
+          <strong style="display: block; padding-left: 15px;">Colegio Salesiano Don Bosco</strong>
+          <small style="padding-left: 15px; color: #666; display: block; margin-bottom: 5px;">2014 - actualidad | Kinder - Bachillerato</small>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Idioma</div>
+          <p style="padding-left: 15px;">Español nativo.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Valores</div>
+          <ul>
+            <li>Respeto</li>
+            <li>Honestidad</li>
+            <li>Responsabilidad</li>
+            <li>Compromiso</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Conocimientos en Computación</div>
+          <ul>
+            <li>Word</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+            <li>Uso de correo electrónico</li>
+            <li>Internet y herramientas digitales</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="right-column">
+        
+        <div class="about-card">
+          <h3>Sobre Mí</h3>
+          <p>
+            Soy una persona responsable y comprometida. He cursado 12 años de formación académica en el Colegio Salesiano Don Bosco y actualmente soy estudiante de Bachillerato en Ciencias y Letras con orientación en Computación.
+            <br><br>
+            Me caracterizo por mis valores, disciplina y capacidad para el trabajo en equipo. Me gusta el fútbol, ya que fortalece en mí la constancia, el respeto y la cooperación.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Contacto</h3>
+          
+          <div class="contact-item">
+            <span>📞</span> 5593 6485
+          </div>
+          
+          <div class="contact-item">
+            <span>✉️</span> a.valdez.6adb@gmail.com
+          </div>
+          
+          <div class="contact-item">
+            <span>📍</span> 7ma calle "B" 33-30 zona 21 Justo Rufino Barrios
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
