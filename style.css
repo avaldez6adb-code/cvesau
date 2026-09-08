@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Variables Modo Oscuro (por defecto) */
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
   --card-bg: rgba(30, 41, 59, 0.7);
   --card-border: rgba(255, 255, 255, 0.08);
@@ -9,7 +10,23 @@
   --accent-color: #34d399;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
+  --title-color: #ffffff;
+  --box-bg: rgba(15, 23, 42, 0.6);
   --font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Variables Modo Claro */
+[data-theme="light"] {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --primary-color: #0284c7;
+  --secondary-color: #4f46e5;
+  --accent-color: #059669;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --title-color: #0f172a;
+  --box-bg: rgba(241, 245, 249, 0.9);
 }
 
 * {
@@ -30,6 +47,7 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .app-container {
@@ -39,6 +57,7 @@ body {
 
 /* Hero Principal */
 .hero-card {
+  position: relative;
   background: var(--card-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
@@ -46,28 +65,53 @@ body {
   padding: 35px 25px;
   text-align: center;
   margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Botón Cambiar Tema */
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
 }
 
 .avatar-placeholder {
   width: 70px;
   height: 70px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: #0f172a;
+  color: #ffffff;
   font-weight: 700;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin: 0 auto 15px auto;
+  margin: 10px auto 15px auto;
   box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
 }
 
 .user-name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--title-color);
   margin-bottom: 6px;
 }
 
@@ -100,7 +144,7 @@ body {
 
 .chip-btn:hover {
   background: var(--primary-color);
-  color: #0f172a;
+  color: #ffffff;
   font-weight: 600;
   transform: translateY(-2px);
 }
@@ -118,12 +162,12 @@ body {
   border: 1px solid var(--card-border);
   border-radius: 16px;
   padding: 25px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  scroll-margin-top: 20px; /* Ajuste para un desplazamiento preciso */
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+  scroll-margin-top: 20px;
 }
 
 .section-card:hover {
-  border-color: rgba(56, 189, 248, 0.3);
+  border-color: var(--primary-color);
 }
 
 .section-title {
@@ -159,7 +203,7 @@ body {
 
 .item-title {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: var(--title-color);
   margin-bottom: 4px;
 }
 
@@ -185,7 +229,7 @@ body {
 
 .project-link:hover {
   background: var(--primary-color);
-  color: #0f172a;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -197,7 +241,7 @@ body {
 }
 
 .skill-box {
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--box-bg);
   border: 1px solid var(--card-border);
   padding: 8px 14px;
   border-radius: 8px;
@@ -236,6 +280,6 @@ body {
 }
 
 .contact-item .val {
-  color: #ffffff;
+  color: var(--title-color);
   font-weight: 500;
 }
