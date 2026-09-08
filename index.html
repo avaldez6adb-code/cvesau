@@ -4,95 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curriculum Vitae - Esaú Valdez</title>
-  <!-- Enlace al archivo de estilos externo -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="cv-container">
+  <div class="wrapper">
+    <div class="top-bar"></div>
     
-    <!-- Encabezado -->
-    <header>
-      <img src="https://via.placeholder.com/130" alt="Foto de Esaú Valdez" class="profile-img">
-      <div class="header-info">
+    <div class="profile-header">
+      <img src="foto.jpg" alt="Esaú Valdez" class="photo">
+      <div class="title">
         <h1>Esaú Valdez</h1>
-        <p>Estudiante bachillerato en ciencias y letras con orientación en computación</p>
+        <p>Bachillerato en Ciencias y Letras (Orientación en Computación)</p>
       </div>
-    </header>
+    </div>
 
-    <!-- Contenido Principal -->
-    <div class="content-grid">
+    <div class="columns">
       
-      <!-- Columna Izquierda -->
-      <div class="left-column">
-        
-        <div class="section">
-          <div class="section-title">Estudios</div>
-          <strong class="school-title">Colegio Salesiano Don Bosco</strong>
-          <small class="school-years">2014 - actualidad | Kinder - Bachillerato</small>
-        </div>
+      <div class="col-main">
+        <section class="card">
+          <h3>Formación Académica</h3>
+          <div class="info-group">
+            <h4>Colegio Salesiano Don Bosco</h4>
+            <p class="date">2014 - actualidad | Kinder a Bachillerato</p>
+          </div>
+        </section>
 
-        <div class="section">
-          <div class="section-title">Idioma</div>
-          <p class="language-text">Español nativo.</p>
-        </div>
+        <section class="card">
+          <h3>Conocimientos Técnicos</h3>
+          <div class="tags">
+            <span>Microsoft Word</span>
+            <span>Microsoft Excel</span>
+            <span>PowerPoint</span>
+            <span>Correo Electrónico</span>
+            <span>Herramientas Digitales</span>
+          </div>
+        </section>
 
-        <div class="section">
-          <div class="section-title">Valores</div>
-          <ul class="interactive-list">
-            <li>Respeto</li>
-            <li>Honestidad</li>
-            <li>Responsabilidad</li>
-            <li>Compromiso</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Conocimientos en Computación</div>
-          <ul class="interactive-list">
-            <li>Word</li>
-            <li>Excel</li>
-            <li>PowerPoint</li>
-            <li>Uso de correo electrónico</li>
-            <li>Internet y herramientas digitales</li>
-          </ul>
-        </div>
-
+        <section class="card">
+          <h3>Valores Personales</h3>
+          <div class="tags secondary">
+            <span>Respeto</span>
+            <span>Honestidad</span>
+            <span>Responsabilidad</span>
+            <span>Compromiso</span>
+          </div>
+        </section>
       </div>
 
-      <!-- Columna Derecha -->
-      <div class="right-column">
-        
-        <div class="about-card">
+      <div class="col-side">
+        <section class="card dark">
           <h3>Sobre Mí</h3>
-          <p>
-            Soy una persona responsable y comprometida. He cursado 12 años de formación académica en el Colegio Salesiano Don Bosco y actualmente soy estudiante de Bachillerato en Ciencias y Letras con orientación en Computación.
-          </p>
-          <p>
-            Me caracterizo por mis valores, disciplina y capacidad para el trabajo en equipo. Me gusta el fútbol, ya que fortalece en mí la constancia, el respeto y la cooperación.
-          </p>
-        </div>
+          <p>Persona responsable y comprometida con 12 años de formación en el Colegio Salesiano Don Bosco.</p>
+          <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación.</p>
+        </section>
 
-        <div class="contact-card">
-          <h3>Contacto</h3>
-          
-          <div class="contact-item">
-            <span>📞</span> 5593 6485
-          </div>
-          
-          <div class="contact-item">
-            <span>✉️</span> a.valdez.6adb@gmail.com
-          </div>
-          
-          <div class="contact-item">
-            <span>📍</span> 7ma calle "B" 33-30 zona 21 Justo Rufino Barrios
-          </div>
-        </div>
-
+        <section class="card outline">
+          <h3>Contacto Directo</h3>
+          <ul>
+            <li><strong>Teléfono:</strong> 5593 6485</li>
+            <li><strong>Correo:</strong> a.valdez.6adb@gmail.com</li>
+            <li><strong>Ubicación:</strong> Zona 21, Justo Rufino Barrios</li>
+          </ul>
+        </section>
       </div>
 
     </div>
-
   </div>
 
 </body>
