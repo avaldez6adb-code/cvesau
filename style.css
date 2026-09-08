@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-  --bg-color: #0b0f19;
-  --card-bg: rgba(22, 31, 48, 0.7);
-  --card-border: rgba(56, 189, 248, 0.2);
-  --primary-accent: #38bdf8; /* Azul Neón */
-  --secondary-accent: #818cf8; /* Violeta Tech */
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
+  --bg-color: #0d1117;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+  --primary-accent: #58a6ff;
+  --secondary-accent: #7ee787;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Fira Code', monospace;
 }
@@ -20,141 +20,130 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.12) 0px, transparent 50%);
   color: var(--text-main);
   font-family: var(--font-sans);
-  line-height: 1.6;
-  padding: 40px 20px;
+  line-height: 1.5;
+  padding: 30px 15px;
 }
 
 .wrapper {
-  max-width: 950px;
+  max-width: 900px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Barra superior estilo terminal */
 .top-bar {
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
-}
-
-/* Header */
-.profile-header {
+  height: 35px;
+  background: #161b22;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
-  gap: 25px;
-  padding: 40px;
-  border-bottom: 1px solid var(--card-border);
+  padding-left: 15px;
 }
 
-.photo {
-  width: 110px;
-  height: 110px;
+.top-bar::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ff5f56;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-accent);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  box-shadow: 15px 0 0 #ffbd2e, 30px 0 0 #27c93f;
 }
 
-.title h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -0.5px;
+/* Header Centrado */
+.profile-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.title p {
+.hero-message h2 {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.hero-message .subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
   color: var(--primary-accent);
-  margin-top: 4px;
 }
 
 /* Disposición de Columnas */
 .columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  padding: 30px 40px 40px 40px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  padding: 25px;
 }
 
-/* Tarjetas Generales */
+/* Tarjetas */
 .card {
   background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 22px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(56, 189, 248, 0.4);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
-  color: var(--primary-accent);
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.card h3::before {
-  content: "> ";
-  margin-right: 6px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: var(--secondary-accent);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
 }
 
 .info-group h4 {
-  font-size: 1.05rem;
-  color: var(--text-main);
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .info-group .date {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* Tags de Habilidades y Valores */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tags span {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  background: rgba(56, 189, 248, 0.1);
+  font-size: 0.75rem;
+  background: #21262d;
   color: var(--primary-accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  padding: 5px 12px;
-  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .tags.secondary span {
-  background: rgba(129, 140, 248, 0.1);
-  color: var(--secondary-accent);
-  border-color: rgba(129, 140, 248, 0.3);
+  color: var(--text-main);
 }
 
-/* Sección Sobre Mí y Contacto */
+/* Textos y Contacto */
 .col-side p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 12px;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
 }
 
 .col-side ul {
@@ -163,24 +152,18 @@ body {
 
 .col-side li {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 8px;
+  font-family: var(--font-mono);
 }
 
 .col-side li strong {
-  color: var(--text-main);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  color: var(--primary-accent);
 }
 
-/* Responsive para Pantallas Pequeñas */
-@media (max-width: 768px) {
+/* Adaptación Responsive */
+@media (max-width: 650px) {
   .columns {
     grid-template-columns: 1fr;
-  }
-  
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
   }
 }
