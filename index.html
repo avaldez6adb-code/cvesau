@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Evitar caché en el navegador -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <title>Terminal CV - Alejandro Esaú Valdez</title>
-  <link rel="stylesheet" href="./style.css">
+  <!-- Enlace al archivo CSS con parámetro de versión -->
+  <link rel="stylesheet" href="./style.css?v=3">
 </head>
 <body>
 
   <div class="wrapper">
-    <!-- Barra superior tipo terminal -->
+    <!-- Ventana Terminal Bar -->
     <div class="top-bar">
       <div class="window-buttons">
         <span class="btn-dot close"></span>
@@ -19,7 +25,7 @@
       <span class="terminal-title">esau_valdez@dev-cv:~</span>
     </div>
 
-    <!-- Encabezado de presentación -->
+    <!-- 1. Saludo / Presentación -->
     <header class="profile-header">
       <div class="hero-message">
         <p class="prompt-line"><span class="user">guest@system</span>:<span class="path">~</span>$ whoami</p>
@@ -28,57 +34,63 @@
       </div>
     </header>
 
-    <!-- Contenido en una sola columna vertical -->
     <main class="content-stream">
-      
-      <section class="card">
-        <h3>Navegación / Accesos Rápidos</h3>
+
+      <!-- 2. Tarjeta Exclusiva de Navegación -->
+      <section class="card nav-card">
+        <h3><span class="icon">&gt;</span> Navegación Rápida</h3>
         <nav class="nav-bar">
+          <a href="#sobre-mi" class="nav-btn"><span>$</span> ./sobre-mi</a>
           <a href="#estudios" class="nav-btn"><span>$</span> ./formacion</a>
           <a href="#tecnico" class="nav-btn"><span>$</span> ./habilidades</a>
-          <a href="#sobre-mi" class="nav-btn"><span>$</span> ./sobre-mi</a>
+          <a href="#valores" class="nav-btn"><span>$</span> ./valores</a>
           <a href="#contacto" class="nav-btn"><span>$</span> ./contacto</a>
         </nav>
       </section>
 
+      <!-- 3. Sobre Mí -->
       <section class="card" id="sobre-mi">
-        <h3>Sobre Mí</h3>
-        <p>Persona responsable y comprometida con 12 años de formación en el Colegio Salesiano Don Bosco.</p>
-        <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación.</p>
+        <h3><span class="icon">#</span> Sobre Mí</h3>
+        <p>Persona responsable y comprometida con 12 años de formación continua en el Colegio Salesiano Don Bosco.</p>
+        <p>Destaco por mi disciplina y trabajo en equipo. Apasionado del fútbol por el aprendizaje en cooperación y alcance de metas grupales.</p>
       </section>
 
+      <!-- 4. Formación Académica -->
       <section class="card" id="estudios">
-        <h3>Formación Académica</h3>
-        <div class="info-group">
+        <h3><span class="icon">#</span> Formación Académica</h3>
+        <div class="info-block">
           <h4>Colegio Salesiano Don Bosco</h4>
           <p class="date">2014 - actualidad | Kinder a Bachillerato</p>
         </div>
       </section>
 
+      <!-- 5. Conocimientos Técnicos -->
       <section class="card" id="tecnico">
-        <h3>Conocimientos Técnicos</h3>
-        <div class="tags">
-          <span>Microsoft Word</span>
-          <span>Microsoft Excel</span>
-          <span>PowerPoint</span>
-          <span>Correo Electrónico</span>
-          <span>Herramientas Digitales</span>
+        <h3><span class="icon">#</span> Conocimientos Técnicos</h3>
+        <div class="tags-container">
+          <span class="tag">Microsoft Word</span>
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">PowerPoint</span>
+          <span class="tag">Correo Electrónico</span>
+          <span class="tag">Herramientas Digitales</span>
         </div>
       </section>
 
-      <section class="card">
-        <h3>Valores Personales</h3>
-        <div class="tags secondary">
-          <span>Respeto</span>
-          <span>Honestidad</span>
-          <span>Responsabilidad</span>
-          <span>Compromiso</span>
+      <!-- 6. Valores Personales -->
+      <section class="card" id="valores">
+        <h3><span class="icon">#</span> Valores Personales</h3>
+        <div class="tags-container green">
+          <span class="tag">Respeto</span>
+          <span class="tag">Honestidad</span>
+          <span class="tag">Responsabilidad</span>
+          <span class="tag">Compromiso</span>
         </div>
       </section>
 
+      <!-- 7. Contacto Directo -->
       <section class="card" id="contacto">
-        <h3>Contacto Directo</h3>
-        <ul>
+        <h3><span class="icon">#</span> Contacto Directo</h3>
+        <ul class="contact-list">
           <li><strong>Teléfono:</strong> 5593 6485</li>
           <li><strong>Correo:</strong> a.valdez.6adb@gmail.com</li>
           <li><strong>Ubicación:</strong> Zona 21, Justo Rufino Barrios</li>
