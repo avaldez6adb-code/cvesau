@@ -1,1 +1,209 @@
+/* Estilos Generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+  background-color: #eef2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Contenedor Principal */
+.cv-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 850px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 2px solid #222;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.header-info h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.header-info p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Grid de Contenido */
+.content-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+}
+
+/* Secciones Interactivas */
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111;
+}
+
+.section-title::before {
+  content: "•";
+  font-size: 1.5rem;
+}
+
+.school-title {
+  display: block;
+  padding-left: 15px;
+}
+
+.school-years {
+  padding-left: 15px;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.language-text {
+  padding-left: 15px;
+}
+
+/* Listas con interacción Hover */
+.interactive-list {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.interactive-list li {
+  margin-bottom: 8px;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.interactive-list li:hover {
+  color: #0056b3;
+  transform: translateX(5px);
+}
+
+.interactive-list li::before {
+  content: "- ";
+  color: #666;
+}
+
+/* Tarjeta Interactiva "Sobre Mí" */
+.about-card {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-card:hover {
+  background-color: #1f1f1f;
+  transform: translateY(-3px);
+}
+
+.about-card h3 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+/* Tarjeta de Contacto */
+.contact-card {
+  background-color: #111;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contact-card h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  word-break: break-word;
+  transition: opacity 0.2s;
+}
+
+.contact-item:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
