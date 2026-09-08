@@ -1,89 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: rgba(22, 31, 48, 0.7);
+  --card-border: rgba(56, 189, 248, 0.2);
+  --primary-accent: #38bdf8; /* Azul Neón */
+  --secondary-accent: #818cf8; /* Violeta Tech */
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f1f5f9;
-  color: #1e293b;
-  padding: 40px 15px;
-  display: flex;
-  justify-content: center;
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.12) 0px, transparent 50%);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  padding: 40px 20px;
 }
 
 .wrapper {
-  background: white;
-  width: 100%;
-  max-width: 800px;
-  border-radius: 12px;
+  max-width: 950px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .top-bar {
-  height: 8px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
 }
 
+/* Header */
 .profile-header {
-  padding: 30px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
+  gap: 25px;
+  padding: 40px;
+  border-bottom: 1px solid var(--card-border);
 }
 
 .photo {
-  width: 90px;
-  height: 90px;
-  border-radius: 12px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
   object-fit: cover;
+  border: 2px solid var(--primary-accent);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .title h1 {
-  font-size: 1.8rem;
-  color: #0f172a;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
 }
 
 .title p {
-  color: #2563eb;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--primary-accent);
+  margin-top: 4px;
 }
 
+/* Disposición de Columnas */
 .columns {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  padding: 30px;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
+  padding: 30px 40px 40px 40px;
 }
 
+/* Tarjetas Generales */
 .card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 22px;
+  border-radius: 12px;
   margin-bottom: 25px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
 .card h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #0f172a;
-  letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--primary-accent);
   margin-bottom: 15px;
-  border-left: 3px solid #2563eb;
-  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card h3::before {
+  content: "> ";
+  margin-right: 6px;
+  color: var(--secondary-accent);
 }
 
 .info-group h4 {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  color: var(--text-main);
 }
 
 .info-group .date {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 4px;
 }
 
+/* Tags de Habilidades y Valores */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -91,62 +135,52 @@ body {
 }
 
 .tags span {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid #bfdbfe;
-  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary-accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 5px 12px;
   border-radius: 6px;
-  font-size: 0.82rem;
-  font-weight: 500;
 }
 
 .tags.secondary span {
-  background: #f8fafc;
-  color: #475569;
-  border-color: #cbd5e1;
+  background: rgba(129, 140, 248, 0.1);
+  color: var(--secondary-accent);
+  border-color: rgba(129, 140, 248, 0.3);
 }
 
-.card.dark {
-  background: #0f172a;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
+/* Sección Sobre Mí y Contacto */
+.col-side p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
-.card.dark h3 {
-  color: white;
-  border-left-color: #3b82f6;
-}
-
-.card.dark p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: #94a3b8;
-  margin-bottom: 10px;
-}
-
-.card.outline {
-  border: 1px dashed #cbd5e1;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.card.outline ul {
+.col-side ul {
   list-style: none;
 }
 
-.card.outline li {
-  font-size: 0.85rem;
+.col-side li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
   margin-bottom: 8px;
-  color: #334155;
 }
 
-@media (max-width: 600px) {
+.col-side li strong {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Responsive para Pantallas Pequeñas */
+@media (max-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  
   .profile-header {
     flex-direction: column;
     text-align: center;
-  }
-  .columns {
-    grid-template-columns: 1fr;
   }
 }
