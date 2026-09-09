@@ -13,23 +13,31 @@ body, body.dark-mode {
   --title-color: #ffffff;
   --box-bg: rgba(15, 23, 42, 0.6);
   --btn-bg: rgba(255, 255, 255, 0.08);
-  --paint-btn-bg: #e11d48;
-  --paint-btn-hover: #be123c;
+
+  /* Colores estilo Max Böck nav */
+  --nav-num: #f43f5e;
+  --nav-active-bar: #f43f5e;
+  --paint-btn-bg: #f43f5e;
+  --paint-btn-hover: #e11d48;
 }
 
 /* Variables Modo Claro */
 body.light-mode {
-  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(0, 0, 0, 0.1);
+  --bg-gradient: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(0, 0, 0, 0.05);
   --primary-color: #0284c7;
   --secondary-color: #4f46e5;
   --accent-color: #059669;
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --title-color: #0284c7;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --title-color: #0f172a;
   --box-bg: #e2e8f0;
   --btn-bg: rgba(0, 0, 0, 0.06);
+
+  /* Colores estilo Max Böck nav (Claro) */
+  --nav-num: #d97706;
+  --nav-active-bar: #b91c1c;
   --paint-btn-bg: #f43f5e;
   --paint-btn-hover: #e11d48;
 }
@@ -63,77 +71,77 @@ body {
 /* BARRA SUPERIOR DE NAVEGACIÓN */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 15px 25px;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  margin-bottom: 25px;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.portfolio-tag {
-  color: var(--accent-color);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  padding: 15px 20px;
+  background: transparent;
+  margin-bottom: 10px;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
+  margin-left: auto;
   flex-wrap: wrap;
 }
 
-/* ENLACES TIPO ESTILO REFERENCIA (01 home, 02 writing, etc.) */
+/* NAVEGACIÓN ESTILO MAX BÖCK */
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-main);
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  font-family: monospace, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+  transition: opacity 0.2s ease;
 }
 
 .nav-link .num {
+  color: var(--nav-num);
   font-weight: 700;
-  color: var(--primary-color);
-  font-size: 0.8rem;
+  margin-right: 4px;
+}
+
+/* Línea roja debajo de la opción activa */
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--nav-active-bar);
+  border-radius: 2px;
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
-  transform: translateY(-1px);
+  opacity: 0.8;
 }
 
-/* BOTÓN DE PINTURA (CIRCULAR) */
+/* BOTÓN DE PINTURA (CIRCULAR ESTILO BÖCK) */
 .theme-btn {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: var(--paint-btn-bg);
   border: none;
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
 }
 
@@ -153,6 +161,15 @@ body {
   margin-bottom: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-tag {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .user-name {
@@ -182,7 +199,7 @@ body {
   border-radius: 16px;
   padding: 25px;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 80px;
 }
 
 .section-card:hover {
@@ -313,14 +330,10 @@ body {
   text-decoration: underline;
 }
 
-/* Responsivo para pantallas pequeñas */
+/* Responsivo para móviles */
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
   .nav-right {
+    justify-content: flex-end;
     width: 100%;
-    justify-content: space-between;
   }
 }
