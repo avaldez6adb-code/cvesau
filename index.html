@@ -10,29 +10,37 @@
 
   <div class="app-container">
 
-    <!-- HERO PRINCIPAL -->
-    <header class="hero-card">
-      <button class="theme-btn" id="theme-toggle">
-        <span id="theme-icon">☀️</span> <span id="theme-text">Modo Claro</span>
-      </button>
+    <!-- BARRA SUPERIOR DE NAVEGACIÓN -->
+    <header class="navbar">
+      <div class="nav-brand">
+        <p class="portfolio-tag">Portafolio de prácticas</p>
+      </div>
 
-      <p class="portfolio-tag">Portafolio de prácticas</p>
-      <h1 class="user-name">Alejandro Esaú Valdez</h1>
-      <p class="user-title">Bachiller en Ciencias y Letras con Orientación en Computación</p>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <a href="#sobre-mi" class="nav-link"><span class="num">01</span> Sobre Mí</a>
+          <a href="#estudios" class="nav-link"><span class="num">02</span> Estudios</a>
+          <a href="#trabajos" class="nav-link"><span class="num">03</span> Trabajos</a>
+          <a href="#habilidades" class="nav-link"><span class="num">04</span> Habilidades</a>
+          <a href="#valores" class="nav-link"><span class="num">05</span> Valores</a>
+          <a href="#contacto" class="nav-link"><span class="num">06</span> Contacto</a>
+        </nav>
+
+        <!-- Botón de pintura / cambio de tema -->
+        <button class="theme-btn" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">
+          <span id="theme-icon">🎨</span>
+        </button>
+      </div>
     </header>
 
-    <!-- NAVEGACIÓN RÁPIDA -->
-    <nav class="quick-nav">
-      <a href="#sobre-mi" class="chip-btn">Sobre Mí</a>
-      <a href="#estudios" class="chip-btn">Estudios</a>
-      <a href="#trabajos" class="chip-btn">Trabajos</a>
-      <a href="#habilidades" class="chip-btn">Habilidades</a>
-      <a href="#valores" class="chip-btn">Valores</a>
-      <a href="#contacto" class="chip-btn">Contacto</a>
-    </nav>
+    <!-- HERO PRINCIPAL -->
+    <section class="hero-card">
+      <h1 class="user-name">Alejandro Esaú Valdez</h1>
+      <p class="user-title">Bachiller en Ciencias y Letras con Orientación en Computación</p>
+    </section>
 
     <!-- SECCIONES DE CONTENIDO -->
-    <main class="main-content" style="margin-top: 20px;">
+    <main class="main-content">
 
       <!-- SOBRE MÍ -->
       <section id="sobre-mi" class="section-card">
@@ -113,18 +121,9 @@
   <script>
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    const themeText = document.getElementById('theme-text');
 
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
-      
-      if (document.body.classList.contains('light-mode')) {
-        themeIcon.textContent = '🌙';
-        themeText.textContent = 'Modo Oscuro';
-      } else {
-        themeIcon.textContent = '☀️';
-        themeText.textContent = 'Modo Claro';
-      }
     });
   </script>
 
