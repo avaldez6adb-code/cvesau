@@ -120,6 +120,46 @@
 
   </div>
 
-  <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const themeText = document.getElementById('theme-text');
+      const body = document.body;
+
+      if (!toggleBtn) return;
+
+      // Revisa la preferencia guardada en localStorage
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light') {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        if (themeIcon) themeIcon.textContent = '🌙';
+        if (themeText) themeText.textContent = 'Modo Oscuro';
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeText) themeText.textContent = 'Modo Claro';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        if (body.classList.contains('light-mode')) {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+          if (themeIcon) themeIcon.textContent = '☀️';
+          if (themeText) themeText.textContent = 'Modo Claro';
+        } else {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
+          localStorage.setItem('theme', 'light');
+          if (themeIcon) themeIcon.textContent = '🌙';
+          if (themeText) themeText.textContent = 'Modo Oscuro';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
