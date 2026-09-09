@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-:root {
-  /* Variables Modo Oscuro (por defecto) */
+/* Variables Modo Oscuro */
+body.dark-mode {
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
   --card-bg: rgba(30, 41, 59, 0.7);
   --card-border: rgba(255, 255, 255, 0.08);
@@ -12,21 +12,22 @@
   --text-muted: #94a3b8;
   --title-color: #ffffff;
   --box-bg: rgba(15, 23, 42, 0.6);
-  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --btn-bg: rgba(255, 255, 255, 0.08);
 }
 
 /* Variables Modo Claro */
-[data-theme="light"] {
-  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(0, 0, 0, 0.08);
+body.light-mode {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.1);
   --primary-color: #0284c7;
   --secondary-color: #4f46e5;
   --accent-color: #059669;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --title-color: #0f172a;
-  --box-bg: rgba(241, 245, 249, 0.9);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --title-color: #0284c7;
+  --box-bg: #e2e8f0;
+  --btn-bg: rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -43,7 +44,7 @@ body {
   background: var(--bg-gradient);
   background-attachment: fixed;
   color: var(--text-main);
-  font-family: var(--font-family);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
   padding: 40px 20px;
   line-height: 1.6;
@@ -74,10 +75,10 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--btn-bg);
   border: 1px solid var(--card-border);
   color: var(--text-main);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -122,18 +123,26 @@ body {
   font-weight: 500;
 }
 
-/* Botones Navegación por Chips */
+/* Botones Navegación Pegajosos (Sticky) */
 .quick-nav {
+  position: sticky;
+  top: 15px;
+  z-index: 100;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
 }
 
 .chip-btn {
   text-decoration: none;
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--btn-bg);
   border: 1px solid var(--card-border);
   padding: 8px 18px;
   border-radius: 30px;
@@ -163,7 +172,7 @@ body {
   border-radius: 16px;
   padding: 25px;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
-  scroll-margin-top: 20px;
+  scroll-margin-top: 80px;
 }
 
 .section-card:hover {
@@ -175,8 +184,6 @@ body {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 15px;
-  display: flex;
-  align-items: center;
 }
 
 .text-body {
@@ -250,9 +257,10 @@ body {
 }
 
 .skill-box.accent {
-  background: rgba(52, 211, 153, 0.08);
-  border-color: rgba(52, 211, 153, 0.2);
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.3);
   color: var(--accent-color);
+  font-weight: 600;
 }
 
 /* Grid de Contacto */
@@ -280,6 +288,6 @@ body {
 }
 
 .contact-item .val {
-  color: var(--title-color);
+  color: var(--text-main);
   font-weight: 500;
 }
