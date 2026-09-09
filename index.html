@@ -12,29 +12,26 @@
 
     <!-- BARRA SUPERIOR DE NAVEGACIÓN -->
     <header class="navbar">
-      <div class="nav-brand">
-        <p class="portfolio-tag">Portafolio de prácticas</p>
-      </div>
-
       <div class="nav-right">
         <nav class="main-nav">
-          <a href="#sobre-mi" class="nav-link"><span class="num">01</span> Sobre Mí</a>
-          <a href="#estudios" class="nav-link"><span class="num">02</span> Estudios</a>
-          <a href="#trabajos" class="nav-link"><span class="num">03</span> Trabajos</a>
-          <a href="#habilidades" class="nav-link"><span class="num">04</span> Habilidades</a>
-          <a href="#valores" class="nav-link"><span class="num">05</span> Valores</a>
-          <a href="#contacto" class="nav-link"><span class="num">06</span> Contacto</a>
+          <a href="#sobre-mi" class="nav-link active"><span class="num">01</span> home</a>
+          <a href="#estudios" class="nav-link"><span class="num">02</span> estudios</a>
+          <a href="#trabajos" class="nav-link"><span class="num">03</span> trabajos</a>
+          <a href="#habilidades" class="nav-link"><span class="num">04</span> habilidades</a>
+          <a href="#valores" class="nav-link"><span class="num">05</span> valores</a>
+          <a href="#contacto" class="nav-link"><span class="num">06</span> contacto</a>
         </nav>
 
         <!-- Botón de pintura / cambio de tema -->
         <button class="theme-btn" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">
-          <span id="theme-icon">🎨</span>
+          <span>🎨</span>
         </button>
       </div>
     </header>
 
     <!-- HERO PRINCIPAL -->
     <section class="hero-card">
+      <p class="portfolio-tag">Portafolio de prácticas</p>
       <h1 class="user-name">Alejandro Esaú Valdez</h1>
       <p class="user-title">Bachiller en Ciencias y Letras con Orientación en Computación</p>
     </section>
@@ -120,7 +117,6 @@
   <!-- SCRIPT MODO CLARO / OSCURO -->
   <script>
     const themeBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
 
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
