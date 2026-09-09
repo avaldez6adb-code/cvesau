@@ -1,5 +1,297 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+/* Variables Modo Oscuro (Por defecto) */
+body, body.dark-mode {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --primary-color: #38bdf8;
+  --secondary-color: #818cf8;
+  --accent-color: #34d399;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --title-color: #ffffff;
+  --box-bg: rgba(15, 23, 42, 0.6);
+  --btn-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* Variables Modo Claro */
+body.light-mode {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --primary-color: #0284c7;
+  --secondary-color: #4f46e5;
+  --accent-color: #059669;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --title-color: #0284c7;
+  --box-bg: #e2e8f0;
+  --btn-bg: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Hero Principal */
+.hero-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Botón Cambiar Tema */
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--btn-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.avatar-placeholder {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px auto 15px auto;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.user-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 6px;
+}
+
+.user-title {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Botones Navegación Pegajosos (Sticky) */
+.quick-nav {
+  position: sticky;
+  top: 15px;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+}
+
+.chip-btn {
+  text-decoration: none;
+  color: var(--text-main);
+  background: var(--btn-bg);
+  border: 1px solid var(--card-border);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.chip-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+/* Tarjetas de Contenido */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+  scroll-margin-top: 80px;
+}
+
+.section-card:hover {
+  border-color: var(--primary-color);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.text-body {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.text-body:last-child {
+  margin-bottom: 0;
+}
+
+/* Bloque Formación */
+.badge-year {
+  display: inline-block;
+  background: rgba(129, 140, 248, 0.15);
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.item-title {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  margin-bottom: 4px;
+}
+
+.item-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Estilo para Trabajos / Proyectos */
+.project-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Grid de Habilidades */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-box {
+  background: var(--box-bg);
+  border: 1px solid var(--card-border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.skill-box.accent {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Grid de Contacto */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-item .label {
+  color: var(--text-muted);
+}
+
+.contact-item .val {
+  color: var(--text-main);
+  font-weight: 500;
+}@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 /* Variables Modo Oscuro */
 body.dark-mode {
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
