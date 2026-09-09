@@ -94,7 +94,7 @@ body {
   color: #ffffff;
 }
 
-/* Texto Portafolio de prácticas (Reemplaza al logo) */
+/* Texto Portafolio de prácticas */
 .portfolio-tag {
   color: var(--accent-color);
   font-size: 0.85rem;
@@ -286,4 +286,15 @@ body {
 .contact-item .val {
   color: var(--text-main);
   font-weight: 500;
+}
+
+.contact-link {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
