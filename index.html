@@ -8,8 +8,8 @@
 </head>
 <body class="theme-azul">
 
-  <!-- CANVAS PARA EL FONDO ANIMADO DE PARTÍCULAS -->
-  <canvas id="bg-particles"></canvas>
+  <!-- CANVAS PARA EL FONDO INTERACTIVO DE NODOS -->
+  <canvas id="bg-canvas"></canvas>
 
   <!-- PANEL DESPLEGABLE DE TEMAS -->  
   <div class="theme-panel" id="theme-panel">
@@ -68,7 +68,7 @@
 
   <div class="app-container">
 
-    <!-- BARRA SUPERIOR DE NAVEGACIÓN (STICKY) -->
+    <!-- BARRA SUPERIOR DE NAVEGACIÓN -->
     <header class="navbar">
       <div class="nav-right">
         <nav class="main-nav">
@@ -291,10 +291,10 @@
 
   </div>
 
-  <!-- SCRIPT PANEL DE TEMAS + FONDO ANIMADO DE PARTÍCULAS -->
+  <!-- SCRIPT: PANEL DE TEMAS + FONDO DE NODOS INTERACTIVO -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // --- PANEL DE TEMAS ---
+      // --- CONTROL DEL PANEL DE TEMAS ---
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themePanel = document.getElementById('theme-panel');
       const themePanelClose = document.getElementById('theme-panel-close');
@@ -325,74 +325,102 @@
         }
       });
 
-      // --- ANIMACIÓN DE PARTÍCULAS EN CANVAS ---
-      const canvas = document.getElementById('bg-particles');
+      // --- FONDO ANIMADO DE NODOS & INTERACCIÓN CON EL MOUSE ---
+      const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
 
       let width = canvas.width = window.innerWidth;
       let height = canvas.height = window.innerHeight;
+
+      const mouse = { x: null, y: null, radius: 150 };
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+      });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
 
       window.addEventListener('resize', () => {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
       });
 
-      const numParticles = 45;
-      const particles = [];
+      class Node {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.radius = Math.random() * 2 + 1.5;
+          this.vx = (Math.random() - 0.5) * 0.8;
+          this.vy = (Math.random() - 0.5) * 0.8;
+        }
 
-      for (let i = 0; i < numParticles; i++) {
-        particles.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          radius: Math.random() * 2 + 1,
-          vx: (Math.random() - 0.5) * 0.6,
-          vy: (Math.random() - 0.5) * 0.6,
-          alpha: Math.random() * 0.5 + 0.2
-        });
-      }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
 
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
+          if (this.x < 0 || this.x > width) this.vx *= -1;
+          if (this.y < 0 || this.y > height) this.vy *= -1;
 
-        // Obtener color del acento según el tema actual
-        const computedAccent = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
-
-        particles.forEach(p => {
-          p.x += p.vx;
-          p.y += p.vy;
-
-          if (p.x < 0) p.x = width;
-          if (p.x > width) p.x = 0;
-          if (p.y < 0) p.y = height;
-          if (p.y > height) p.y = 0;
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fillStyle = computedAccent;
-          ctx.globalAlpha = p.alpha;
-          ctx.fill();
-        });
-
-        // Dibujar líneas suaves de conexión entre partículas cercanas
-        for (let i = 0; i < numParticles; i++) {
-          for (let j = i + 1; j < numParticles; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
+          // Interacción con ratón
+          if (mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            if (dist < 110) {
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = computedAccent;
-              ctx.globalAlpha = (1 - dist / 110) * 0.2;
-              ctx.lineWidth = 0.8;
-              ctx.stroke();
+            if (dist < mouse.radius) {
+              const angle = Math.atan2(dy, dx);
+              const force = (mouse.radius - dist) / mouse.radius;
+              this.x -= Math.cos(angle) * force * 2;
+              this.y -= Math.sin(angle) * force * 2;
             }
           }
         }
 
-        ctx.globalAlpha = 1;
+        draw(color) {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = color;
+          ctx.fill();
+        }
+      }
+
+      const nodeCount = Math.floor((width * height) / 18000);
+      const nodes = Array.from({ length: Math.min(nodeCount, 60) }, () => new Node());
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        
+        const accentColor = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
+
+        nodes.forEach(node => {
+          node.update();
+          node.draw(accentColor);
+        });
+
+        // Conexiones de líneas entre nodos
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 130) {
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = accentColor;
+              ctx.globalAlpha = 1 - (dist / 130);
+              ctx.lineWidth = 0.7;
+              ctx.stroke();
+              ctx.globalAlpha = 1;
+            }
+          }
+        }
+
         requestAnimationFrame(animate);
       }
 
