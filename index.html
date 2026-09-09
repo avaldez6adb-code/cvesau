@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
   <title>Curriculum - Alejandro Esaú Valdez</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-mode">
 
   <div class="app-container">
-    
-    <!-- Encabezado Principal / Hero -->
+
+    <!-- HERO PRINCIPAL -->
     <header class="hero-card">
-      <!-- Botón de Alternar Tema -->
-      <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+      <button class="theme-btn" id="theme-toggle">
         <span id="theme-icon">☀️</span> <span id="theme-text">Modo Claro</span>
       </button>
 
-      <div class="avatar-placeholder">AV</div>
+      <p class="portfolio-tag">Portafolio de prácticas</p>
       <h1 class="user-name">Alejandro Esaú Valdez</h1>
       <p class="user-title">Bachiller en Ciencias y Letras con Orientación en Computación</p>
-      
-      <!-- Navegación por Chips -->
-      <nav class="quick-nav">
-        <a href="#sobre-mi" class="chip-btn">Sobre Mí</a>
-        <a href="#estudios" class="chip-btn">Estudios</a>
-        <a href="#trabajos" class="chip-btn">Trabajos</a>
-        <a href="#habilidades" class="chip-btn">Habilidades</a>
-        <a href="#valores" class="chip-btn">Valores</a>
-        <a href="#contacto" class="chip-btn">Contacto</a>
-      </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
+    <!-- NAVEGACIÓN RÁPIDA -->
+    <nav class="quick-nav">
+      <a href="#sobre-mi" class="chip-btn">Sobre Mí</a>
+      <a href="#estudios" class="chip-btn">Estudios</a>
+      <a href="#trabajos" class="chip-btn">Trabajos</a>
+      <a href="#habilidades" class="chip-btn">Habilidades</a>
+      <a href="#valores" class="chip-btn">Valores</a>
+      <a href="#contacto" class="chip-btn">Contacto</a>
+    </nav>
 
-      <!-- Sobre Mí -->
-      <section class="section-card" id="sobre-mi">
+    <!-- SECCIONES DE CONTENIDO -->
+    <main class="main-content" style="margin-top: 20px;">
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" class="section-card">
         <h2 class="section-title">Sobre Mí</h2>
         <p class="text-body">
           Persona responsable y comprometida con 12 años de formación continua en el Colegio Salesiano Don Bosco.
@@ -50,68 +45,58 @@
         </p>
       </section>
 
-      <!-- Formación Académica -->
-      <section class="section-card" id="estudios">
-        <h2 class="section-title">Formación Académica</h2>
-        <div class="timeline-item">
-          <div class="badge-year">2014 - Actualidad</div>
-          <h3 class="item-title">Colegio Salesiano Don Bosco</h3>
-          <p class="item-sub">Kinder a Bachillerato</p>
-        </div>
+      <!-- ESTUDIOS -->
+      <section id="estudios" class="section-card">
+        <h2 class="section-title">Estudios</h2>
+        <span class="badge-year">Graduación 2024</span>
+        <h3 class="item-title">Bachiller en Ciencias y Letras con Orientación en Computación</h3>
+        <p class="item-sub">Colegio Salesiano Don Bosco</p>
       </section>
 
-      <!-- Trabajos Recientes -->
-      <section class="section-card" id="trabajos">
-        <h2 class="section-title">Trabajos Recientes</h2>
-        <div class="project-item">
-          <h3 class="item-title">Prácticas y Proyectos Web</h3>
-          <p class="text-body">Recopilación de ejercicios, prácticas de código y proyectos realizados durante mi formación.</p>
-          <a href="https://andre303q.github.io/rgpracticas/" target="_blank" rel="noopener noreferrer" class="project-link">
-            Ver Portafolio de Prácticas ↗
-          </a>
-        </div>
+      <!-- TRABAJOS Y PROYECTOS -->
+      <section id="trabajos" class="section-card">
+        <h2 class="section-title">Trabajos / Proyectos</h2>
+        <p class="text-body">
+          Proyectos desarrollados durante el ciclo académico y prácticas de programación:
+        </p>
+        <a href="https://github.com/avaldez6adb-code" target="_blank" class="project-link">
+          Ver perfil de GitHub ↗
+        </a>
       </section>
 
-      <!-- Habilidades / Conocimientos -->
-      <section class="section-card" id="habilidades">
-        <h2 class="section-title">Conocimientos Técnicos</h2>
+      <!-- HABILIDADES -->
+      <section id="habilidades" class="section-card">
+        <h2 class="section-title">Habilidades Técnicas y Personales</h2>
         <div class="skills-grid">
-          <div class="skill-box">Python</div>
-          <div class="skill-box">Visual Studio</div>
-          <div class="skill-box">Apache NetBeans</div>
-          <div class="skill-box">Microsoft Word</div>
-          <div class="skill-box">Microsoft Excel</div>
-          <div class="skill-box">PowerPoint</div>
-          <div class="skill-box">Herramientas Digitales</div>
+          <div class="skill-box accent">Liderazgo</div>
+          <div class="skill-box accent">Trabajo en Equipo</div>
+          <div class="skill-box accent">Disciplina</div>
+          <div class="skill-box">Programación Básica</div>
+          <div class="skill-box">Lógica de Sistemas</div>
+          <div class="skill-box">Pensamiento Crítico</div>
+          <div class="skill-box">Resolución de Problemas</div>
         </div>
       </section>
 
-      <!-- Valores -->
-      <section class="section-card" id="valores">
-        <h2 class="section-title">Valores Personales</h2>
-        <div class="skills-grid accent-grid">
-          <div class="skill-box accent">Respeto</div>
-          <div class="skill-box accent">Honestidad</div>
-          <div class="skill-box accent">Responsabilidad</div>
-          <div class="skill-box accent">Compromiso</div>
-        </div>
+      <!-- VALORES -->
+      <section id="valores" class="section-card">
+        <h2 class="section-title">Valores y Formación</h2>
+        <p class="text-body">
+          Formado en el sistema preventivo salesiano, priorizando la responsabilidad, la empatía y la perseverancia en cada reto académico y personal.
+        </p>
       </section>
 
-      <!-- Contacto Directo -->
-      <section class="section-card" id="contacto">
-        <h2 class="section-title">Contacto Directo</h2>
+      <!-- CONTACTO -->
+      <section id="contacto" class="section-card">
+        <h2 class="section-title">Contacto</h2>
         <div class="contact-grid">
           <div class="contact-item">
-            <span class="label">Teléfono:</span>
-            <span class="val">5593 6485</span>
+            <span class="label">Ubicación</span>
+            <span class="val">Guatemala</span>
           </div>
           <div class="contact-item">
-            <span class="label">Correo:</span>
-            <span class="val">a.valdez.6adb@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <span class="label">Ubicación:</span>
-            <span class="val">Zona 21, Justo Rufino Barrios</span>
+            <span class="label">Educación</span>
+            <span class="val">Salesiano Don Bosco</span>
           </div>
         </div>
       </section>
@@ -120,46 +105,24 @@
 
   </div>
 
+  <!-- SCRIPT MODO CLARO / OSCURO -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('theme-toggle');
-      const themeIcon = document.getElementById('theme-icon');
-      const themeText = document.getElementById('theme-text');
-      const body = document.body;
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
 
-      if (!toggleBtn) return;
-
-      // Revisa la preferencia guardada en localStorage
-      const savedTheme = localStorage.getItem('theme');
-
-      if (savedTheme === 'light') {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        if (themeIcon) themeIcon.textContent = '🌙';
-        if (themeText) themeText.textContent = 'Modo Oscuro';
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      
+      if (document.body.classList.contains('light-mode')) {
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Modo Oscuro';
       } else {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        if (themeIcon) themeIcon.textContent = '☀️';
-        if (themeText) themeText.textContent = 'Modo Claro';
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Modo Claro';
       }
-
-      toggleBtn.addEventListener('click', () => {
-        if (body.classList.contains('light-mode')) {
-          body.classList.remove('light-mode');
-          body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-          if (themeIcon) themeIcon.textContent = '☀️';
-          if (themeText) themeText.textContent = 'Modo Claro';
-        } else {
-          body.classList.remove('dark-mode');
-          body.classList.add('light-mode');
-          localStorage.setItem('theme', 'light');
-          if (themeIcon) themeIcon.textContent = '🌙';
-          if (themeText) themeText.textContent = 'Modo Oscuro';
-        }
-      });
     });
   </script>
+
 </body>
 </html>
