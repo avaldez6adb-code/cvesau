@@ -6,7 +6,72 @@
   <title>Curriculum - Alejandro Esaú Valdez</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
+<body class="theme-dark">
+
+  <!-- PANEL DESPLEGABLE DE TEMAS -->
+  <div class="theme-panel" id="theme-panel">
+    <div class="theme-panel-header">
+      <span class="theme-panel-title">SELECT THEME</span>
+      <button class="theme-panel-close" id="theme-panel-close">✕</button>
+    </div>
+    
+    <div class="theme-options">
+      <!-- Opción Oscuro -->
+      <button class="theme-card active" data-theme="theme-dark">
+        <span class="theme-name">Dark</span>
+        <div class="theme-dots">
+          <span style="background: #0f172a;"></span>
+          <span style="background: #38bdf8;"></span>
+          <span style="background: #f43f5e;"></span>
+          <span style="background: #ffffff;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Classic (Claro) -->
+      <button class="theme-card" data-theme="theme-classic">
+        <span class="theme-name">Classic</span>
+        <div class="theme-dots">
+          <span style="background: #ffffff;"></span>
+          <span style="background: #0284c7;"></span>
+          <span style="background: #f43f5e;"></span>
+          <span style="background: #0f172a;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Koopa Beach -->
+      <button class="theme-card" data-theme="theme-koopa">
+        <span class="theme-name">Koopa Beach</span>
+        <div class="theme-dots">
+          <span style="background: #fef9c3;"></span>
+          <span style="background: #eab308;"></span>
+          <span style="background: #06b6d4;"></span>
+          <span style="background: #1e3a8a;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Choco Mountain -->
+      <button class="theme-card" data-theme="theme-choco">
+        <span class="theme-name">Choco Mountain</span>
+        <div class="theme-dots">
+          <span style="background: #f5f5f4;"></span>
+          <span style="background: #78350f;"></span>
+          <span style="background: #f97316;"></span>
+          <span style="background: #292524;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Rainbow Road -->
+      <button class="theme-card" data-theme="theme-rainbow">
+        <span class="theme-name">Rainbow Road</span>
+        <div class="theme-dots">
+          <span style="background: #18181b;"></span>
+          <span style="background: #ec4899;"></span>
+          <span style="background: #a855f7;"></span>
+          <span style="background: #eab308;"></span>
+        </div>
+      </button>
+    </div>
+  </div>
 
   <div class="app-container">
 
@@ -22,8 +87,8 @@
           <a href="#contacto" class="nav-link"><span class="num">06</span> contacto</a>
         </nav>
 
-        <!-- Botón de pintura / cambio de tema -->
-        <button class="theme-btn" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">
+        <!-- Botón de pintura / brocha -->
+        <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
           <span>🎨</span>
         </button>
       </div>
@@ -114,14 +179,6 @@
 
   </div>
 
-  <!-- SCRIPT MODO CLARO / OSCURO -->
-  <script>
-    const themeBtn = document.getElementById('theme-toggle');
-
-    themeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
