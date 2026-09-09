@@ -8,6 +8,9 @@
 </head>
 <body class="theme-azul">
 
+  <!-- CANVAS PARA EL FONDO ANIMADO DE PARTÍCULAS -->
+  <canvas id="bg-particles"></canvas>
+
   <!-- PANEL DESPLEGABLE DE TEMAS -->  
   <div class="theme-panel" id="theme-panel">
     <div class="theme-panel-header">
@@ -230,7 +233,7 @@
         <div class="about-education-grid">
           <div class="about-text">
             <p class="text-body">
-              Soy una persona responsable, highly disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
+              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
             </p>
             <p class="text-body" style="margin-top: 12px;">
               Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.
@@ -288,8 +291,10 @@
 
   </div>
 
+  <!-- SCRIPT PANEL DE TEMAS + FONDO ANIMADO DE PARTÍCULAS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // --- PANEL DE TEMAS ---
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themePanel = document.getElementById('theme-panel');
       const themePanelClose = document.getElementById('theme-panel-close');
@@ -319,6 +324,79 @@
           themePanel.classList.remove('open');
         }
       });
+
+      // --- ANIMACIÓN DE PARTÍCULAS EN CANVAS ---
+      const canvas = document.getElementById('bg-particles');
+      const ctx = canvas.getContext('2d');
+
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const numParticles = 45;
+      const particles = [];
+
+      for (let i = 0; i < numParticles; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 1,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          alpha: Math.random() * 0.5 + 0.2
+        });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Obtener color del acento según el tema actual
+        const computedAccent = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
+
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = computedAccent;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+        });
+
+        // Dibujar líneas suaves de conexión entre partículas cercanas
+        for (let i = 0; i < numParticles; i++) {
+          for (let j = i + 1; j < numParticles; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 110) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = computedAccent;
+              ctx.globalAlpha = (1 - dist / 110) * 0.2;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
     });
   </script>
 
