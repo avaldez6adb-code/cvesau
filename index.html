@@ -6,68 +6,63 @@
   <title>Curriculum - Alejandro Esaú Valdez</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme-dark">
+<body class="theme-azul">
 
   <!-- PANEL DESPLEGABLE DE TEMAS -->
   <div class="theme-panel" id="theme-panel">
     <div class="theme-panel-header">
-      <span class="theme-panel-title">SELECT THEME</span>
-      <button class="theme-panel-close" id="theme-panel-close">✕</button>
+      <span class="theme-panel-title">SELECCIONAR TEMA</span>
+      <button class="theme-panel-close" id="theme-panel-close" aria-label="Cerrar">✕</button>
     </div>
     
     <div class="theme-options">
-      <!-- Opción Oscuro -->
-      <button class="theme-card active" data-theme="theme-dark">
-        <span class="theme-name">Dark</span>
+      <!-- Opción Azul (Por defecto) -->
+      <button class="theme-card active" data-theme="theme-azul">
+        <span class="theme-name">Azul Profesional</span>
         <div class="theme-dots">
           <span style="background: #0f172a;"></span>
+          <span style="background: #2563eb;"></span>
           <span style="background: #38bdf8;"></span>
-          <span style="background: #f43f5e;"></span>
-          <span style="background: #ffffff;"></span>
         </div>
       </button>
 
-      <!-- Opción Classic (Claro) -->
-      <button class="theme-card" data-theme="theme-classic">
-        <span class="theme-name">Classic</span>
+      <!-- Opción Naranja -->
+      <button class="theme-card" data-theme="theme-naranja">
+        <span class="theme-name">Naranja Cálido</span>
         <div class="theme-dots">
-          <span style="background: #ffffff;"></span>
-          <span style="background: #0284c7;"></span>
-          <span style="background: #f43f5e;"></span>
-          <span style="background: #0f172a;"></span>
+          <span style="background: #1c1917;"></span>
+          <span style="background: #ea580c;"></span>
+          <span style="background: #fb923c;"></span>
         </div>
       </button>
 
-      <!-- Opción Koopa Beach -->
-      <button class="theme-card" data-theme="theme-koopa">
-        <span class="theme-name">Koopa Beach</span>
-        <div class="theme-dots">
-          <span style="background: #fef9c3;"></span>
-          <span style="background: #eab308;"></span>
-          <span style="background: #06b6d4;"></span>
-          <span style="background: #1e3a8a;"></span>
-        </div>
-      </button>
-
-      <!-- Opción Choco Mountain -->
-      <button class="theme-card" data-theme="theme-choco">
-        <span class="theme-name">Choco Mountain</span>
-        <div class="theme-dots">
-          <span style="background: #f5f5f4;"></span>
-          <span style="background: #78350f;"></span>
-          <span style="background: #f97316;"></span>
-          <span style="background: #292524;"></span>
-        </div>
-      </button>
-
-      <!-- Opción Rainbow Road -->
-      <button class="theme-card" data-theme="theme-rainbow">
-        <span class="theme-name">Rainbow Road</span>
+      <!-- Opción Rojo -->
+      <button class="theme-card" data-theme="theme-rojo">
+        <span class="theme-name">Rojo Elegante</span>
         <div class="theme-dots">
           <span style="background: #18181b;"></span>
-          <span style="background: #ec4899;"></span>
-          <span style="background: #a855f7;"></span>
-          <span style="background: #eab308;"></span>
+          <span style="background: #dc2626;"></span>
+          <span style="background: #f87171;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Oscuro Puro -->
+      <button class="theme-card" data-theme="theme-oscuro">
+        <span class="theme-name">Modo Oscuro</span>
+        <div class="theme-dots">
+          <span style="background: #09090b;"></span>
+          <span style="background: #27272a;"></span>
+          <span style="background: #a1a1aa;"></span>
+        </div>
+      </button>
+
+      <!-- Opción Claro -->
+      <button class="theme-card" data-theme="theme-claro">
+        <span class="theme-name">Modo Claro</span>
+        <div class="theme-dots">
+          <span style="background: #ffffff;"></span>
+          <span style="background: #f1f5f9;"></span>
+          <span style="background: #0284c7;"></span>
         </div>
       </button>
     </div>
@@ -179,6 +174,48 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <!-- SCRIPT PARA ABRIR/CERRAR PANEL Y CAMBIAR TEMAS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themePanel = document.getElementById('theme-panel');
+      const themePanelClose = document.getElementById('theme-panel-close');
+      const themeCards = document.querySelectorAll('.theme-card');
+
+      // Función para alternar el panel
+      themeToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themePanel.classList.toggle('open');
+      });
+
+      // Cerrar panel al hacer clic en la X
+      themePanelClose.addEventListener('click', () => {
+        themePanel.classList.remove('open');
+      });
+
+      // Cambiar de tema
+      themeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const selectedTheme = card.getAttribute('data-theme');
+
+          // Limpiar clases de tema previas
+          document.body.className = '';
+          document.body.classList.add(selectedTheme);
+
+          // Actualizar estado activo en los botones de tema
+          themeCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+        });
+      });
+
+      // Cerrar panel si se hace clic fuera de él
+      document.addEventListener('click', (e) => {
+        if (!themePanel.contains(e.target) && !themeToggleBtn.contains(e.target)) {
+          themePanel.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
