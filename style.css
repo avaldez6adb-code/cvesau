@@ -112,6 +112,7 @@ body {
 .app-container {
   max-width: 960px;
   margin: 0 auto;
+  padding-top: 70px; /* Margen superior para compensar la barra fija */
 }
 
 /* --- PANEL DESPLEGABLE TIPO MARIO KART / MAX BÖCK --- */
@@ -216,14 +217,21 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* --- BARRA SUPERIOR DE NAVEGACIÓN --- */
+/* --- BARRA SUPERIOR DE NAVEGACIÓN (AHORA FIJA EN LA PARTE SUPERIOR) --- */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 15px 20px;
-  background: transparent;
-  margin-bottom: 10px;
+  padding: 15px 30px;
+  background: var(--panel-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+  z-index: 900;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .nav-right {
@@ -272,6 +280,24 @@ body {
 
 .nav-link:hover {
   opacity: 0.8;
+}
+
+/* ESTILO ESPECIAL PARA EL BOTÓN DE DESCARGA CV */
+.nav-link.cv-link {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link.cv-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.nav-link.cv-link::after {
+  display: none;
 }
 
 /* BOTÓN DE BROCHA / PINTURA */
@@ -343,7 +369,7 @@ body {
   border-radius: 16px;
   padding: 25px;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 
 .section-card:hover {
