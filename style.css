@@ -4,7 +4,7 @@
 
 /* 1. TEMA AZUL PROFESIONAL */
 body.theme-azul {
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);  
   --card-bg: rgba(15, 23, 42, 0.75);
   --card-border: rgba(56, 189, 248, 0.2);
   --primary-color: #38bdf8;
