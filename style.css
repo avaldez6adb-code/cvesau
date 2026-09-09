@@ -13,6 +13,8 @@ body, body.dark-mode {
   --title-color: #ffffff;
   --box-bg: rgba(15, 23, 42, 0.6);
   --btn-bg: rgba(255, 255, 255, 0.08);
+  --paint-btn-bg: #e11d48;
+  --paint-btn-hover: #be123c;
 }
 
 /* Variables Modo Claro */
@@ -28,6 +30,8 @@ body.light-mode {
   --title-color: #0284c7;
   --box-bg: #e2e8f0;
   --btn-bg: rgba(0, 0, 0, 0.06);
+  --paint-btn-bg: #f43f5e;
+  --paint-btn-hover: #e11d48;
 }
 
 * {
@@ -46,112 +50,122 @@ body {
   color: var(--text-main);
   font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 20px;
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .app-container {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-/* Hero Principal */
-.hero-card {
-  position: relative;
+/* BARRA SUPERIOR DE NAVEGACIÓN */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
   background: var(--card-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 35px 25px;
-  text-align: center;
+  border-radius: 16px;
   margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-/* Botón Cambiar Tema */
-.theme-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--btn-bg);
-  border: 1px solid var(--card-border);
-  color: var(--text-main);
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-}
-
-.theme-btn:hover {
-  background: var(--primary-color);
-  color: #ffffff;
-}
-
-/* Texto Portafolio de prácticas */
 .portfolio-tag {
   color: var(--accent-color);
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-top: 15px;
-  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ENLACES TIPO ESTILO REFERENCIA (01 home, 02 writing, etc.) */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link .num {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+/* BOTÓN DE PINTURA (CIRCULAR) */
+.theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--paint-btn-bg);
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: var(--paint-btn-hover);
+  transform: scale(1.08);
+}
+
+/* Hero Principal */
+.hero-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: left;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .user-name {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--title-color);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .user-title {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--primary-color);
-  margin-bottom: 25px;
   font-weight: 500;
-}
-
-/* Botones Navegación Pegajosos (Sticky) */
-.quick-nav {
-  position: sticky;
-  top: 15px;
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid var(--card-border);
-}
-
-.chip-btn {
-  text-decoration: none;
-  color: var(--text-main);
-  background: var(--btn-bg);
-  border: 1px solid var(--card-border);
-  padding: 8px 18px;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-
-.chip-btn:hover {
-  background: var(--primary-color);
-  color: #ffffff;
-  font-weight: 600;
-  transform: translateY(-2px);
 }
 
 /* Tarjetas de Contenido */
@@ -168,7 +182,7 @@ body {
   border-radius: 16px;
   padding: 25px;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .section-card:hover {
@@ -297,4 +311,16 @@ body {
 .contact-link:hover {
   color: var(--primary-color);
   text-decoration: underline;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
