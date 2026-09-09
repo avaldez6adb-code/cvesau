@@ -1,98 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-/* --- DEFINICIÓN DE TEMAS DE COLORES --- */
+/* --- PALETAS DE COLORES Y DEGRADADOS PROFESIONALES --- */
 
-/* Tema 1: Dark (Por defecto) */
-body.theme-dark {
-  --bg-color: #0f172a;
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  --card-bg: rgba(30, 41, 59, 0.75);
-  --card-border: rgba(255, 255, 255, 0.08);
+/* 1. TEMA AZUL PROFESIONAL */
+body.theme-azul {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(56, 189, 248, 0.2);
   --primary-color: #38bdf8;
-  --secondary-color: #818cf8;
-  --accent-color: #34d399;
+  --secondary-color: #60a5fa;
+  --accent-color: #38bdf8;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --title-color: #ffffff;
-  --box-bg: rgba(15, 23, 42, 0.6);
-  --nav-num: #f43f5e;
-  --nav-active-bar: #f43f5e;
-  --panel-bg: #1e293b;
+  --box-bg: rgba(30, 41, 59, 0.7);
+  --nav-num: #38bdf8;
+  --nav-active-bar: #38bdf8;
+  --panel-bg: rgba(15, 23, 42, 0.95);
 }
 
-/* Tema 2: Classic (Claro) */
-body.theme-classic {
-  --bg-color: #f8fafc;
-  --bg-gradient: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
-  --card-bg: rgba(255, 255, 255, 0.88);
-  --card-border: rgba(0, 0, 0, 0.06);
-  --primary-color: #0284c7;
-  --secondary-color: #4f46e5;
-  --accent-color: #059669;
-  --text-main: #334155;
-  --text-muted: #64748b;
-  --title-color: #0f172a;
-  --box-bg: #e2e8f0;
-  --nav-num: #d97706;
-  --nav-active-bar: #b91c1c;
-  --panel-bg: #f87171;
-}
-
-/* Tema 3: Koopa Beach */
-body.theme-koopa {
-  --bg-color: #fef9c3;
-  --bg-gradient: linear-gradient(135deg, #fef08a 0%, #bae6fd 100%);
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(234, 179, 8, 0.2);
-  --primary-color: #0284c7;
-  --secondary-color: #eab308;
-  --accent-color: #0d9488;
-  --text-main: #1e3a8a;
-  --text-muted: #475569;
-  --title-color: #1e3a8a;
-  --box-bg: #fef3c7;
-  --nav-num: #eab308;
-  --nav-active-bar: #0284c7;
-  --panel-bg: #38bdf8;
-}
-
-/* Tema 4: Choco Mountain */
-body.theme-choco {
-  --bg-color: #292524;
-  --bg-gradient: linear-gradient(135deg, #44403c 0%, #1c1917 100%);
-  --card-bg: rgba(68, 64, 60, 0.75);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --primary-color: #f97316;
+/* 2. TEMA NARANJA CÁLIDO */
+body.theme-naranja {
+  --bg-gradient: linear-gradient(135deg, #1c1917 0%, #7c2d12 50%, #c2410c 100%);
+  --card-bg: rgba(28, 25, 23, 0.8);
+  --card-border: rgba(251, 146, 60, 0.25);
+  --primary-color: #fb923c;
   --secondary-color: #fdba74;
-  --accent-color: #84cc16;
+  --accent-color: #f97316;
   --text-main: #f5f5f4;
   --text-muted: #a8a29e;
   --title-color: #ffffff;
-  --box-bg: rgba(28, 25, 23, 0.6);
-  --nav-num: #f97316;
-  --nav-active-bar: #f97316;
-  --panel-bg: #78350f;
+  --box-bg: rgba(44, 36, 32, 0.7);
+  --nav-num: #fb923c;
+  --nav-active-bar: #fb923c;
+  --panel-bg: rgba(28, 25, 23, 0.95);
 }
 
-/* Tema 5: Rainbow Road */
-body.theme-rainbow {
-  --bg-color: #09090b;
-  --bg-gradient: linear-gradient(135deg, #18181b 0%, #3f3f46 100%);
-  --card-bg: rgba(24, 24, 27, 0.85);
-  --card-border: rgba(236, 72, 153, 0.3);
-  --primary-color: #ec4899;
-  --secondary-color: #a855f7;
-  --accent-color: #eab308;
+/* 3. TEMA ROJO ELEGANTE */
+body.theme-rojo {
+  --bg-gradient: linear-gradient(135deg, #18181b 0%, #7f1d1d 50%, #991b1b 100%);
+  --card-bg: rgba(24, 24, 27, 0.8);
+  --card-border: rgba(248, 113, 113, 0.25);
+  --primary-color: #f87171;
+  --secondary-color: #fca5a5;
+  --accent-color: #ef4444;
   --text-main: #f4f4f5;
   --text-muted: #a1a1aa;
   --title-color: #ffffff;
-  --box-bg: rgba(39, 39, 42, 0.8);
-  --nav-num: #ec4899;
-  --nav-active-bar: #a855f7;
-  --panel-bg: #831843;
+  --box-bg: rgba(39, 39, 42, 0.7);
+  --nav-num: #f87171;
+  --nav-active-bar: #f87171;
+  --panel-bg: rgba(24, 24, 27, 0.95);
 }
 
-/* --- ESTILOS GENERALES --- */
+/* 4. TEMA OSCURO PURO */
+body.theme-oscuro {
+  --bg-gradient: linear-gradient(135deg, #09090b 0%, #18181b 50%, #27272a 100%);
+  --card-bg: rgba(24, 24, 27, 0.85);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --primary-color: #e4e4e7;
+  --secondary-color: #a1a1aa;
+  --accent-color: #3f3f46;
+  --text-main: #f4f4f5;
+  --text-muted: #71717a;
+  --title-color: #ffffff;
+  --box-bg: rgba(39, 39, 42, 0.8);
+  --nav-num: #e4e4e7;
+  --nav-active-bar: #e4e4e7;
+  --panel-bg: rgba(18, 18, 18, 0.95);
+}
+
+/* 5. TEMA CLARO */
+body.theme-claro {
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --primary-color: #0284c7;
+  --secondary-color: #0369a1;
+  --accent-color: #0284c7;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --title-color: #0f172a;
+  --box-bg: #f1f5f9;
+  --nav-num: #0284c7;
+  --nav-active-bar: #0284c7;
+  --panel-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* --- ESTILOS BASE --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -111,7 +106,7 @@ body {
   min-height: 100vh;
   padding: 20px;
   line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .app-container {
@@ -122,18 +117,21 @@ body {
 /* --- PANEL DESPLEGABLE TIPO MARIO KART / MAX BÖCK --- */
 .theme-panel {
   position: fixed;
-  top: -200px;
+  top: 0;
   left: 0;
   width: 100%;
   background: var(--panel-bg);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--card-border);
   padding: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   z-index: 1000;
-  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .theme-panel.open {
-  top: 0;
+  transform: translateY(0);
 }
 
 .theme-panel-header {
@@ -148,16 +146,22 @@ body {
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 1.5px;
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .theme-panel-close {
-  background: none;
+  background: transparent;
   border: none;
-  color: #ffffff;
+  color: var(--text-main);
   font-size: 1.2rem;
   cursor: pointer;
-  padding: 0 5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.theme-panel-close:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .theme-options {
@@ -170,8 +174,8 @@ body {
 }
 
 .theme-card {
-  background: #ffffff;
-  border: 3px solid transparent;
+  background: var(--box-bg);
+  border: 2px solid var(--card-border);
   border-radius: 12px;
   padding: 12px 18px;
   cursor: pointer;
@@ -185,22 +189,23 @@ body {
 
 .theme-card:hover {
   transform: translateY(-3px);
+  border-color: var(--primary-color);
 }
 
 .theme-card.active {
-  border-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .theme-name {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 .theme-dots {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 .theme-dots span {
@@ -208,7 +213,7 @@ body {
   height: 14px;
   border-radius: 50%;
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* --- BARRA SUPERIOR DE NAVEGACIÓN --- */
@@ -282,15 +287,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
 }
 
 .theme-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
-/* --- CONTENIDO --- */
+/* --- TARJETAS Y CONTENIDO --- */
 .hero-card {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -299,7 +304,7 @@ body {
   padding: 40px 30px;
   text-align: left;
   margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -358,9 +363,13 @@ body {
   margin-bottom: 12px;
 }
 
+.text-body:last-child {
+  margin-bottom: 0;
+}
+
 .badge-year {
   display: inline-block;
-  background: rgba(129, 140, 248, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--secondary-color);
   font-size: 0.8rem;
   padding: 4px 10px;
@@ -388,8 +397,8 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   padding: 8px 16px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
   border-radius: 8px;
   transition: all 0.2s ease;
 }
@@ -416,9 +425,8 @@ body {
 }
 
 .skill-box.accent {
-  background: rgba(52, 211, 153, 0.12);
-  border-color: rgba(52, 211, 153, 0.3);
-  color: var(--accent-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
   font-weight: 600;
 }
 
