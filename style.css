@@ -1,6 +1,5 @@
 /* CSS PORTAFOLIO ALEJANDRO ESAÚ VALDEZ */
 
-/* Reset & variables globales */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +17,10 @@
   --badge-text: #60a5fa;
 }
 
-/* Temas dinámicos */
+/* ===================================================
+   VARIABLES DE TEMAS CON FONDOS DINÁMICOS
+   =================================================== */
+
 body.theme-azul {
   --bg-color: #0f172a;
   --card-bg: rgba(30, 41, 59, 0.88);
@@ -74,22 +76,22 @@ body.theme-claro {
   --badge-text: #0369a1;
 }
 
-/* Base */
+/* Configuración de Pantalla Base */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
   position: relative;
   overflow-x: hidden;
 }
 
-/* Canvas del Fondo de Nodos */
+/* Canvas del Fondo Interactivo */
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -100,21 +102,21 @@ body {
   pointer-events: none;
 }
 
-/* Aura sutil ambiental */
+/* Aura Resplandeciente de Fondo según el Tema */
 body::before {
   content: "";
   position: fixed;
-  top: 20%;
-  left: 30%;
+  top: 15%;
+  left: 25%;
   width: 500px;
   height: 500px;
   z-index: -1;
   background: var(--accent-color);
-  opacity: 0.08;
+  opacity: 0.12;
   filter: blur(140px);
   border-radius: 50%;
   pointer-events: none;
-  transition: background 0.3s ease;
+  transition: background 0.4s ease;
 }
 
 .app-container {
@@ -123,30 +125,30 @@ body::before {
   padding: 0 20px 20px 20px;
 }
 
-/* Navegación Sticky */
+/* Barra de Navegación Sticky */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: var(--bg-color);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: flex-end;
-  padding: 15px 0;
+  padding: 14px 0;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .main-nav {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -175,7 +177,7 @@ body::before {
   color: #fff;
 }
 
-/* Selector de Temas */
+/* Botón y Panel de Temas */
 .theme-btn {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -248,7 +250,6 @@ body::before {
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
-  text-align: left;
   transition: border-color 0.2s ease;
 }
 
@@ -267,7 +268,7 @@ body::before {
   border-radius: 50%;
 }
 
-/* Secciones & Tarjetas */
+/* Tarjetas Principales */
 .hero-card, .section-card {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -275,17 +276,13 @@ body::before {
   border-radius: 16px;
   padding: 32px;
   margin-bottom: 30px;
-}
-
-.hero-card {
-  padding: 40px;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .user-greeting {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.5px;
   margin-bottom: 0.8rem;
 }
 
@@ -325,19 +322,19 @@ body::before {
   font-size: 0.85rem;
 }
 
-/* Grillas & Tarjetas Internas */
-.projects-grid, .certificates-grid {
+/* Grillas y Elementos Internos */
+.projects-grid, .certificates-grid, .contact-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .project-card, .certificate-card, .education-box, .contact-item {
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 24px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.4s ease;
 }
 
 .certificate-card:hover, .project-card:hover {
@@ -356,7 +353,7 @@ body::before {
 }
 
 .certificate-title, .project-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-top: 8px;
   margin-bottom: 4px;
@@ -404,13 +401,7 @@ body::before {
 .skills-wrapper, .about-education-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-@media (max-width: 640px) {
-  .skills-wrapper, .about-education-grid {
-    grid-template-columns: 1fr;
-  }
+  gap: 20px;
 }
 
 .skills-subtitle {
@@ -436,12 +427,6 @@ body::before {
   border-color: var(--accent-color);
 }
 
-.contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
 .contact-item {
   display: flex;
   justify-content: space-between;
@@ -459,4 +444,76 @@ body::before {
   padding: 20px 0 40px 0;
   color: var(--text-sub);
   font-size: 0.85rem;
+}
+
+/* Ajuste general para textos largos */
+.val, .contact-link {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===================================================
+   DISEÑO RESPONSIVO MÓVIL (PANTALLAS PEQUEÑAS)
+   =================================================== */
+
+@media (max-width: 640px) {
+  .app-container {
+    padding: 0 12px 20px 12px;
+  }
+
+  .hero-card, .section-card {
+    padding: 20px 16px;
+  }
+
+  /* Compacta la navegación */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  /* Corrige el contacto: coloca los datos debajo de los títulos */
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 16px;
+  }
+
+  .contact-item .label {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+  }
+
+  .contact-item .val {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .skills-wrapper, .about-education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-greeting {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
 }
