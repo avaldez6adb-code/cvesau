@@ -8,7 +8,7 @@
 </head>
 <body class="theme-azul">
 
-  <!-- CANVAS PARA EL FONDO INTERACTIVO DE NODOS -->
+  <!-- CANVAS PARA EL FONDO INTERACTIVO DE NODOS ANIMADOS -->
   <canvas id="bg-canvas"></canvas>
 
   <!-- PANEL DESPLEGABLE DE TEMAS -->  
@@ -291,7 +291,7 @@
 
   </div>
 
-  <!-- SCRIPT: PANEL DE TEMAS + FONDO DE NODOS INTERACTIVO -->
+  <!-- SCRIPT: PANEL DE TEMAS Y FONDO ANIMADO DE NODOS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // --- CONTROL DEL PANEL DE TEMAS ---
@@ -325,14 +325,14 @@
         }
       });
 
-      // --- FONDO ANIMADO DE NODOS & INTERACCIÓN CON EL MOUSE ---
+      // --- FONDO ANIMADO DE NODOS DINÁMICOS POR TEMA ---
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
 
       let width = canvas.width = window.innerWidth;
       let height = canvas.height = window.innerHeight;
 
-      const mouse = { x: null, y: null, radius: 150 };
+      const mouse = { x: null, y: null, radius: 140 };
 
       window.addEventListener('mousemove', (e) => {
         mouse.x = e.x;
@@ -353,9 +353,9 @@
         constructor() {
           this.x = Math.random() * width;
           this.y = Math.random() * height;
-          this.radius = Math.random() * 2 + 1.5;
-          this.vx = (Math.random() - 0.5) * 0.8;
-          this.vy = (Math.random() - 0.5) * 0.8;
+          this.radius = Math.random() * 2 + 1.2;
+          this.vx = (Math.random() - 0.5) * 0.7;
+          this.vy = (Math.random() - 0.5) * 0.7;
         }
 
         update() {
@@ -365,7 +365,6 @@
           if (this.x < 0 || this.x > width) this.vx *= -1;
           if (this.y < 0 || this.y > height) this.vy *= -1;
 
-          // Interacción con ratón
           if (mouse.x !== null && mouse.y !== null) {
             const dx = mouse.x - this.x;
             const dy = mouse.y - this.y;
@@ -374,8 +373,8 @@
             if (dist < mouse.radius) {
               const angle = Math.atan2(dy, dx);
               const force = (mouse.radius - dist) / mouse.radius;
-              this.x -= Math.cos(angle) * force * 2;
-              this.y -= Math.sin(angle) * force * 2;
+              this.x -= Math.cos(angle) * force * 1.8;
+              this.y -= Math.sin(angle) * force * 1.8;
             }
           }
         }
@@ -388,12 +387,13 @@
         }
       }
 
-      const nodeCount = Math.floor((width * height) / 18000);
-      const nodes = Array.from({ length: Math.min(nodeCount, 60) }, () => new Node());
+      const nodeCount = Math.floor((width * height) / 20000);
+      const nodes = Array.from({ length: Math.min(nodeCount, 55) }, () => new Node());
 
       function animate() {
         ctx.clearRect(0, 0, width, height);
         
+        // Toma el color de acento según el tema activo
         const accentColor = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
 
         nodes.forEach(node => {
@@ -401,20 +401,19 @@
           node.draw(accentColor);
         });
 
-        // Conexiones de líneas entre nodos
         for (let i = 0; i < nodes.length; i++) {
           for (let j = i + 1; j < nodes.length; j++) {
             const dx = nodes[i].x - nodes[j].x;
             const dy = nodes[i].y - nodes[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            if (dist < 130) {
+            if (dist < 120) {
               ctx.beginPath();
               ctx.moveTo(nodes[i].x, nodes[i].y);
               ctx.lineTo(nodes[j].x, nodes[j].y);
               ctx.strokeStyle = accentColor;
-              ctx.globalAlpha = 1 - (dist / 130);
-              ctx.lineWidth = 0.7;
+              ctx.globalAlpha = 1 - (dist / 120);
+              ctx.lineWidth = 0.6;
               ctx.stroke();
               ctx.globalAlpha = 1;
             }
