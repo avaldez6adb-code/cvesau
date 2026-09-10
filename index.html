@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body class="theme-azul">
 
@@ -14,13 +14,13 @@
   <!-- PANEL DESPLEGABLE DE TEMAS -->  
   <div class="theme-panel" id="theme-panel">
     <div class="theme-panel-header">
-      <span class="theme-panel-title">SELECCIONAR TEMA</span>
+      <span class="theme-panel-title" data-i18n="theme_panel_title">SELECCIONAR TEMA</span>
       <button class="theme-panel-close" id="theme-panel-close" aria-label="Cerrar">✕</button>
     </div>
     
     <div class="theme-options">
       <button class="theme-card active" data-theme="theme-azul">
-        <span class="theme-name">Azul Profesional</span>
+        <span class="theme-name" data-i18n="theme_blue">Azul Profesional</span>
         <div class="theme-dots">
           <span style="background: #0f172a;"></span>
           <span style="background: #2563eb;"></span>
@@ -29,7 +29,7 @@
       </button>
 
       <button class="theme-card" data-theme="theme-naranja">
-        <span class="theme-name">Naranja Cálido</span>
+        <span class="theme-name" data-i18n="theme_orange">Naranja Cálido</span>
         <div class="theme-dots">
           <span style="background: #1c1917;"></span>
           <span style="background: #ea580c;"></span>
@@ -38,7 +38,7 @@
       </button>
 
       <button class="theme-card" data-theme="theme-rojo">
-        <span class="theme-name">Rojo Elegante</span>
+        <span class="theme-name" data-i18n="theme_red">Rojo Elegante</span>
         <div class="theme-dots">
           <span style="background: #18181b;"></span>
           <span style="background: #dc2626;"></span>
@@ -47,7 +47,7 @@
       </button>
 
       <button class="theme-card" data-theme="theme-oscuro">
-        <span class="theme-name">Modo Oscuro</span>
+        <span class="theme-name" data-i18n="theme_dark">Modo Oscuro</span>
         <div class="theme-dots">
           <span style="background: #09090b;"></span>
           <span style="background: #27272a;"></span>
@@ -56,7 +56,7 @@
       </button>
 
       <button class="theme-card" data-theme="theme-claro">
-        <span class="theme-name">Modo Claro</span>
+        <span class="theme-name" data-i18n="theme_light">Modo Claro</span>
         <div class="theme-dots">
           <span style="background: #ffffff;"></span>
           <span style="background: #f1f5f9;"></span>
@@ -72,26 +72,34 @@
     <header class="navbar">
       <div class="nav-right">
         <nav class="main-nav">
-          <a href="#inicio" class="nav-link active">inicio</a>
-          <a href="#proyectos" class="nav-link">proyectos</a>
-          <a href="#habilidades" class="nav-link">habilidades</a>
-          <a href="#certificados" class="nav-link">certificados</a>
-          <a href="#sobre-mi" class="nav-link">sobre mí</a>
-          <a href="#contacto" class="nav-link">contacto</a>
-          <a href="cv-Esau-valdez.pdf" download="cv-Esau-valdez.pdf" class="nav-link cv-link">cv</a>
+          <a href="#inicio" class="nav-link active" data-i18n="nav_start">inicio</a>
+          <a href="#proyectos" class="nav-link" data-i18n="nav_projects">proyectos</a>
+          <a href="#habilidades" class="nav-link" data-i18n="nav_skills">habilidades</a>
+          <a href="#certificados" class="nav-link" data-i18n="nav_certificates">certificados</a>
+          <a href="#sobre-mi" class="nav-link" data-i18n="nav_about">sobre mí</a>
+          <a href="#contacto" class="nav-link" data-i18n="nav_contact">contacto</a>
+          <a href="cv-Esau-valdez.pdf" download="cv-Esau-valdez.pdf" class="nav-link cv-link" data-i18n="nav_cv">cv</a>
         </nav>
 
-        <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
-          <span>🎨</span>
-        </button>
+        <div class="nav-controls">
+          <!-- BOTÓN SELECTOR DE IDIOMA -->
+          <button class="lang-btn" id="lang-toggle" title="Cambiar Idioma">
+            <span id="lang-label">EN</span>
+          </button>
+
+          <!-- BOTÓN SELECTOR DE TEMA -->
+          <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
+            <span>🎨</span>
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- HERO PRINCIPAL -->
     <section id="inicio" class="hero-card">
-      <h2 class="user-greeting">Hola, soy Alejandro Esaú Valdez</h2>
-      <p class="user-title">Desarrollador Junior | Bachiller en Computación</p>
-      <p class="hero-description">
+      <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
+      <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
+      <p class="hero-description" data-i18n="hero_desc">
         Especializado en lógica de programación, desarrollo de software y construcción de interfaces funcionales. Enfocado en resolver problemas reales a través de código eficiente.
       </p>
     </section>
@@ -102,30 +110,30 @@
       <!-- PROYECTOS DESTACADOS -->
       <section id="proyectos" class="section-card">
         <div class="section-header">
-          <h2 class="section-title">Proyectos Destacados</h2>
+          <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
           <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="github-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
         </div>
-        <p class="text-body" style="margin-bottom: 20px;">
+        <p class="text-body" style="margin-bottom: 20px;" data-i18n="projects_intro">
           Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:
         </p>
 
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-content">
-              <h3 class="project-title">Sistema de Gestión Académica</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="project_1_title">Sistema de Gestión Académica</h3>
+              <p class="project-description" data-i18n="project_1_desc">
                 Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.
               </p>
               <div class="project-tags">
                 <span class="tag">C# / .NET</span>
-                <span class="tag">SQL / BD</span>
-                <span class="tag">Lógica POO</span>
+                <span class="tag" data-i18n="tag_sql">SQL / BD</span>
+                <span class="tag" data-i18n="tag_oop">Lógica POO</span>
               </div>
               <div class="project-actions">
-                <a href="https://andre303q.github.io/rgpracticas/" target="_blank" rel="noopener noreferrer" class="btn-card primary">Ver Aplicación ↗</a>
+                <a href="https://andre303q.github.io/rgpracticas/" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_app">Ver Aplicación ↗</a>
               </div>
             </div>
           </article>
@@ -134,30 +142,30 @@
 
       <!-- HABILIDADES -->
       <section id="habilidades" class="section-card">
-        <h2 class="section-title">Habilidades & Competencias</h2>
+        <h2 class="section-title" data-i18n="skills_title">Habilidades & Competencias</h2>
         
         <div class="skills-wrapper">
           <div class="skills-group">
-            <h3 class="skills-subtitle">💻 Tecnologías & Programación</h3>
+            <h3 class="skills-subtitle" data-i18n="skills_sub1">💻 Tecnologías & Programación</h3>
             <div class="skills-grid">
-              <div class="skill-box accent">Lógica de Sistemas</div>
-              <div class="skill-box accent">Programación POO</div>
+              <div class="skill-box accent" data-i18n="skill_logic">Lógica de Sistemas</div>
+              <div class="skill-box accent" data-i18n="skill_oop">Programación POO</div>
               <div class="skill-box">HTML5 & CSS3</div>
               <div class="skill-box">JavaScript</div>
-              <div class="skill-box">Bases de Datos</div>
-              <div class="skill-box">Resolución de Algoritmos</div>
+              <div class="skill-box" data-i18n="skill_db">Bases de Datos</div>
+              <div class="skill-box" data-i18n="skill_algo">Resolución de Algoritmos</div>
             </div>
           </div>
 
           <div class="skills-group">
-            <h3 class="skills-subtitle">🤝 Fortalezas Personales</h3>
+            <h3 class="skills-subtitle" data-i18n="skills_sub2">🤝 Fortalezas Personales</h3>
             <div class="skills-grid">
-              <div class="skill-box accent">Liderazgo</div>
-              <div class="skill-box accent">Trabajo en Equipo</div>
-              <div class="skill-box accent">Disciplina Salesiana</div>
-              <div class="skill-box">Pensamiento Crítico</div>
-              <div class="skill-box">Adaptabilidad</div>
-              <div class="skill-box">Comunicación Asertiva</div>
+              <div class="skill-box accent" data-i18n="skill_leadership">Liderazgo</div>
+              <div class="skill-box accent" data-i18n="skill_teamwork">Trabajo en Equipo</div>
+              <div class="skill-box accent" data-i18n="skill_salesian">Disciplina Salesiana</div>
+              <div class="skill-box" data-i18n="skill_critical">Pensamiento Crítico</div>
+              <div class="skill-box" data-i18n="skill_adaptability">Adaptabilidad</div>
+              <div class="skill-box" data-i18n="skill_comm">Comunicación Asertiva</div>
             </div>
           </div>
         </div>
@@ -165,8 +173,8 @@
 
       <!-- CERTIFICADOS -->
       <section id="certificados" class="section-card">
-        <h2 class="section-title">Certificados & Logros</h2>
-        <p class="text-body section-desc">
+        <h2 class="section-title" data-i18n="cert_title">Certificados & Logros</h2>
+        <p class="text-body section-desc" data-i18n="cert_desc">
           Acreditaciones e insignias oficiales emitidas por instituciones reconocidas internacionalmente:
         </p>
 
@@ -179,11 +187,11 @@
                 <h3 class="certificate-title">JavaScript Essentials 1</h3>
               </div>
               <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
-              <p class="certificate-desc">
+              <p class="certificate-desc" data-i18n="cert_js_desc">
                 Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
               </p>
               <div class="certificate-actions">
-                <a href="https://www.credly.com/badges/1c712ebc-e84f-4cae-9120-3b904dcbb25a/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary">Ver Credencial ↗</a>
+                <a href="https://www.credly.com/badges/1c712ebc-e84f-4cae-9120-3b904dcbb25a/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_cred">Ver Credencial ↗</a>
               </div>
             </div>
           </article>
@@ -195,11 +203,11 @@
                 <h3 class="certificate-title">Networking Basics</h3>
               </div>
               <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc">
+              <p class="certificate-desc" data-i18n="cert_net_desc">
                 Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
               </p>
               <div class="certificate-actions">
-                <a href="https://www.credly.com/badges/f146016b-e4df-403f-a580-b8fdb78fef4e/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary">Ver Credencial ↗</a>
+                <a href="https://www.credly.com/badges/f146016b-e4df-403f-a580-b8fdb78fef4e/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_cred">Ver Credencial ↗</a>
               </div>
             </div>
           </article>
@@ -211,11 +219,11 @@
                 <h3 class="certificate-title">Introduction to Cybersecurity</h3>
               </div>
               <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc">
+              <p class="certificate-desc" data-i18n="cert_sec_desc">
                 Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
               </p>
               <div class="certificate-actions">
-                <a href="https://www.credly.com/badges/eb82b7d7-99f5-498a-884a-3c6c701ed45a/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary">Ver Credencial ↗</a>
+                <a href="https://www.credly.com/badges/eb82b7d7-99f5-498a-884a-3c6c701ed45a/public_url" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_cred">Ver Credencial ↗</a>
               </div>
             </div>
           </article>
@@ -225,36 +233,36 @@
 
       <!-- SOBRE MÍ Y ESTUDIOS -->
       <section id="sobre-mi" class="section-card">
-        <h2 class="section-title">Sobre Mí & Formación</h2>
+        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Formación</h2>
         
         <div class="about-education-grid">
           <div class="about-text">
-            <p class="text-body">
+            <p class="text-body" data-i18n="about_p1">
               Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
             </p>
-            <p class="text-body" style="margin-top: 12px;">
+            <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
               Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.
             </p>
           </div>
 
           <div class="education-box">
-            <span class="badge-year">Graduación 2026</span>
-            <h3 class="item-title">Bachiller en Ciencias y Letras con Orientación en Computación</h3>
+            <span class="badge-year" data-i18n="edu_year">Graduación 2026</span>
+            <h3 class="item-title" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h3>
             <p class="item-sub">Colegio Salesiano Don Bosco</p>
-            <p class="education-desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos de práctica graduanda.</p>
+            <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos de práctica graduanda.</p>
           </div>
         </div>
       </section>
 
       <!-- CONTACTO -->
       <section id="contacto" class="section-card">
-        <h2 class="section-title">Contacto</h2>
-        <p class="text-body" style="margin-bottom: 20px;">
+        <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
+        <p class="text-body" style="margin-bottom: 20px;" data-i18n="contact_desc">
           ¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.
         </p>
         <div class="contact-grid">
           <div class="contact-item">
-            <span class="label">WhatsApp / Teléfono</span>
+            <span class="label" data-i18n="contact_phone_label">WhatsApp / Teléfono</span>
             <span class="val">
               <a href="https://wa.me/50255936485" target="_blank" rel="noopener noreferrer" class="contact-link">
                 💬 +502 55936485
@@ -262,7 +270,7 @@
             </span>
           </div>
           <div class="contact-item">
-            <span class="label">Correo Electrónico</span>
+            <span class="label" data-i18n="contact_email_label">Correo Electrónico</span>
             <span class="val">
               <a href="mailto:a.valdez.6adb@gmail.com" class="contact-link">
                 a.valdez.6adb@gmail.com
@@ -283,14 +291,150 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web</p>
+      <p data-i18n="footer_text">© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web</p>
     </footer>
 
   </div>
 
-  <!-- SCRIPT: PANEL Y ANIMACIONES INDEPENDIENTES POR TEMA -->
+  <!-- SCRIPT: TRADUCCIÓN, PANEL Y ANIMACIONES DE CANAL -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // --- DICCIONARIO DE TRADUCCIÓN (ES / EN) ---
+      const translations = {
+        es: {
+          nav_start: "inicio",
+          nav_projects: "proyectos",
+          nav_skills: "habilidades",
+          nav_certificates: "certificados",
+          nav_about: "sobre mí",
+          nav_contact: "contacto",
+          nav_cv: "cv",
+          theme_panel_title: "SELECCIONAR TEMA",
+          theme_blue: "Azul Profesional",
+          theme_orange: "Naranja Cálido",
+          theme_red: "Rojo Elegante",
+          theme_dark: "Modo Oscuro",
+          theme_light: "Modo Claro",
+          hero_greeting: "Hola, soy Alejandro Esaú Valdez",
+          hero_subtitle: "Desarrollador Junior | Bachiller en Computación",
+          hero_desc: "Especializado en lógica de programación, desarrollo de software y construcción de interfaces funcionales. Enfocado en resolver problemas reales a través de código eficiente.",
+          projects_title: "Proyectos Destacados",
+          projects_intro: "Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:",
+          project_1_title: "Sistema de Gestión Académica",
+          project_1_desc: "Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.",
+          tag_sql: "SQL / BD",
+          tag_oop: "Lógica POO",
+          btn_view_app: "Ver Aplicación ↗",
+          skills_title: "Habilidades & Competencias",
+          skills_sub1: "💻 Tecnologías & Programación",
+          skills_sub2: "🤝 Fortalezas Personales",
+          skill_logic: "Lógica de Sistemas",
+          skill_oop: "Programación POO",
+          skill_db: "Bases de Datos",
+          skill_algo: "Resolución de Algoritmos",
+          skill_leadership: "Liderazgo",
+          skill_teamwork: "Trabajo en Equipo",
+          skill_salesian: "Disciplina Salesiana",
+          skill_critical: "Pensamiento Crítico",
+          skill_adaptability: "Adaptabilidad",
+          skill_comm: "Comunicación Asertiva",
+          cert_title: "Certificados & Logros",
+          cert_desc: "Acreditaciones e insignias oficiales emitidas por instituciones reconocidas internacionalmente:",
+          cert_js_desc: "Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.",
+          cert_net_desc: "Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.",
+          cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
+          btn_view_cred: "Ver Credencial ↗",
+          about_title: "Sobre Mí & Formación",
+          about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
+          about_p2: "Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.",
+          edu_year: "Graduación 2026",
+          edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
+          edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos de práctica graduanda.",
+          contact_title: "Contacto",
+          contact_desc: "¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.",
+          contact_phone_label: "WhatsApp / Teléfono",
+          contact_email_label: "Correo Electrónico",
+          footer_text: "© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web"
+        },
+        en: {
+          nav_start: "home",
+          nav_projects: "projects",
+          nav_skills: "skills",
+          nav_certificates: "certifications",
+          nav_about: "about me",
+          nav_contact: "contact",
+          nav_cv: "resume",
+          theme_panel_title: "SELECT THEME",
+          theme_blue: "Professional Blue",
+          theme_orange: "Warm Orange",
+          theme_red: "Elegant Red",
+          theme_dark: "Dark Mode",
+          theme_light: "Light Mode",
+          hero_greeting: "Hi, I'm Alejandro Esaú Valdez",
+          hero_subtitle: "Junior Developer | Computer Science High School Graduate",
+          hero_desc: "Specialized in programming logic, software development, and functional interface design. Focused on solving real-world problems through efficient code.",
+          projects_title: "Featured Projects",
+          projects_intro: "Selection of applications, systems, and programming projects developed:",
+          project_1_title: "Academic Management System",
+          project_1_desc: "Application developed for data administration and control, optimizing information querying and business logic.",
+          tag_sql: "SQL / DB",
+          tag_oop: "OOP Logic",
+          btn_view_app: "View Application ↗",
+          skills_title: "Skills & Competencies",
+          skills_sub1: "💻 Technologies & Programming",
+          skills_sub2: "🤝 Personal Strengths",
+          skill_logic: "System Logic",
+          skill_oop: "OOP Programming",
+          skill_db: "Databases",
+          skill_algo: "Algorithm Problem Solving",
+          skill_leadership: "Leadership",
+          skill_teamwork: "Teamwork",
+          skill_salesian: "Salesian Discipline",
+          skill_critical: "Critical Thinking",
+          skill_adaptability: "Adaptability",
+          skill_comm: "Assertive Communication",
+          cert_title: "Certifications & Achievements",
+          cert_desc: "Official accreditations and badges issued by internationally recognized institutions:",
+          cert_js_desc: "Validates proficiency in basic syntax, data types, control structures, functions, and JavaScript programming fundamentals.",
+          cert_net_desc: "Validates fundamental knowledge in network architecture, communication protocols, IP addresses, and system connectivity.",
+          cert_sec_desc: "Covers key concepts on data protection, cyber threats, network privacy, and digital security best practices.",
+          btn_view_cred: "View Credential ↗",
+          about_title: "About Me & Education",
+          about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My 12-year education at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
+          about_p2: "I am passionate about soccer, a sport that has reinforced my values of teamwork, performing under pressure, and achieving shared goals.",
+          edu_year: "Graduation 2026",
+          edu_degree: "High School Diploma in Computer Science",
+          edu_desc: "Specialized in technical fundamentals, computational logic, and technology projects.",
+          contact_title: "Contact",
+          contact_desc: "Have a project, job offer, or want to collaborate? I would love to connect with you.",
+          contact_phone_label: "WhatsApp / Phone",
+          contact_email_label: "Email",
+          footer_text: "© 2026 Alejandro Esaú Valdez — Designed with focus on Web Portfolio"
+        }
+      };
+
+      let currentLang = 'es';
+      const langToggleBtn = document.getElementById('lang-toggle');
+      const langLabel = document.getElementById('lang-label');
+
+      function updateLanguage(lang) {
+        currentLang = lang;
+        langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
+
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+          }
+        });
+      }
+
+      langToggleBtn.addEventListener('click', () => {
+        const newLang = currentLang === 'es' ? 'en' : 'es';
+        updateLanguage(newLang);
+      });
+
+      // --- CONTROL DEL PANEL DE TEMAS ---
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themePanel = document.getElementById('theme-panel');
       const themePanelClose = document.getElementById('theme-panel-close');
@@ -322,6 +466,7 @@
         }
       });
 
+      // --- CANVAS CON ANIMACIONES ---
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
 
