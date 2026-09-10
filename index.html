@@ -280,8 +280,8 @@
           <div class="contact-item">
             <span class="label" data-i18n="contact_email_label">Correo Electrónico</span>
             <span class="val">
-              <!-- Enlace universal mailto compatible con PC y Móvil -->
-              <a href="mailto:a.valdez.6adb@gmail.com" class="contact-link">
+              <!-- Enlace inteligente con ID para abrir Gmail Web en PC y App en Celular -->
+              <a href="#" id="email-smart-link" class="contact-link">
                 a.valdez.6adb@gmail.com ↗
               </a>
             </span>
@@ -313,9 +313,29 @@
 
   </div>
 
-  <!-- SCRIPT: TRADUCCIÓN, PANEL Y ANIMACIONES DE CANVAS -->
+  <!-- SCRIPT: TRADUCCIÓN, PANEL, CANVAS Y CORREO INTELIGENTE -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      
+      // --- MANEJO INTELIGENTE DE ENLACE DE CORREO (PC vs MÓVIL) ---
+      const emailLink = document.getElementById('email-smart-link');
+
+      if (emailLink) {
+        emailLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+          const email = "a.valdez.6adb@gmail.com";
+
+          if (isMobile) {
+            // En celular abre la aplicación de correo nativa
+            window.location.href = `mailto:${email}`;
+          } else {
+            // En computadora abre directamente Gmail Web en una nueva pestaña
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+          }
+        });
+      }
+
       // --- DICCIONARIO DE TRADUCCIÓN (ES / EN) ---
       const translations = {
         es: {
@@ -362,7 +382,7 @@
           cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
           btn_view_cred: "Ver Credencial ↗",
           about_title: "Sobre Mí & Formación",
-          about_p1: "Soy una persona responsable, highly disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
+          about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
           about_p2: "Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.",
           edu_year: "Graduación 2026",
           edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
