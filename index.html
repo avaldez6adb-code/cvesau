@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body class="theme-azul">
 
@@ -286,6 +286,14 @@
             </span>
           </div>
           <div class="contact-item">
+            <span class="label">LinkedIn</span>
+            <span class="val">
+              <a href="https://www.linkedin.com/in/alejandro-esaú-valdez-893b89435" target="_blank" rel="noopener noreferrer" class="contact-link">
+                linkedin.com/in/alejandro-esaú-valdez ↗
+              </a>
+            </span>
+          </div>
+          <div class="contact-item">
             <span class="label">GitHub</span>
             <span class="val">
               <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="contact-link">
@@ -353,7 +361,7 @@
           cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
           btn_view_cred: "Ver Credencial ↗",
           about_title: "Sobre Mí & Formación",
-          about_p1: "Soy una persona responsable, highly disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
+          about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
           about_p2: "Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.",
           edu_year: "Graduación 2026",
           edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
@@ -428,6 +436,7 @@
       function updateLanguage(lang) {
         currentLang = lang;
         langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
+        document.documentElement.lang = lang;
 
         document.querySelectorAll('[data-i18n]').forEach(element => {
           const key = element.getAttribute('data-i18n');
