@@ -4,7 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
+  <style>
+    /* Estilos adicionales para la línea de tiempo visual */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 1.5rem;
+      border-left: 2px solid var(--accent-color, #2563eb);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -2.35rem;
+      top: 0.2rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-color, #2563eb);
+      border: 2px solid #fff;
+    }
+    .timeline-year {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent-color, #2563eb);
+      margin-bottom: 4px;
+    }
+  </style>
 </head>
 <body class="theme-azul">
 
@@ -239,9 +275,9 @@
         </div>
       </section>
 
-      <!-- SOBRE MÍ Y ESTUDIOS -->
+      <!-- SOBRE MÍ Y LÍNEA DE TIEMPO -->
       <section id="sobre-mi" class="section-card">
-        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Formación</h2>
+        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Trayectoria</h2>
         
         <div class="about-education-grid">
           <div class="about-text">
@@ -253,11 +289,33 @@
             </p>
           </div>
 
+          <!-- LÍNEA DE TIEMPO VISUAL -->
           <div class="education-box">
-            <span class="badge-year" data-i18n="edu_year">Graduación 2026</span>
-            <h3 class="item-title" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h3>
-            <p class="item-sub">Colegio Salesiano Don Bosco</p>
-            <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos de práctica graduanda.</p>
+            <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
+            
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2015 – 2025</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                <p class="education-desc" data-i18n="t_step1_desc">12 años de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2024 – 2025</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript Essentials, Redes y Ciberseguridad a través de Cisco Networking Academy.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -381,12 +439,17 @@
           cert_net_desc: "Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.",
           cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
           btn_view_cred: "Ver Credencial ↗",
-          about_title: "Sobre Mí & Formación",
+          about_title: "Sobre Mí & Trayectoria",
           about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación de 12 años en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
           about_p2: "Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.",
+          timeline_heading: "Línea de Tiempo Académica",
+          t_step1_title: "Formación Integral Salesiana",
+          t_step1_desc: "12 años de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.",
+          t_step2_title: "Certificaciones Profesionales",
+          t_step2_desc: "Acreditación en JavaScript Essentials, Redes y Ciberseguridad a través de Cisco Networking Academy.",
           edu_year: "Graduación 2026",
           edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
-          edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos de práctica graduanda.",
+          edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.",
           contact_title: "Contacto",
           contact_desc: "¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.",
           contact_phone_label: "WhatsApp / Teléfono",
@@ -436,9 +499,14 @@
           cert_net_desc: "Validates fundamental knowledge in network architecture, communication protocols, IP addresses, and system connectivity.",
           cert_sec_desc: "Covers key concepts on data protection, cyber threats, network privacy, and digital security best practices.",
           btn_view_cred: "View Credential ↗",
-          about_title: "About Me & Education",
+          about_title: "About Me & Journey",
           about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My 12-year education at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
           about_p2: "I am passionate about soccer, a sport that has reinforced my values of teamwork, performing under pressure, and achieving shared goals.",
+          timeline_heading: "Academic Timeline",
+          t_step1_title: "Salesian Comprehensive Education",
+          t_step1_desc: "12 years of development in values, discipline, and academic foundations at Colegio Salesiano Don Bosco.",
+          t_step2_title: "Professional Certifications",
+          t_step2_desc: "Accreditation in JavaScript Essentials, Networking, and Cybersecurity through Cisco Networking Academy.",
           edu_year: "Graduation 2026",
           edu_degree: "High School Diploma in Computer Science",
           edu_desc: "Specialized in technical fundamentals, computational logic, and technology projects.",
