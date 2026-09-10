@@ -1,5 +1,3 @@
-/* CSS PORTAFOLIO ALEJANDRO ESAÚ VALDEZ */
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -17,10 +15,7 @@
   --badge-text: #60a5fa;
 }
 
-/* ===================================================
-   VARIABLES DE TEMAS CON FONDOS DINÁMICOS
-   =================================================== */
-
+/* TEMAS */
 body.theme-azul {
   --bg-color: #0f172a;
   --card-bg: rgba(30, 41, 59, 0.88);
@@ -76,7 +71,6 @@ body.theme-claro {
   --badge-text: #0369a1;
 }
 
-/* Configuración de Pantalla Base */
 html {
   scroll-behavior: smooth;
 }
@@ -91,7 +85,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Canvas del Fondo Interactivo */
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -102,7 +95,6 @@ body {
   pointer-events: none;
 }
 
-/* Aura Resplandeciente de Fondo según el Tema */
 body::before {
   content: "";
   position: fixed;
@@ -125,7 +117,6 @@ body::before {
   padding: 0 20px 20px 20px;
 }
 
-/* Barra de Navegación Sticky */
 .navbar {
   position: sticky;
   top: 0;
@@ -177,7 +168,6 @@ body::before {
   color: #fff;
 }
 
-/* Botón y Panel de Temas */
 .theme-btn {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -268,7 +258,6 @@ body::before {
   border-radius: 50%;
 }
 
-/* Tarjetas Principales */
 .hero-card, .section-card {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -322,7 +311,6 @@ body::before {
   font-size: 0.85rem;
 }
 
-/* Grillas y Elementos Internos */
 .projects-grid, .certificates-grid, .contact-grid {
   display: flex;
   flex-direction: column;
@@ -446,15 +434,11 @@ body::before {
   font-size: 0.85rem;
 }
 
-/* Ajuste general para textos largos */
+/* AJUSTE PARA MÓVIL */
 .val, .contact-link {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
-
-/* ===================================================
-   DISEÑO RESPONSIVO MÓVIL (PANTALLAS PEQUEÑAS)
-   =================================================== */
 
 @media (max-width: 640px) {
   .app-container {
@@ -465,7 +449,6 @@ body::before {
     padding: 20px 16px;
   }
 
-  /* Compacta la navegación */
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -487,7 +470,6 @@ body::before {
     padding: 4px 8px;
   }
 
-  /* Corrige el contacto: coloca los datos debajo de los títulos */
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
