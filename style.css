@@ -471,6 +471,8 @@ body::before {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer {
