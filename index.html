@@ -9,6 +9,27 @@
     html {
       scroll-behavior: smooth;
     }
+    .timeline-scroll-container {
+      max-height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    .timeline-animating {
+      display: flex;
+      flex-direction: column;
+      animation: scrollTimeline 15s linear infinite;
+    }
+    .timeline-animating:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scrollTimeline {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
     .timeline {
       position: relative;
       padding-left: 2rem;
@@ -378,26 +399,53 @@
           <div class="education-box">
             <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
             
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <span class="timeline-year">2014 – 2026</span>
-                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-                <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-              </div>
+            <!-- Caja con scroll automático para la línea de tiempo -->
+            <div class="timeline-scroll-container">
+              <div class="timeline timeline-animating">
+                
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2014 – 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+                </div>
 
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <span class="timeline-year">2024 – 2025</span>
-                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-                <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-              </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2024 – 2025</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+                </div>
 
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-                <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-                <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+                </div>
+
+                <!-- Elementos duplicados para lograr el bucle infinito suave al subir -->
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2014 – 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2024 – 2025</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+                </div>
+
               </div>
             </div>
 
@@ -630,6 +678,7 @@
           themeCards.forEach(c => c.classList.remove('active'));
           card.classList.add('active');
           initParticles();
+          themePanel.classList.remove('open');
         });
       });
 
