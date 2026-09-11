@@ -136,7 +136,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      animation: scrollCertificates 25s linear infinite;
+      animation: scrollCertificates 35s linear infinite;
     }
     .certificates-animating:hover {
       animation-play-state: paused;
@@ -350,6 +350,7 @@
         <div class="certificates-scroll-container">
           <div class="certificates-animating">
             
+            <!-- BLOQUE 1: Originales -->
             <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
@@ -446,7 +447,7 @@
               </div>
             </div>
 
-            <!-- Elemento duplicado para bucle fluido -->
+            <!-- BLOQUE 2: Duplicados exactos para bucle infinito fluido -->
             <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
@@ -459,6 +460,86 @@
               <div class="pdf-viewer-container">
                 <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
                   <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Networking Basics</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_net_desc">
+                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_sec_desc">
+                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_packet_desc">
+                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">IT Essentials</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_it_desc">
+                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">Linux</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_linux_desc">
+                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
                 </object>
               </div>
             </div>
