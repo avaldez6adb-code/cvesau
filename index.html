@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
   <style>
     html {
       scroll-behavior: smooth;
     }
-    /* Estilos adicionales para la línea de tiempo visual */
     .timeline {
       position: relative;
       padding-left: 2rem;
@@ -43,8 +42,6 @@
       color: var(--accent-color, #2563eb);
       margin-bottom: 4px;
     }
-
-    /* Estilos para poner el avatar vectorial y el mensaje a la par */
     .hero-flex-container {
       display: flex;
       align-items: center;
@@ -76,8 +73,6 @@
       border-radius: 50%;
       color: #fff;
     }
-
-    /* Estilo para integrar el enlace del PDF debajo del título */
     .cert-title-link {
       color: inherit;
       text-decoration: none;
@@ -92,10 +87,8 @@
 </head>
 <body class="theme-azul">
 
-  <!-- CANVAS PARA EL FONDO ANIMADO INTERACTIVO -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- PANEL DESPLEGABLE DE TEMAS -->  
   <div class="theme-panel" id="theme-panel">
     <div class="theme-panel-header">
       <span class="theme-panel-title" data-i18n="theme_panel_title">SELECCIONAR TEMA</span>
@@ -152,7 +145,6 @@
 
   <div class="app-container">
 
-    <!-- BARRA SUPERIOR DE NAVEGACIÓN -->
     <header class="navbar">
       <div class="nav-brand">
         <div class="nav-avatar-svg">
@@ -172,12 +164,9 @@
         </nav>
 
         <div class="nav-controls">
-          <!-- BOTÓN SELECTOR DE IDIOMA -->
           <button class="lang-btn" id="lang-toggle" title="Cambiar Idioma">
             <span id="lang-label">EN</span>
           </button>
-
-          <!-- BOTÓN SELECTOR DE TEMA -->
           <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
             <span>🎨</span>
           </button>
@@ -185,7 +174,6 @@
       </div>
     </header>
 
-    <!-- HERO PRINCIPAL CON AVATAR VECTORIAL Y TEXTO A LA PAR -->
     <section id="inicio" class="hero-card">
       <div class="hero-flex-container">
         <div class="hero-profile-container">
@@ -203,10 +191,8 @@
       </div>
     </section>
 
-    <!-- SECCIONES DE CONTENIDO -->
     <main class="main-content">
 
-      <!-- PROYECTOS DESTACADOS -->
       <section id="proyectos" class="section-card">
         <div class="section-header">
           <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
@@ -239,7 +225,6 @@
         </div>
       </section>
 
-      <!-- HABILIDADES -->
       <section id="habilidades" class="section-card">
         <h2 class="section-title" data-i18n="skills_title">Habilidades & Competencias</h2>
         
@@ -270,7 +255,6 @@
         </div>
       </section>
 
-      <!-- CERTIFICADOS -->
       <section id="certificados" class="section-card">
         <h2 class="section-title" data-i18n="cert_title">Certificados & Logros</h2>
         <p class="text-body section-desc" data-i18n="cert_desc">
@@ -278,8 +262,6 @@
         </p>
 
         <div class="certificates-grid">
-          
-          <!-- Certificado 1 (Credly): JavaScript Essentials 1 -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -296,7 +278,6 @@
             </div>
           </article>
 
-          <!-- Certificado 2 (Credly): Networking Basics -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -313,7 +294,6 @@
             </div>
           </article>
 
-          <!-- Certificado 3 (Credly): Introduction to Cybersecurity -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -330,7 +310,6 @@
             </div>
           </article>
 
-          <!-- Certificado 4 (PDF): Cisco Packet Tracer -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -346,7 +325,6 @@
             </div>
           </article>
 
-          <!-- Certificado 5 (PDF): IT Essentials -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -362,7 +340,6 @@
             </div>
           </article>
 
-          <!-- Certificado 6 (PDF): Linux -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -381,7 +358,7 @@
         </div>
       </section>
 
-      <!-- SOBRE MÍ Y LÍNEA DE TIEMPO (2014 - 2026) -->
+      <!-- SOBRE MÍ Y LÍNEA DE TIEMPO (Actualizado con Fisioterapia) -->
       <section id="sobre-mi" class="section-card">
         <h2 class="section-title" data-i18n="about_title">Sobre Mí & Trayectoria</h2>
         
@@ -391,11 +368,10 @@
               Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
             </p>
             <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
-              Me interesa profundamente la fisioterapia y la anatomía humana, un campo que me fascina por su enfoque en la recuperación física, el bienestar integral y el apoyo a las personas para mejorar su calidad de vida.
+              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
             </p>
           </div>
 
-          <!-- LÍNEA DE TIEMPO VISUAL -->
           <div class="education-box">
             <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
             
@@ -426,7 +402,6 @@
         </div>
       </section>
 
-      <!-- CONTACTO (SIN WHATSAPP) -->
       <section id="contacto" class="section-card">
         <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
         <p class="text-body" style="margin-bottom: 20px;" data-i18n="contact_desc">
@@ -468,19 +443,15 @@
 
   </div>
 
-  <!-- SCRIPT: TRADUCCIÓN, PANEL, CANVAS Y CORREO INTELIGENTE -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       
-      // --- MANEJO INTELIGENTE DE ENLACE DE CORREO (PC vs MÓVIL) ---
       const emailLink = document.getElementById('email-smart-link');
-
       if (emailLink) {
         emailLink.addEventListener('click', (e) => {
           e.preventDefault();
           const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
           const email = "a.valdez.6adb@gmail.com";
-
           if (isMobile) {
             window.location.href = `mailto:${email}`;
           } else {
@@ -489,7 +460,6 @@
         });
       }
 
-      // --- DICCIONARIO DE TRADUCCIÓN (ES / EN) ---
       const translations = {
         es: {
           nav_start: "inicio",
@@ -503,7 +473,7 @@
           theme_orange: "Naranja Cálido",
           theme_red: "Rojo Elegante",
           theme_dark: "Modo Oscuro",
-          theme_light: "Modo Claro",
+          theme_claro: "Modo Claro",
           hero_greeting: "Hola, soy Alejandro Esaú Valdez",
           hero_subtitle: "Desarrollador Junior | Bachiller en Computación",
           hero_desc: "Especializado en lógica de programación, desarrollo de software y construcción de interfaces funcionales. Enfocado en resolver problemas reales a través de código eficiente.",
@@ -539,7 +509,7 @@
           btn_view_cred: "Ver Credencial ↗",
           about_title: "Sobre Mí & Trayectoria",
           about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
-          about_p2: "Me interesa profundamente la fisioterapia y la anatomía humana, un campo que me fascina por su enfoque en la recuperación física, el bienestar integral y el apoyo a las personas para mejorar su calidad de vida.",
+          about_p2: "Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.",
           timeline_heading: "Línea de Tiempo Académica",
           t_step1_title: "Formación Integral Salesiana",
           t_step1_desc: "Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.",
@@ -601,7 +571,7 @@
           btn_view_cred: "View Credential ↗",
           about_title: "About Me & Journey",
           about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My continuous education from 2014 to 2026 at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
-          about_p2: "I am deeply interested in physical therapy and human anatomy, a field that fascinates me for its focus on physical recovery, comprehensive well-being, and helping people improve their quality of life.",
+          about_p2: "I am passionate about physical therapy, focusing my interest on physical rehabilitation, the study of human movement, and helping people recover their well-being and quality of life.",
           timeline_heading: "Academic Timeline",
           t_step1_title: "Salesian Comprehensive Education",
           t_step1_desc: "Continuous trajectory of development in values, discipline, and academic foundations at Colegio Salesiano Don Bosco.",
@@ -639,7 +609,6 @@
         updateLanguage(newLang);
       });
 
-      // --- CONTROL DEL PANEL DE TEMAS ---
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themePanel = document.getElementById('theme-panel');
       const themePanelClose = document.getElementById('theme-panel-close');
@@ -671,7 +640,6 @@
         }
       });
 
-      // --- CANVAS CON ANIMACIONES ---
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
 
@@ -781,7 +749,6 @@
       function initParticles() {
         particles = [];
         const currentTheme = document.body.className || 'theme-azul';
-        
         let count = 45;
         if (currentTheme === 'theme-rojo') count = 65;
         if (currentTheme === 'theme-oscuro') count = 50;
@@ -794,7 +761,6 @@
 
       function animate() {
         ctx.clearRect(0, 0, width, height);
-
         const currentTheme = document.body.className || 'theme-azul';
         const accentColor = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
 
