@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=16">
   <style>
     html {
       scroll-behavior: smooth;
@@ -75,6 +75,18 @@
       background: var(--accent-color, #2563eb);
       border-radius: 50%;
       color: #fff;
+    }
+
+    /* Estilo para integrar el enlace del PDF debajo del título */
+    .cert-title-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+    .cert-title-link:hover {
+      color: var(--accent-color, #2563eb);
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -323,15 +335,14 @@
             <div class="certificate-content">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">Introducción a Cisco Packet Tracer</h3>
+                <h3 class="certificate-title">
+                  <a href="CiscoPaketTracer.pdf" target="_blank" rel="noopener noreferrer" class="cert-title-link" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer ↗</a>
+                </h3>
               </div>
               <p class="certificate-issuer">Cisco Networking Academy</p>
               <p class="certificate-desc" data-i18n="cert_packet_desc">
                 Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
               </p>
-              <div class="certificate-actions">
-                <a href="CiscoPaketTracer.pdf" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_pdf">Ver Certificado (PDF) ↗</a>
-              </div>
             </div>
           </article>
 
@@ -340,15 +351,14 @@
             <div class="certificate-content">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">IT Essentials</h3>
+                <h3 class="certificate-title">
+                  <a href="IT_Essentials.pdf" target="_blank" rel="noopener noreferrer" class="cert-title-link">IT Essentials ↗</a>
+                </h3>
               </div>
               <p class="certificate-issuer">Cisco Networking Academy</p>
               <p class="certificate-desc" data-i18n="cert_it_desc">
                 Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
               </p>
-              <div class="certificate-actions">
-                <a href="IT_Essentials.pdf" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_pdf">Ver Certificado (PDF) ↗</a>
-              </div>
             </div>
           </article>
 
@@ -357,15 +367,14 @@
             <div class="certificate-content">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">Linux</h3>
+                <h3 class="certificate-title">
+                  <a href="Linux-pdf.pdf" target="_blank" rel="noopener noreferrer" class="cert-title-link">Linux ↗</a>
+                </h3>
               </div>
               <p class="certificate-issuer">Cisco Networking Academy</p>
               <p class="certificate-desc" data-i18n="cert_linux_desc">
                 Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
               </p>
-              <div class="certificate-actions">
-                <a href="Linux-pdf.pdf" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_pdf">Ver Certificado (PDF) ↗</a>
-              </div>
             </div>
           </article>
 
@@ -382,7 +391,7 @@
               Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
             </p>
             <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
-              Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.
+              Me interesa profundamente la fisioterapia y la anatomía humana, un campo que me fascina por su enfoque en la recuperación física, el bienestar integral y el apoyo a las personas para mejorar su calidad de vida.
             </p>
           </div>
 
@@ -523,14 +532,14 @@
           cert_js_desc: "Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.",
           cert_net_desc: "Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.",
           cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
+          cert_packet_title: "Introducción a Cisco Packet Tracer ↗",
           cert_packet_desc: "Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.",
           cert_it_desc: "Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.",
           cert_linux_desc: "Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.",
           btn_view_cred: "Ver Credencial ↗",
-          btn_view_pdf: "Ver Certificado (PDF) ↗",
           about_title: "Sobre Mí & Trayectoria",
           about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
-          about_p2: "Me apasiona el fútbol, deporte a través del cual he reforzado el valor de la cooperación, el trabajo bajo presión y la consecución de metas compartidas.",
+          about_p2: "Me interesa profundamente la fisioterapia y la anatomía humana, un campo que me fascina por su enfoque en la recuperación física, el bienestar integral y el apoyo a las personas para mejorar su calidad de vida.",
           timeline_heading: "Línea de Tiempo Académica",
           t_step1_title: "Formación Integral Salesiana",
           t_step1_desc: "Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.",
@@ -585,14 +594,14 @@
           cert_js_desc: "Validates proficiency in basic syntax, data types, control structures, functions, and JavaScript programming fundamentals.",
           cert_net_desc: "Validates fundamental knowledge in network architecture, communication protocols, IP addresses, and system connectivity.",
           cert_sec_desc: "Covers key concepts on data protection, cyber threats, network privacy, and digital security best practices.",
+          cert_packet_title: "Introduction to Cisco Packet Tracer ↗",
           cert_packet_desc: "Validates basic proficiency in using the Cisco Packet Tracer network simulation tool for connectivity design and analysis.",
           cert_it_desc: "Validates essential knowledge in computer hardware, software, equipment assembly, peripherals, and technical troubleshooting.",
           cert_linux_desc: "Covers fundamental concepts about Linux operating systems, terminal usage, file management, permissions, and essential commands.",
           btn_view_cred: "View Credential ↗",
-          btn_view_pdf: "View Certificate (PDF) ↗",
           about_title: "About Me & Journey",
           about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My continuous education from 2014 to 2026 at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
-          about_p2: "I am passionate about soccer, a sport that has reinforced my values of teamwork, performing under pressure, and achieving shared goals.",
+          about_p2: "I am deeply interested in physical therapy and human anatomy, a field that fascinates me for its focus on physical recovery, comprehensive well-being, and helping people improve their quality of life.",
           timeline_heading: "Academic Timeline",
           t_step1_title: "Salesian Comprehensive Education",
           t_step1_desc: "Continuous trajectory of development in values, discipline, and academic foundations at Colegio Salesiano Don Bosco.",
