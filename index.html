@@ -9,6 +9,12 @@
     html {
       scroll-behavior: smooth;
     }
+    
+    /* Compensación para la barra fija al hacer scroll por el menú */
+    section {
+      scroll-margin-top: 100px;
+    }
+
     .timeline-scroll-container {
       max-height: 280px;
       overflow: hidden;
@@ -117,6 +123,38 @@
       overflow: hidden;
       border: 1px solid rgba(0,0,0,0.1);
       background: #f8fafc;
+    }
+
+    /* Estilos del carrusel automático para certificados */
+    .certificates-scroll-container {
+      max-height: 520px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .certificates-animating {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: scrollCertificates 25s linear infinite;
+    }
+    .certificates-animating:hover {
+      animation-play-state: paused;
+    }
+    .certificate-item-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes scrollCertificates {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
     }
 
     /* Estilos para el efecto de difuminado por scroll */
@@ -305,13 +343,14 @@
 
       <section id="certificados" class="section-card">
         <h2 class="section-title" data-i18n="cert_title">Certificados & Logros</h2>
-        <p class="text-body section-desc" data-i18n="cert_desc">
+        <p class="text-body section-desc" style="margin-bottom: 20px;" data-i18n="cert_desc">
           Acreditaciones e insignias oficiales emitidas por instituciones reconocidas y Cisco Networking Academy:
         </p>
 
-        <div class="certificates-grid">
-          <article class="certificate-card">
-            <div class="certificate-content">
+        <div class="certificates-scroll-container">
+          <div class="certificates-animating">
+            
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
                 <h3 class="certificate-title">JavaScript Essentials 1</h3>
@@ -326,10 +365,8 @@
                 </object>
               </div>
             </div>
-          </article>
 
-          <article class="certificate-card">
-            <div class="certificate-content">
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">Cisco Networking Academy</span>
                 <h3 class="certificate-title">Networking Basics</h3>
@@ -344,10 +381,8 @@
                 </object>
               </div>
             </div>
-          </article>
 
-          <article class="certificate-card">
-            <div class="certificate-content">
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">Cisco Networking Academy</span>
                 <h3 class="certificate-title">Introduction to Cybersecurity</h3>
@@ -362,10 +397,8 @@
                 </object>
               </div>
             </div>
-          </article>
 
-          <article class="certificate-card">
-            <div class="certificate-content">
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
                 <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
@@ -380,10 +413,8 @@
                 </object>
               </div>
             </div>
-          </article>
 
-          <article class="certificate-card">
-            <div class="certificate-content">
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
                 <h3 class="certificate-title">IT Essentials</h3>
@@ -398,10 +429,8 @@
                 </object>
               </div>
             </div>
-          </article>
 
-          <article class="certificate-card">
-            <div class="certificate-content">
+            <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
                 <h3 class="certificate-title">Linux</h3>
@@ -416,8 +445,25 @@
                 </object>
               </div>
             </div>
-          </article>
 
+            <!-- Elemento duplicado para bucle fluido -->
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
+                <h3 class="certificate-title">JavaScript Essentials 1</h3>
+              </div>
+              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_js_desc">
+                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
