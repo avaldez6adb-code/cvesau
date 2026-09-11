@@ -43,6 +43,24 @@
       color: var(--accent-color, #2563eb);
       margin-bottom: 4px;
     }
+
+    /* Estilos para poner la foto y el mensaje a la par y hacerla más grande */
+    .hero-flex-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-avatar {
+      width: 220px !important;
+      height: 220px !important;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .hero-text-content {
+      flex: 1;
+      min-width: 280px;
+    }
   </style>
 </head>
 <body class="theme-azul">
@@ -139,16 +157,20 @@
       </div>
     </header>
 
-    <!-- HERO PRINCIPAL CON FOTO DE PERFIL -->
+    <!-- HERO PRINCIPAL CON FOTO GRANDE Y TEXTO A LA PAR -->
     <section id="inicio" class="hero-card">
-      <div class="hero-profile-container">
-        <img src="perfil.jpg" alt="Foto de perfil de Alejandro Esaú Valdez" class="hero-avatar">
+      <div class="hero-flex-container">
+        <div class="hero-profile-container">
+          <img src="perfil.jpg" alt="Foto de perfil de Alejandro Esaú Valdez" class="hero-avatar">
+        </div>
+        <div class="hero-text-content">
+          <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
+          <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
+          <p class="hero-description" data-i18n="hero_desc">
+            Especializado en lógica de programación, desarrollo de software y construcción de interfaces funcionales. Enfocado en resolver problemas reales a través de código eficiente.
+          </p>
+        </div>
       </div>
-      <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
-      <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
-      <p class="hero-description" data-i18n="hero_desc">
-        Especializado en lógica de programación, desarrollo de software y construcción de interfaces funcionales. Enfocado en resolver problemas reales a través de código eficiente.
-      </p>
     </section>
 
     <!-- SECCIONES DE CONTENIDO -->
@@ -312,7 +334,7 @@
             </div>
           </article>
 
-          <!-- Certificado 6 (PDF): Linux (Corregido con guion) -->
+          <!-- Certificado 6 (PDF): Linux -->
           <article class="certificate-card">
             <div class="certificate-content">
               <div class="certificate-header">
@@ -377,21 +399,13 @@
         </div>
       </section>
 
-      <!-- CONTACTO -->
+      <!-- CONTACTO (SIN WHATSAPP) -->
       <section id="contacto" class="section-card">
         <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
         <p class="text-body" style="margin-bottom: 20px;" data-i18n="contact_desc">
           ¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.
         </p>
         <div class="contact-grid">
-          <div class="contact-item">
-            <span class="label" data-i18n="contact_phone_label">WhatsApp / Teléfono</span>
-            <span class="val">
-              <a href="https://wa.me/50255936485" target="_blank" rel="noopener noreferrer" class="contact-link">
-                💬 +502 55936485
-              </a>
-            </span>
-          </div>
           <div class="contact-item">
             <span class="label" data-i18n="contact_email_label">Correo Electrónico</span>
             <span class="val">
@@ -510,7 +524,6 @@
           edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.",
           contact_title: "Contacto",
           contact_desc: "¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.",
-          contact_phone_label: "WhatsApp / Teléfono",
           contact_email_label: "Correo Electrónico",
           footer_text: "© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web"
         },
@@ -574,7 +587,6 @@
           edu_desc: "Specialized in technical fundamentals, computational logic, and technology projects.",
           contact_title: "Contact",
           contact_desc: "Have a project, job offer, or want to collaborate? I would love to connect with you.",
-          contact_phone_label: "WhatsApp / Phone",
           contact_email_label: "Email",
           footer_text: "© 2026 Alejandro Esaú Valdez — Designed with focus on Web Portfolio"
         }
