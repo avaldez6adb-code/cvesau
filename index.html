@@ -118,6 +118,21 @@
       border: 1px solid rgba(0,0,0,0.1);
       background: #f8fafc;
     }
+
+    /* Estilos para el efecto de difuminado por scroll */
+    .hero-card, .section-card {
+      transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+    }
+    .section-blurred {
+      opacity: 0.3;
+      filter: blur(4px);
+      transform: scale(0.98);
+    }
+    .section-focused {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
   </style>
 </head>
 <body class="theme-azul">
@@ -518,6 +533,36 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       
+      // Script para difuminado por scroll (Intersection Observer)
+      const sections = document.querySelectorAll(".hero-card, .section-card");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -50% 0px", 
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            sections.forEach(sec => sec.classList.remove("section-focused", "section-blurred"));
+            entry.target.classList.add("section-focused");
+            
+            sections.forEach(sec => {
+              if (sec !== entry.target) {
+                sec.classList.add("section-blurred");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        section.classList.add("section-blurred");
+        observer.observe(section);
+      });
+
+      // Lógica de correo inteligente
       const emailLink = document.getElementById('email-smart-link');
       if (emailLink) {
         emailLink.addEventListener('click', (e) => {
@@ -532,6 +577,7 @@
         });
       }
 
+      // Sistema de traducciones
       const translations = {
         es: {
           nav_start: "inicio",
@@ -675,6 +721,7 @@
         updateLanguage(newLang);
       });
 
+      // Panel de temas
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themePanel = document.getElementById('theme-panel');
       const themePanelClose = document.getElementById('theme-panel-close');
@@ -707,6 +754,7 @@
         }
       });
 
+      // Animación de partículas del fondo (Canvas)
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
 
@@ -867,5 +915,6 @@
 
 </body>
 </html>
+
 
 
