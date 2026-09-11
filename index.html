@@ -157,6 +157,12 @@
       }
     }
 
+    /* Transición suave para los enlaces del menú */
+    .main-nav .nav-link {
+      position: relative;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
     /* Estilos para el efecto de difuminado por scroll */
     .hero-card, .section-card {
       transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
@@ -687,6 +693,35 @@
       sections.forEach(section => {
         section.classList.add("section-blurred");
         observer.observe(section);
+      });
+
+      // Sincronizar enlaces del menú con el scroll de la página
+      const navLinks = document.querySelectorAll('.main-nav .nav-link');
+      const trackedSections = document.querySelectorAll('section[id]');
+
+      const scrollObserverOptions = {
+        root: null,
+        rootMargin: '-30% 0px -50% 0px',
+        threshold: 0
+      };
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute('id');
+            
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, scrollObserverOptions);
+
+      trackedSections.forEach(section => {
+        scrollObserver.observe(section);
       });
 
       // Lógica de correo inteligente
