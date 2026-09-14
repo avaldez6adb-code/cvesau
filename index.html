@@ -1,1079 +1,1079 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=22">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Compensación para la barra fija al hacer scroll por el menú */
-    section {
-      scroll-margin-top: 100px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Esaú Valdez | Portafolio de Software</title>
+  <link rel="stylesheet" href="style.css?v=22">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Compensación para la barra fija al hacer scroll por el menú */
+    section {
+      scroll-margin-top: 100px;
+    }
 
-    .timeline-scroll-container {
-      max-height: 280px;
-      overflow: hidden;
-      position: relative;
-    }
-    .timeline-animating {
-      display: flex;
-      flex-direction: column;
-      animation: scrollTimeline 15s linear infinite;
-    }
-    .timeline-animating:hover {
-      animation-play-state: paused;
-    }
-    @keyframes scrollTimeline {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-50%);
-      }
-    }
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-      margin-top: 1.5rem;
-      border-left: 2px solid var(--accent-color, #2563eb);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 1.5rem;
-    }
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-    .timeline-dot {
-      position: absolute;
-      left: -2.35rem;
-      top: 0.2rem;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent-color, #2563eb);
-      border: 2px solid #fff;
-    }
-    .timeline-year {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: bold;
-      padding: 2px 8px;
-      border-radius: 4px;
-      background: rgba(37, 99, 235, 0.1);
-      color: var(--accent-color, #2563eb);
-      margin-bottom: 4px;
-    }
-    .hero-flex-container {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .hero-avatar-img-container {
-      width: 220px !important;
-      height: 220px !important;
-      flex-shrink: 0;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      border: 4px solid var(--accent-color, #2563eb);
-    }
-    .hero-avatar-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-text-content {
-      flex: 1;
-      min-width: 280px;
-    }
-    .nav-avatar-img-container {
-      width: 35px;
-      height: 35px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--accent-color, #2563eb);
-    }
-    .nav-avatar-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .cert-title-link {
-      color: inherit;
-      text-decoration: none;
-      display: inline-block;
-      transition: color 0.2s ease;
-    }
-    .cert-title-link:hover {
-      color: var(--accent-color, #2563eb);
-      text-decoration: underline;
-    }
-    .pdf-viewer-container {
-      margin-top: 15px;
-      height: 300px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.1);
-      background: #f8fafc;
-    }
+    .timeline-scroll-container {
+      max-height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    .timeline-animating {
+      display: flex;
+      flex-direction: column;
+      animation: scrollTimeline 15s linear infinite;
+    }
+    .timeline-animating:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scrollTimeline {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 1.5rem;
+      border-left: 2px solid var(--accent-color, #2563eb);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -2.35rem;
+      top: 0.2rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-color, #2563eb);
+      border: 2px solid #fff;
+    }
+    .timeline-year {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent-color, #2563eb);
+      margin-bottom: 4px;
+    }
+    .hero-flex-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-avatar-img-container {
+      width: 220px !important;
+      height: 220px !important;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border: 4px solid var(--accent-color, #2563eb);
+    }
+    .hero-avatar-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-text-content {
+      flex: 1;
+      min-width: 280px;
+    }
+    .nav-avatar-img-container {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--accent-color, #2563eb);
+    }
+    .nav-avatar-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cert-title-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+    .cert-title-link:hover {
+      color: var(--accent-color, #2563eb);
+      text-decoration: underline;
+    }
+    .pdf-viewer-container {
+      margin-top: 15px;
+      height: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: #f8fafc;
+    }
 
-    /* Estilos del carrusel automático para certificados */
-    .certificates-scroll-container {
-      max-height: 520px;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
-    .certificates-animating {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      animation: scrollCertificates 35s linear infinite;
-    }
-    .certificates-animating:hover {
-      animation-play-state: paused;
-    }
-    .certificate-item-box {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    @keyframes scrollCertificates {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-50%);
-      }
-    }
+    /* Estilos del carrusel automático para certificados */
+    .certificates-scroll-container {
+      max-height: 520px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .certificates-animating {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: scrollCertificates 35s linear infinite;
+    }
+    .certificates-animating:hover {
+      animation-play-state: paused;
+    }
+    .certificate-item-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes scrollCertificates {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
 
-    /* Transición suave para los enlaces del menú */
-    .main-nav .nav-link {
-      position: relative;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+    /* Transición suave para los enlaces del menú */
+    .main-nav .nav-link {
+      position: relative;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-    /* Estilos para el efecto de difuminado por scroll */
-    .hero-card, .section-card {
-      transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
-    }
-    .section-blurred {
-      opacity: 0.3;
-      filter: blur(4px);
-      transform: scale(0.98);
-    }
-    .section-focused {
-      opacity: 1;
-      filter: blur(0);
-      transform: scale(1);
-    }
-  </style>
+    /* Estilos para el efecto de difuminado por scroll */
+    .hero-card, .section-card {
+      transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+    }
+    .section-blurred {
+      opacity: 0.3;
+      filter: blur(4px);
+      transform: scale(0.98);
+    }
+    .section-focused {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+  </style>
 </head>
 <body class="theme-azul">
 
-  <canvas id="bg-canvas"></canvas>
-
-  <div class="theme-panel" id="theme-panel">
-    <div class="theme-panel-header">
-      <span class="theme-panel-title" data-i18n="theme_panel_title">SELECCIONAR TEMA</span>
-      <button class="theme-panel-close" id="theme-panel-close" aria-label="Cerrar">✕</button>
-    </div>
-    
-    <div class="theme-options">
-      <button class="theme-card active" data-theme="theme-azul">
-        <span class="theme-name" data-i18n="theme_blue">Azul Profesional</span>
-        <div class="theme-dots">
-          <span style="background: #0f172a;"></span>
-          <span style="background: #2563eb;"></span>
-          <span style="background: #38bdf8;"></span>
-        </div>
-      </button>
-
-      <button class="theme-card" data-theme="theme-naranja">
-        <span class="theme-name" data-i18n="theme_orange">Naranja Cálido</span>
-        <div class="theme-dots">
-          <span style="background: #1c1917;"></span>
-          <span style="background: #ea580c;"></span>
-          <span style="background: #fb923c;"></span>
-        </div>
-      </button>
-
-      <button class="theme-card" data-theme="theme-rojo">
-        <span class="theme-name" data-i18n="theme_red">Rojo Elegante</span>
-        <div class="theme-dots">
-          <span style="background: #18181b;"></span>
-          <span style="background: #dc2626;"></span>
-          <span style="background: #f87171;"></span>
-        </div>
-      </button>
-
-      <button class="theme-card" data-theme="theme-oscuro">
-        <span class="theme-name" data-i18n="theme_dark">Modo Oscuro</span>
-        <div class="theme-dots">
-          <span style="background: #09090b;"></span>
-          <span style="background: #27272a;"></span>
-          <span style="background: #a1a1aa;"></span>
-        </div>
-      </button>
-
-      <button class="theme-card" data-theme="theme-claro">
-        <span class="theme-name" data-i18n="theme_light">Modo Claro</span>
-        <div class="theme-dots">
-          <span style="background: #ffffff;"></span>
-          <span style="background: #f1f5f9;"></span>
-          <span style="background: #0284c7;"></span>
-        </div>
-      </button>
-    </div>
-  </div>
-
-  <div class="app-container">
-
-    <header class="navbar">
-      <div class="nav-brand">
-        <div class="nav-avatar-img-container">
-          <img src="perfil.jpg" alt="Alejandro Valdez">
-        </div>
-        <span class="brand-name">Alejandro Valdez</span>
-      </div>
-
-      <div class="nav-right">
-        <nav class="main-nav">
-          <a href="#inicio" class="nav-link active" data-i18n="nav_start">inicio</a>
-          <a href="#proyectos" class="nav-link" data-i18n="nav_projects">proyectos</a>
-          <a href="#habilidades" class="nav-link" data-i18n="nav_skills">habilidades</a>
-          <a href="#certificados" class="nav-link" data-i18n="nav_certificates">certificados</a>
-          <a href="#sobre-mi" class="nav-link" data-i18n="nav_about">sobre mí</a>
-          <a href="#contacto" class="nav-link" data-i18n="nav_contact">contacto</a>
-        </nav>
-
-        <div class="nav-controls">
-          <button class="lang-btn" id="lang-toggle" title="Cambiar Idioma">
-            <span id="lang-label">EN</span>
-          </button>
-          <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
-            <span>🎨</span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <section id="inicio" class="hero-card">
-      <div class="hero-flex-container">
-        <div class="hero-profile-container">
-          <div class="hero-avatar-img-container">
-            <img src="perfil.jpg" alt="Alejandro Esaú Valdez">
-          </div>
-        </div>
-        <div class="hero-text-content">
-          <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
-          <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
-          <p class="hero-description" data-i18n="hero_desc">
-            Bachiller en Ciencias y Letras con Orientación en Computación y sólida formación integral. Perfil enfocado en el desarrollo de software, lógica de programación y soporte técnico, complementado con un fuerte interés y vocación hacia la fisioterapia y la rehabilitación física. Destaco por mi disciplina, capacidad analítica y compromiso humano.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <main class="main-content">
-
-      <section id="proyectos" class="section-card">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
-          <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="github-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
-        </div>
-        <p class="text-body" style="margin-bottom: 20px;" data-i18n="projects_intro">
-          Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:
-        </p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-content">
-              <h3 class="project-title" data-i18n="project_1_title">Sistema de Gestión Académica</h3>
-              <p class="project-description" data-i18n="project_1_desc">
-                Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.
-              </p>
-              <div class="project-tags">
-                <span class="tag">C# / .NET</span>
-                <span class="tag" data-i18n="tag_sql">SQL / BD</span>
-                <span class="tag" data-i18n="tag_oop">Lógica POO</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://andre303q.github.io/rgpracticas/" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_app">Ver Aplicación ↗</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="habilidades" class="section-card">
-        <h2 class="section-title" data-i18n="skills_title">Habilidades & Competencias</h2>
-        
-        <div class="skills-wrapper">
-          <div class="skills-group">
-            <h3 class="skills-subtitle" data-i18n="skills_sub1">💻 Tecnologías & Programación</h3>
-            <div class="skills-grid">
-              <div class="skill-box accent" data-i18n="skill_logic">Lógica de Sistemas</div>
-              <div class="skill-box">HTML5 & CSS3</div>
-              <div class="skill-box">JavaScript</div>
-              <div class="skill-box" data-i18n="skill_db">Bases de Datos</div>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-subtitle" data-i18n="skills_sub2">🤝 Fortalezas Personales</h3>
-            <div class="skills-grid">
-              <div class="skill-box accent" data-i18n="skill_leadership">Liderazgo</div>
-              <div class="skill-box accent" data-i18n="skill_teamwork">Trabajo en Equipo</div>
-              <div class="skill-box accent" data-i18n="skill_salesian">Disciplina Salesiana</div>
-              <div class="skill-box" data-i18n="skill_critical">Pensamiento Crítico</div>
-              <div class="skill-box" data-i18n="skill_adaptability">Adaptabilidad</div>
-              <div class="skill-box" data-i18n="skill_comm">Comunicación Asertiva</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="certificados" class="section-card">
-        <h2 class="section-title" data-i18n="cert_title">Certificados & Logros</h2>
-        <p class="text-body section-desc" style="margin-bottom: 20px;" data-i18n="cert_desc">
-          Acreditaciones e insignias oficiales emitidas por instituciones reconocidas y Cisco Networking Academy:
-        </p>
-
-        <div class="certificates-scroll-container">
-          <div class="certificates-animating">
-            
-            <!-- BLOQUE 1: Originales -->
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
-                <h3 class="certificate-title">JavaScript Essentials 1</h3>
-              </div>
-              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_js_desc">
-                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Networking Basics</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_net_desc">
-                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_sec_desc">
-                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_packet_desc">
-                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">IT Essentials</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_it_desc">
-                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">Linux</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_linux_desc">
-                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <!-- BLOQUE 2: Duplicados exactos para bucle infinito fluido -->
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
-                <h3 class="certificate-title">JavaScript Essentials 1</h3>
-              </div>
-              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_js_desc">
-                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Networking Basics</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_net_desc">
-                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_sec_desc">
-                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_packet_desc">
-                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">IT Essentials</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_it_desc">
-                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">Linux</h3>
-              </div>
-                         <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_linux_desc">
-                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre-mi" class="section-card">
-        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Trayectoria</h2>
-        
-        <div class="about-education-grid">
-          <div class="about-text">
-            <p class="text-body" data-i18n="about_p1">
-              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
-            </p>
-            <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
-              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
-            </p>
-          </div>
-
-          <div class="education-box">
-            <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
-            
-            <div class="timeline-scroll-container">
-              <div class="timeline timeline-animating">
-                
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2014 – 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2024 – 2025</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2014 – 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2024 – 2025</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" class="section-card">
-        <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
-        <p class="text-body" style="margin-bottom: 20px;" data-i18n="contact_desc">
-          ¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.
-        </p>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <span class="label" data-i18n="contact_email_label">Correo Electrónico</span>
-            <span class="val">
-              <a href="#" id="email-smart-link" class="contact-link">
-                a.valdez.6adb@gmail.com ↗
-              </a>
-            </span>
-          </div>
-          <div class="contact-item">
-            <span class="label">LinkedIn</span>
-            <span class="val">
-              <a href="https://www.linkedin.com/in/alejandro-esaú-valdez-893b89435" target="_blank" rel="noopener noreferrer" class="contact-link">
-                linkedin.com/in/alejandro-esaú-valdez ↗
-              </a>
-            </span>
-          </div>
-          <div class="contact-item">
-            <span class="label">GitHub</span>
-            <span class="val">
-              <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="contact-link">
-                github.com/avaldez6adb-code ↗
-              </a>
-            </span>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer">
-      <p data-i18n="footer_text">© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web</p>
-    </footer>
-
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      
-      // Script para difuminado por scroll (Intersection Observer)
-      const sections = document.querySelectorAll(".hero-card, .section-card");
-
-      const observerOptions = {
-        root: null,
-        rootMargin: "-20% 0px -50% 0px", 
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            sections.forEach(sec => sec.classList.remove("section-focused", "section-blurred"));
-            entry.target.classList.add("section-focused");
-            
-            sections.forEach(sec => {
-              if (sec !== entry.target) {
-                sec.classList.add("section-blurred");
-              }
-            });
-          }
-        });
-      }, observerOptions);
-
-      sections.forEach(section => {
-        section.classList.add("section-blurred");
-        observer.observe(section);
-      });
-
-      // Sincronizar enlaces del menú con el scroll de la página
-      const navLinks = document.querySelectorAll('.main-nav .nav-link');
-      const trackedSections = document.querySelectorAll('section[id]');
-
-      const scrollObserverOptions = {
-        root: null,
-        rootMargin: '-30% 0px -50% 0px',
-        threshold: 0
-      };
-
-      const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.getAttribute('id');
-            
-            navLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${sectionId}`) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      }, scrollObserverOptions);
-
-      trackedSections.forEach(section => {
-        scrollObserver.observe(section);
-      });
-
-      // Lógica de correo inteligente
-      const emailLink = document.getElementById('email-smart-link');
-      if (emailLink) {
-        emailLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-          const email = "a.valdez.6adb@gmail.com";
-          if (isMobile) {
-            window.location.href = `mailto:${email}`;
-          } else {
-            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
-          }
-        });
-      }
-
-      // Sistema de traducciones
-      const translations = {
-        es: {
-          nav_start: "inicio",
-          nav_projects: "proyectos",
-          nav_skills: "habilidades",
-          nav_certificates: "certificados",
-          nav_about: "sobre mí",
-          nav_contact: "contacto",
-          theme_panel_title: "SELECCIONAR TEMA",
-          theme_blue: "Azul Profesional",
-          theme_orange: "Naranja Cálido",
-          theme_red: "Rojo Elegante",
-          theme_dark: "Modo Oscuro",
-          theme_claro: "Modo Claro",
-          hero_greeting: "Hola, soy Alejandro Esaú Valdez",
-          hero_subtitle: "Desarrollador Junior | Bachiller en Computación",
-          hero_desc: "Bachiller en Ciencias y Letras con Orientación en Computación y sólida formación integral. Perfil enfocado en el desarrollo de software, lógica de programación y soporte técnico, complementado con un fuerte interés y vocación hacia la fisioterapia y la rehabilitación física. Destaco por mi disciplina, capacidad analítica y compromiso humano.",
-          projects_title: "Proyectos Destacados",
-          projects_intro: "Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:",
-          project_1_title: "Sistema de Gestión Académica",
-          project_1_desc: "Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.",
-          tag_sql: "SQL / BD",
-          tag_oop: "Lógica POO",
-          btn_view_app: "Ver Aplicación ↗",
-          skills_title: "Habilidades & Competencias",
-          skills_sub1: "💻 Tecnologías & Programación",
-          skills_sub2: "🤝 Fortalezas Personales",
-          skill_logic: "Lógica de Sistemas",
-          skill_db: "Bases de Datos",
-          skill_leadership: "Liderazgo",
-          skill_teamwork: "Trabajo en Equipo",
-          skill_salesian: "Disciplina Salesiana",
-          skill_critical: "Pensamiento Crítico",
-          skill_adaptability: "Adaptabilidad",
-          skill_comm: "Comunicación Asertiva",
-          cert_title: "Certificados & Logros",
-          cert_desc: "Acreditaciones e insignias oficiales emitidas por instituciones reconocidas y Cisco Networking Academy:",
-          cert_js_desc: "Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.",
-          cert_net_desc: "Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.",
-          cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
-          cert_packet_title: "Introducción a Cisco Packet Tracer",
-          cert_packet_desc: "Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.",
-          cert_it_desc: "Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.",
-          cert_linux_desc: "Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.",
-          about_title: "Sobre Mí & Trayectoria",
-          about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
-          about_p2: "Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.",
-          timeline_heading: "Línea de Tiempo Académica",
-          t_step1_title: "Formación Integral Salesiana",
-          t_step1_desc: "Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.",
-          t_step2_title: "Certificaciones Profesionales",
-          t_step2_desc: "Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.",
-          edu_year: "Graduación 2026",
-          edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
-          edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.",
-          contact_title: "Contacto",
-          contact_desc: "¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.",
-          contact_email_label: "Correo Electrónico",
-          footer_text: "© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web"
-        },
-        en: {
-          nav_start: "home",
-          nav_projects: "projects",
-          nav_skills: "skills",
-          nav_certificates: "certifications",
-          nav_about: "about me",
-          nav_contact: "contact",
-          theme_panel_title: "SELECT THEME",
-          theme_blue: "Professional Blue",
-          theme_orange: "Warm Orange",
-          theme_red: "Elegant Red",
-          theme_dark: "Dark Mode",
-          theme_light: "Light Mode",
-          hero_greeting: "Hi, I'm Alejandro Esaú Valdez",
-          hero_subtitle: "Junior Developer | Computer Science High School Graduate",
-          hero_desc: "High School Diploma in Computer Science with a solid comprehensive background. Profile focused on software development, programming logic, and technical support, complemented by a strong interest and vocation towards physical therapy and physical rehabilitation. Recognized for discipline, analytical skills, and human commitment.",
-          projects_title: "Featured Projects",
-          projects_intro: "Selection of applications, systems, and programming projects developed:",
-          project_1_title: "Academic Management System",
-          project_1_desc: "Application developed for data administration and control, optimizing information querying and business logic.",
-          tag_sql: "SQL / BD",
-          tag_oop: "OOP Logic",
-          btn_view_app: "View Application ↗",
-          skills_title: "Skills & Competencies",
-          skills_sub1: "💻 Technologies & Programming",
-          skills_sub2: "🤝 Personal Strengths",
-          skill_logic: "System Logic",
-          skill_db: "Databases",
-          skill_leadership: "Leadership",
-          skill_teamwork: "Teamwork",
-          skill_salesian: "Salesian Discipline",
-          skill_critical: "Critical Thinking",
-          skill_adaptability: "Adaptability",
-          skill_comm: "Assertive Communication",
-          cert_title: "Certifications & Achievements",
-          cert_desc: "Official accreditations and badges issued by recognized institutions and Cisco Networking Academy:",
-          cert_js_desc: "Validates proficiency in basic syntax, data types, control structures, functions, and JavaScript programming fundamentals.",
-          cert_net_desc: "Validates fundamental knowledge in network architecture, communication protocols, IP addresses, and system connectivity.",
-          cert_sec_desc: "Covers key concepts on data protection, cyber threats, network privacy, and digital security best practices.",
-          cert_packet_title: "Introduction to Cisco Packet Tracer",
-          cert_packet_desc: "Validates basic proficiency in using the Cisco Packet Tracer network simulation tool for connectivity design and analysis.",
-          cert_it_desc: "Validates essential knowledge in computer hardware, software, equipment assembly, peripherals, and technical troubleshooting.",
-          cert_linux_desc: "Covers fundamental concepts about Linux operating systems, terminal usage, file management, permissions, and essential commands.",
-          about_title: "About Me & Journey",
-          about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My continuous education from 2014 to 2026 at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
-          about_p2: "I am passionate about physical therapy, focusing my interest on physical rehabilitation, the study of human movement, and helping people recover their well-being and quality of life.",
-          timeline_heading: "Academic Timeline",
-          t_step1_title: "Salesian Comprehensive Education",
-          t_step1_desc: "Continuous trajectory of development in values, disciplina, and academic foundations at Colegio Salesiano Don Bosco.",
-          t_step2_title: "Professional Certifications",
-          t_step2_desc: "Accreditation in JavaScript, Networking, Cybersecurity, Packet Tracer, IT Essentials, and Linux.",
-          edu_year: "Graduation 2026",
-          edu_degree: "High School Diploma in Computer Science",
-          edu_desc: "Specialized in technical fundamentals, computational logic, and technology projects.",
-          contact_title: "Contact",
-          contact_desc: "Have a project, job offer, or want to collaborate? I would love to connect with you.",
-          contact_email_label: "Email",
-          footer_text: "© 2026 Alejandro Esaú Valdez — Designed with focus on Web Portfolio"
-        }
-      };
-
-      let currentLang = 'es';
-      const langToggleBtn = document.getElementById('lang-toggle');
-      const langLabel = document.getElementById('lang-label');
-
-      function updateLanguage(lang) {
-        currentLang = lang;
-        langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
-        document.documentElement.lang = lang;
-
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
-          if (translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
-          }
-        });
-      }
-
-      langToggleBtn.addEventListener('click', () => {
-        const newLang = currentLang === 'es' ? 'en' : 'es';
-        updateLanguage(newLang);
-      });
-
-      // Panel de temas
-      const themeToggleBtn = document.getElementById('theme-toggle');
-      const themePanel = document.getElementById('theme-panel');
-      const themePanelClose = document.getElementById('theme-panel-close');
-      const themeCards = document.querySelectorAll('.theme-card');
-
-      themeToggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        themePanel.classList.toggle('open');
-      });
-
-      themePanelClose.addEventListener('click', () => {
-        themePanel.classList.remove('open');
-      });
-
-      themeCards.forEach(card => {
-        card.addEventListener('click', () => {
-          const selectedTheme = card.getAttribute('data-theme');
-          document.body.className = '';
-          document.body.classList.add(selectedTheme);
-          themeCards.forEach(c => c.classList.remove('active'));
-          card.classList.add('active');
-          initParticles();
-          themePanel.classList.remove('open');
-        });
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!themePanel.contains(e.target) && !themeToggleBtn.contains(e.target)) {
-          themePanel.classList.remove('open');
-        }
-      });
-
-      // Animación de partículas del fondo (Canvas)
-      const canvas = document.getElementById('bg-canvas');
-      const ctx = canvas.getContext('2d');
-
-      let width = canvas.width = window.innerWidth;
-      let height = canvas.height = window.innerHeight;
-      let particles = [];
-
-      window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-        initParticles();
-      });
-
-      class Particle {
-        constructor(theme) {
-          this.reset(theme);
-        }
-
-        reset(theme) {
-          this.x = Math.random() * width;
-          this.y = Math.random() * height;
-
-          if (theme === 'theme-rojo') {
-            this.radius = Math.random() * 2.5 + 1;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = -Math.random() * 2 - 0.6;
-            this.alpha = Math.random() * 0.8 + 0.2;
-          } else if (theme === 'theme-naranja') {
-            this.radius = Math.random() * 5 + 2;
-            this.vx = (Math.random() - 0.5) * 0.4;
-            this.vy = (Math.random() - 0.5) * 0.4;
-            this.alpha = Math.random() * 0.4 + 0.1;
-          } else if (theme === 'theme-oscuro') {
-            this.radius = Math.random() * 1.5 + 1;
-            this.length = Math.random() * 12 + 4;
-            this.vx = 0;
-            this.vy = Math.random() * 3 + 1.5;
-            this.alpha = Math.random() * 0.5 + 0.2;
-          } else if (theme === 'theme-claro') {
-            this.radius = Math.random() * 2 + 1;
-            this.maxRadius = Math.random() * 40 + 20;
-            this.growth = Math.random() * 0.4 + 0.2;
-            this.vx = 0;
-            this.vy = 0;
-            this.alpha = 0.6;
-          } else {
-            this.radius = Math.random() * 2 + 1;
-            this.vx = (Math.random() - 0.5) * 0.7;
-            this.vy = (Math.random() - 0.5) * 0.7;
-            this.alpha = 1;
-          }
-        }
-
-        update(theme) {
-          if (theme === 'theme-rojo') {
-            this.x += this.vx;
-            this.y += this.vy;
-            if (this.y < 0) {
-              this.y = height;
-              this.x = Math.random() * width;
-            }
-          } else if (theme === 'theme-oscuro') {
-            this.y += this.vy;
-            if (this.y > height) {
-              this.y = -10;
-              this.x = Math.random() * width;
-            }
-          } else if (theme === 'theme-claro') {
-            this.radius += this.growth;
-            this.alpha -= 0.008;
-            if (this.alpha <= 0 || this.radius >= this.maxRadius) {
-              this.reset(theme);
-            }
-          } else {
-            this.x += this.vx;
-            this.y += this.vy;
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
-          }
-        }
-
-        draw(color, theme) {
-          ctx.beginPath();
-          if (theme === 'theme-oscuro') {
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(this.x, this.y + this.length);
-            ctx.strokeStyle = color;
-            ctx.lineWidth = this.radius;
-            ctx.globalAlpha = this.alpha;
-            ctx.stroke();
-          } else if (theme === 'theme-claro') {
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 1;
-            ctx.globalAlpha = Math.max(this.alpha, 0);
-            ctx.stroke();
-          } else {
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = color;
-            ctx.globalAlpha = this.alpha;
-            ctx.fill();
-          }
-          ctx.globalAlpha = 1;
-        }
-      }
-
-      function initParticles() {
-        particles = [];
-        const currentTheme = document.body.className || 'theme-azul';
-        let count = 45;
-        if (currentTheme === 'theme-rojo') count = 65;
-        if (currentTheme === 'theme-oscuro') count = 50;
-        if (currentTheme === 'theme-claro') count = 25;
-
-        for (let i = 0; i < count; i++) {
-          particles.push(new Particle(currentTheme));
-        }
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-        const currentTheme = document.body.className || 'theme-azul';
-        const accentColor = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
-
-        particles.forEach(p => {
-          p.update(currentTheme);
-          p.draw(accentColor, currentTheme);
-        });
-
-        if (currentTheme === 'theme-azul') {
-          for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-              const dx = particles[i].x - particles[j].x;
-              const dy = particles[i].y - particles[j].y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-
-              if (dist < 110) {
-                ctx.beginPath();
-                ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(particles[j].x, particles[j].y);
-                ctx.strokeStyle = accentColor;
-                ctx.globalAlpha = 1 - (dist / 110);
-                ctx.lineWidth = 0.5;
-                ctx.stroke();
-                ctx.globalAlpha = 1;
-              }
-            }
-          }
-        }
-
-        requestAnimationFrame(animate);
-      }
-
-      initParticles();
-      animate();
-    });
-  </script>
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="theme-panel" id="theme-panel">
+    <div class="theme-panel-header">
+      <span class="theme-panel-title" data-i18n="theme_panel_title">SELECCIONAR TEMA</span>
+      <button class="theme-panel-close" id="theme-panel-close" aria-label="Cerrar">✕</button>
+    </div>
+    
+    <div class="theme-options">
+      <button class="theme-card active" data-theme="theme-azul">
+        <span class="theme-name" data-i18n="theme_blue">Azul Profesional</span>
+        <div class="theme-dots">
+          <span style="background: #0f172a;"></span>
+          <span style="background: #2563eb;"></span>
+          <span style="background: #38bdf8;"></span>
+        </div>
+      </button>
+
+      <button class="theme-card" data-theme="theme-naranja">
+        <span class="theme-name" data-i18n="theme_orange">Naranja Cálido</span>
+        <div class="theme-dots">
+          <span style="background: #1c1917;"></span>
+          <span style="background: #ea580c;"></span>
+          <span style="background: #fb923c;"></span>
+        </div>
+      </button>
+
+      <button class="theme-card" data-theme="theme-rojo">
+        <span class="theme-name" data-i18n="theme_red">Rojo Elegante</span>
+        <div class="theme-dots">
+          <span style="background: #18181b;"></span>
+          <span style="background: #dc2626;"></span>
+          <span style="background: #f87171;"></span>
+        </div>
+      </button>
+
+      <button class="theme-card" data-theme="theme-oscuro">
+        <span class="theme-name" data-i18n="theme_dark">Modo Oscuro</span>
+        <div class="theme-dots">
+          <span style="background: #09090b;"></span>
+          <span style="background: #27272a;"></span>
+          <span style="background: #a1a1aa;"></span>
+        </div>
+      </button>
+
+      <button class="theme-card" data-theme="theme-claro">
+        <span class="theme-name" data-i18n="theme_light">Modo Claro</span>
+        <div class="theme-dots">
+          <span style="background: #ffffff;"></span>
+          <span style="background: #f1f5f9;"></span>
+          <span style="background: #0284c7;"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <div class="app-container">
+
+    <header class="navbar">
+      <div class="nav-brand">
+        <div class="nav-avatar-img-container">
+          <img src="perfil.jpg" alt="Alejandro Valdez">
+        </div>
+        <span class="brand-name">Alejandro Valdez</span>
+      </div>
+
+      <div class="nav-right">
+        <nav class="main-nav">
+          <a href="#inicio" class="nav-link active" data-i18n="nav_start">inicio</a>
+          <a href="#proyectos" class="nav-link" data-i18n="nav_projects">proyectos</a>
+          <a href="#habilidades" class="nav-link" data-i18n="nav_skills">habilidades</a>
+          <a href="#certificados" class="nav-link" data-i18n="nav_certificates">certificados</a>
+          <a href="#sobre-mi" class="nav-link" data-i18n="nav_about">sobre mí</a>
+          <a href="#contacto" class="nav-link" data-i18n="nav_contact">contacto</a>
+        </nav>
+
+        <div class="nav-controls">
+          <button class="lang-btn" id="lang-toggle" title="Cambiar Idioma">
+            <span id="lang-label">EN</span>
+          </button>
+          <button class="theme-btn" id="theme-toggle" title="Seleccionar Tema" aria-label="Seleccionar Tema">
+            <span>🎨</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="inicio" class="hero-card">
+      <div class="hero-flex-container">
+        <div class="hero-profile-container">
+          <div class="hero-avatar-img-container">
+            <img src="perfil.jpg" alt="Alejandro Esaú Valdez">
+          </div>
+        </div>
+        <div class="hero-text-content">
+          <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
+          <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
+          <p class="hero-description" data-i18n="hero_desc">
+            Bachiller en Ciencias y Letras con Orientación en Computación y sólida formación integral. Perfil enfocado en el desarrollo de software, lógica de programación y soporte técnico, complementado con un fuerte interés y vocación hacia la fisioterapia y la rehabilitación física. Destaco por mi disciplina, capacidad analítica y compromiso humano.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content">
+
+      <section id="proyectos" class="section-card">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
+          <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="github-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <p class="text-body" style="margin-bottom: 20px;" data-i18n="projects_intro">
+          Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title" data-i18n="project_1_title">Sistema de Gestión Académica</h3>
+              <p class="project-description" data-i18n="project_1_desc">
+                Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C# / .NET</span>
+                <span class="tag" data-i18n="tag_sql">SQL / BD</span>
+                <span class="tag" data-i18n="tag_oop">Lógica POO</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://andre303q.github.io/rgpracticas/" target="_blank" rel="noopener noreferrer" class="btn-card primary" data-i18n="btn_view_app">Ver Aplicación ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="habilidades" class="section-card">
+        <h2 class="section-title" data-i18n="skills_title">Habilidades & Competencias</h2>
+        
+        <div class="skills-wrapper">
+          <div class="skills-group">
+            <h3 class="skills-subtitle" data-i18n="skills_sub1">💻 Tecnologías & Programación</h3>
+            <div class="skills-grid">
+              <div class="skill-box accent" data-i18n="skill_logic">Lógica de Sistemas</div>
+              <div class="skill-box">HTML5 & CSS3</div>
+              <div class="skill-box">JavaScript</div>
+              <div class="skill-box" data-i18n="skill_db">Bases de Datos</div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-subtitle" data-i18n="skills_sub2">🤝 Fortalezas Personales</h3>
+            <div class="skills-grid">
+              <div class="skill-box accent" data-i18n="skill_leadership">Liderazgo</div>
+              <div class="skill-box accent" data-i18n="skill_teamwork">Trabajo en Equipo</div>
+              <div class="skill-box accent" data-i18n="skill_salesian">Disciplina Salesiana</div>
+              <div class="skill-box" data-i18n="skill_critical">Pensamiento Crítico</div>
+              <div class="skill-box" data-i18n="skill_adaptability">Adaptabilidad</div>
+              <div class="skill-box" data-i18n="skill_comm">Comunicación Asertiva</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificados" class="section-card">
+        <h2 class="section-title" data-i18n="cert_title">Certificados & Logros</h2>
+        <p class="text-body section-desc" style="margin-bottom: 20px;" data-i18n="cert_desc">
+          Acreditaciones e insignias oficiales emitidas por instituciones reconocidas y Cisco Networking Academy:
+        </p>
+
+        <div class="certificates-scroll-container">
+          <div class="certificates-animating">
+            
+            <!-- BLOQUE 1: Originales -->
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
+                <h3 class="certificate-title">JavaScript Essentials 1</h3>
+              </div>
+              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_js_desc">
+                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Networking Basics</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_net_desc">
+                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_sec_desc">
+                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_packet_desc">
+                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">IT Essentials</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_it_desc">
+                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">Linux</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_linux_desc">
+                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <!-- BLOQUE 2: Duplicados exactos para bucle infinito fluido -->
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
+                <h3 class="certificate-title">JavaScript Essentials 1</h3>
+              </div>
+              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_js_desc">
+                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Networking Basics</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_net_desc">
+                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Cisco Networking Academy</span>
+                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
+              </div>
+              <p class="certificate-issuer">Cisco</p>
+              <p class="certificate-desc" data-i18n="cert_sec_desc">
+                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_packet_desc">
+                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">IT Essentials</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_it_desc">
+                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+            <div class="certificate-item-box">
+              <div class="certificate-header">
+                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
+                <h3 class="certificate-title">Linux</h3>
+              </div>
+              <p class="certificate-issuer">Cisco Networking Academy</p>
+              <p class="certificate-desc" data-i18n="cert_linux_desc">
+                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
+              </p>
+              <div class="pdf-viewer-container">
+                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
+                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
+                </object>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="section-card">
+        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Trayectoria</h2>
+        
+        <div class="about-education-grid">
+          <div class="about-text">
+            <p class="text-body" data-i18n="about_p1">
+              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
+            </p>
+            <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
+              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
+            </p>
+          </div>
+
+          <div class="education-box">
+            <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
+            
+            <div class="timeline-scroll-container">
+              <div class="timeline timeline-animating">
+                
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2014 – 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2024 – 2025</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2014 – 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2024 – 2025</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section-card">
+        <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
+        <p class="text-body" style="margin-bottom: 20px;" data-i18n="contact_desc">
+          ¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="label" data-i18n="contact_email_label">Correo Electrónico</span>
+            <span class="val">
+              <a href="#" id="email-smart-link" class="contact-link">
+                a.valdez.6adb@gmail.com ↗
+              </a>
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="label">LinkedIn</span>
+            <span class="val">
+              <a href="https://www.linkedin.com/in/alejandro-esaú-valdez-893b89435" target="_blank" rel="noopener noreferrer" class="contact-link">
+                linkedin.com/in/alejandro-esaú-valdez ↗
+              </a>
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="label">GitHub</span>
+            <span class="val">
+              <a href="https://github.com/avaldez6adb-code" target="_blank" rel="noopener noreferrer" class="contact-link">
+                github.com/avaldez6adb-code ↗
+              </a>
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footer_text">© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Script para difuminado por scroll (Intersection Observer)
+      const sections = document.querySelectorAll(".hero-card, .section-card");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -50% 0px", 
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            sections.forEach(sec => sec.classList.remove("section-focused", "section-blurred"));
+            entry.target.classList.add("section-focused");
+            
+            sections.forEach(sec => {
+              if (sec !== entry.target) {
+                sec.classList.add("section-blurred");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        section.classList.add("section-blurred");
+        observer.observe(section);
+      });
+
+      // Sincronizar enlaces del menú con el scroll de la página
+      const navLinks = document.querySelectorAll('.main-nav .nav-link');
+      const trackedSections = document.querySelectorAll('section[id]');
+
+      const scrollObserverOptions = {
+        root: null,
+        rootMargin: '-30% 0px -50% 0px',
+        threshold: 0
+      };
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute('id');
+            
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, scrollObserverOptions);
+
+      trackedSections.forEach(section => {
+        scrollObserver.observe(section);
+      });
+
+      // Lógica de correo inteligente
+      const emailLink = document.getElementById('email-smart-link');
+      if (emailLink) {
+        emailLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+          const email = "a.valdez.6adb@gmail.com";
+          if (isMobile) {
+            window.location.href = `mailto:${email}`;
+          } else {
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+          }
+        });
+      }
+
+      // Sistema de traducciones
+      const translations = {
+        es: {
+          nav_start: "inicio",
+          nav_projects: "proyectos",
+          nav_skills: "habilidades",
+          nav_certificates: "certificados",
+          nav_about: "sobre mí",
+          nav_contact: "contacto",
+          theme_panel_title: "SELECCIONAR TEMA",
+          theme_blue: "Azul Profesional",
+          theme_orange: "Naranja Cálido",
+          theme_red: "Rojo Elegante",
+          theme_dark: "Modo Oscuro",
+          theme_claro: "Modo Claro",
+          hero_greeting: "Hola, soy Alejandro Esaú Valdez",
+          hero_subtitle: "Desarrollador Junior | Bachiller en Computación",
+          hero_desc: "Bachiller en Ciencias y Letras con Orientación en Computación y sólida formación integral. Perfil enfocado en el desarrollo de software, lógica de programación y soporte técnico, complementado con un fuerte interés y vocación hacia la fisioterapia y la rehabilitación física. Destaco por mi disciplina, capacidad analítica y compromiso humano.",
+          projects_title: "Proyectos Destacados",
+          projects_intro: "Selección de aplicaciones, sistemas y prácticas de programación desarrolladas:",
+          project_1_title: "Sistema de Gestión Académica",
+          project_1_desc: "Aplicación desarrollada para la administración y control de datos, optimizando la consulta de información y la lógica de procesos.",
+          tag_sql: "SQL / BD",
+          tag_oop: "Lógica POO",
+          btn_view_app: "Ver Aplicación ↗",
+          skills_title: "Habilidades & Competencias",
+          skills_sub1: "💻 Tecnologías & Programación",
+          skills_sub2: "🤝 Fortalezas Personales",
+          skill_logic: "Lógica de Sistemas",
+          skill_db: "Bases de Datos",
+          skill_leadership: "Liderazgo",
+          skill_teamwork: "Trabajo en Equipo",
+          skill_salesian: "Disciplina Salesiana",
+          skill_critical: "Pensamiento Crítico",
+          skill_adaptability: "Adaptabilidad",
+          skill_comm: "Comunicación Asertiva",
+          cert_title: "Certificados & Logros",
+          cert_desc: "Acreditaciones e insignias oficiales emitidas por instituciones reconocidas y Cisco Networking Academy:",
+          cert_js_desc: "Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.",
+          cert_net_desc: "Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.",
+          cert_sec_desc: "Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.",
+          cert_packet_title: "Introducción a Cisco Packet Tracer",
+          cert_packet_desc: "Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.",
+          cert_it_desc: "Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.",
+          cert_linux_desc: "Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.",
+          about_title: "Sobre Mí & Trayectoria",
+          about_p1: "Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.",
+          about_p2: "Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.",
+          timeline_heading: "Línea de Tiempo Académica",
+          t_step1_title: "Formación Integral Salesiana",
+          t_step1_desc: "Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.",
+          t_step2_title: "Certificaciones Profesionales",
+          t_step2_desc: "Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.",
+          edu_year: "Graduación 2026",
+          edu_degree: "Bachiller en Ciencias y Letras con Orientación en Computación",
+          edu_desc: "Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.",
+          contact_title: "Contacto",
+          contact_desc: "¿Tienes un proyecto, propuesta laboral o deseas colaborar? Estaré encantado de ponerme en contacto contigo.",
+          contact_email_label: "Correo Electrónico",
+          footer_text: "© 2026 Alejandro Esaú Valdez — Diseñado con enfoque en Portafolio Web"
+        },
+        en: {
+          nav_start: "home",
+          nav_projects: "projects",
+          nav_skills: "skills",
+          nav_certificates: "certifications",
+          nav_about: "about me",
+          nav_contact: "contact",
+          theme_panel_title: "SELECT THEME",
+          theme_blue: "Professional Blue",
+          theme_orange: "Warm Orange",
+          theme_red: "Elegant Red",
+          theme_dark: "Dark Mode",
+          theme_light: "Light Mode",
+          hero_greeting: "Hi, I'm Alejandro Esaú Valdez",
+          hero_subtitle: "Junior Developer | Computer Science High School Graduate",
+          hero_desc: "High School Diploma in Computer Science with a solid comprehensive background. Profile focused on software development, programming logic, and technical support, complemented by a strong interest and vocation towards physical therapy and physical rehabilitation. Recognized for discipline, analytical skills, and human commitment.",
+          projects_title: "Featured Projects",
+          projects_intro: "Selection of applications, systems, and programming projects developed:",
+          project_1_title: "Academic Management System",
+          project_1_desc: "Application developed for data administration and control, optimizing information querying and business logic.",
+          tag_sql: "SQL / BD",
+          tag_oop: "OOP Logic",
+          btn_view_app: "View Application ↗",
+          skills_title: "Skills & Competencies",
+          skills_sub1: "💻 Technologies & Programming",
+          skills_sub2: "🤝 Personal Strengths",
+          skill_logic: "System Logic",
+          skill_db: "Databases",
+          skill_leadership: "Leadership",
+          skill_teamwork: "Teamwork",
+          skill_salesian: "Salesian Discipline",
+          skill_critical: "Critical Thinking",
+          skill_adaptability: "Adaptability",
+          skill_comm: "Assertive Communication",
+          cert_title: "Certifications & Achievements",
+          cert_desc: "Official accreditations and badges issued by recognized institutions and Cisco Networking Academy:",
+          cert_js_desc: "Validates proficiency in basic syntax, data types, control structures, functions, and JavaScript programming fundamentals.",
+          cert_net_desc: "Validates fundamental knowledge in network architecture, communication protocols, IP addresses, and system connectivity.",
+          cert_sec_desc: "Covers key concepts on data protection, cyber threats, network privacy, and digital security best practices.",
+          cert_packet_title: "Introduction to Cisco Packet Tracer",
+          cert_packet_desc: "Validates basic proficiency in using the Cisco Packet Tracer network simulation tool for connectivity design and analysis.",
+          cert_it_desc: "Validates essential knowledge in computer hardware, software, equipment assembly, peripherals, and technical troubleshooting.",
+          cert_linux_desc: "Covers fundamental concepts about Linux operating systems, terminal usage, file management, permissions, and essential commands.",
+          about_title: "About Me & Journey",
+          about_p1: "I am a responsible, highly disciplined individual committed to continuous software development. My continuous education from 2014 to 2026 at <strong>Colegio Salesiano Don Bosco</strong> strengthened my work ethic, adaptability, and collaborative mindset.",
+          about_p2: "I am passionate about physical therapy, focusing my interest on physical rehabilitation, the study of human movement, and helping people recover their well-being and quality of life.",
+          timeline_heading: "Academic Timeline",
+          t_step1_title: "Salesian Comprehensive Education",
+          t_step1_desc: "Continuous trajectory of development in values, disciplina, and academic foundations at Colegio Salesiano Don Bosco.",
+          t_step2_title: "Professional Certifications",
+          t_step2_desc: "Accreditation in JavaScript, Networking, Cybersecurity, Packet Tracer, IT Essentials, and Linux.",
+          edu_year: "Graduation 2026",
+          edu_degree: "High School Diploma in Computer Science",
+          edu_desc: "Specialized in technical fundamentals, computational logic, and technology projects.",
+          contact_title: "Contact",
+          contact_desc: "Have a project, job offer, or want to collaborate? I would love to connect with you.",
+          contact_email_label: "Email",
+          footer_text: "© 2026 Alejandro Esaú Valdez — Designed with focus on Web Portfolio"
+        }
+      };
+
+      let currentLang = 'es';
+      const langToggleBtn = document.getElementById('lang-toggle');
+      const langLabel = document.getElementById('lang-label');
+
+      function updateLanguage(lang) {
+        currentLang = lang;
+        langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+          }
+        });
+      }
+
+      langToggleBtn.addEventListener('click', () => {
+        const newLang = currentLang === 'es' ? 'en' : 'es';
+        updateLanguage(newLang);
+      });
+
+      // Panel de temas
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themePanel = document.getElementById('theme-panel');
+      const themePanelClose = document.getElementById('theme-panel-close');
+      const themeCards = document.querySelectorAll('.theme-card');
+
+      themeToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themePanel.classList.toggle('open');
+      });
+
+      themePanelClose.addEventListener('click', () => {
+        themePanel.classList.remove('open');
+      });
+
+      themeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const selectedTheme = card.getAttribute('data-theme');
+          document.body.className = '';
+          document.body.classList.add(selectedTheme);
+          themeCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          initParticles();
+          themePanel.classList.remove('open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!themePanel.contains(e.target) && !themeToggleBtn.contains(e.target)) {
+          themePanel.classList.remove('open');
+        }
+      });
+
+      // Animación de partículas del fondo (Canvas)
+      const canvas = document.getElementById('bg-canvas');
+      const ctx = canvas.getContext('2d');
+
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+      let particles = [];
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        initParticles();
+      });
+
+      class Particle {
+        constructor(theme) {
+          this.reset(theme);
+        }
+
+        reset(theme) {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+
+          if (theme === 'theme-rojo') {
+            this.radius = Math.random() * 2.5 + 1;
+            this.vx = (Math.random() - 0.5) * 0.8;
+            this.vy = -Math.random() * 2 - 0.6;
+            this.alpha = Math.random() * 0.8 + 0.2;
+          } else if (theme === 'theme-naranja') {
+            this.radius = Math.random() * 5 + 2;
+            this.vx = (Math.random() - 0.5) * 0.4;
+            this.vy = (Math.random() - 0.5) * 0.4;
+            this.alpha = Math.random() * 0.4 + 0.1;
+          } else if (theme === 'theme-oscuro') {
+            this.radius = Math.random() * 1.5 + 1;
+            this.length = Math.random() * 12 + 4;
+            this.vx = 0;
+            this.vy = Math.random() * 3 + 1.5;
+            this.alpha = Math.random() * 0.5 + 0.2;
+          } else if (theme === 'theme-claro') {
+            this.radius = Math.random() * 2 + 1;
+            this.maxRadius = Math.random() * 40 + 20;
+            this.growth = Math.random() * 0.4 + 0.2;
+            this.vx = 0;
+            this.vy = 0;
+            this.alpha = 0.6;
+          } else {
+            this.radius = Math.random() * 2 + 1;
+            this.vx = (Math.random() - 0.5) * 0.7;
+            this.vy = (Math.random() - 0.5) * 0.7;
+            this.alpha = 1;
+          }
+        }
+
+        update(theme) {
+          if (theme === 'theme-rojo') {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.y < 0) {
+              this.y = height;
+              this.x = Math.random() * width;
+            }
+          } else if (theme === 'theme-oscuro') {
+            this.y += this.vy;
+            if (this.y > height) {
+              this.y = -10;
+              this.x = Math.random() * width;
+            }
+          } else if (theme === 'theme-claro') {
+            this.radius += this.growth;
+            this.alpha -= 0.008;
+            if (this.alpha <= 0 || this.radius >= this.maxRadius) {
+              this.reset(theme);
+            }
+          } else {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+          }
+        }
+
+        draw(color, theme) {
+          ctx.beginPath();
+          if (theme === 'theme-oscuro') {
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(this.x, this.y + this.length);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = this.radius;
+            ctx.globalAlpha = this.alpha;
+            ctx.stroke();
+          } else if (theme === 'theme-claro') {
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1;
+            ctx.globalAlpha = Math.max(this.alpha, 0);
+            ctx.stroke();
+          } else {
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.globalAlpha = this.alpha;
+            ctx.fill();
+          }
+          ctx.globalAlpha = 1;
+        }
+      }
+
+      function initParticles() {
+        particles = [];
+        const currentTheme = document.body.className || 'theme-azul';
+        let count = 45;
+        if (currentTheme === 'theme-rojo') count = 65;
+        if (currentTheme === 'theme-oscuro') count = 50;
+        if (currentTheme === 'theme-claro') count = 25;
+
+        for (let i = 0; i < count; i++) {
+          particles.push(new Particle(currentTheme));
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        const currentTheme = document.body.className || 'theme-azul';
+        const accentColor = getComputedStyle(document.body).getPropertyValue('--accent-color').trim() || '#2563eb';
+
+        particles.forEach(p => {
+          p.update(currentTheme);
+          p.draw(accentColor, currentTheme);
+        });
+
+        if (currentTheme === 'theme-azul') {
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < 110) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = accentColor;
+                ctx.globalAlpha = 1 - (dist / 110);
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+                ctx.globalAlpha = 1;
+              }
+            }
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      initParticles();
+      animate();
+    });
+  </script>
 
 </body>
 </html>
