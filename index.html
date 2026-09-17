@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=26">
+  <link rel="stylesheet" href="style.css?v=28">
   <script src="script.js" defer></script>
 </head>
 <body class="theme-azul">
@@ -77,7 +77,6 @@
 
       <div class="nav-right">
         <nav class="main-nav">
-          <!-- Menú actualizado: 'inicio' ahora se llama 'sobre mí' -->
           <a href="#sobre-mi" class="nav-link active" data-i18n="nav_about">sobre mí</a>
           <a href="#proyectos" class="nav-link" data-i18n="nav_projects">proyectos</a>
           <a href="#habilidades" class="nav-link" data-i18n="nav_skills">habilidades</a>
@@ -96,7 +95,7 @@
       </div>
     </header>
 
-    <!-- SECCIÓN PRINCIPAL: FOTO A LA PAR DE LA INFORMACIÓN DE "SOBRE MÍ" -->
+    <!-- SECCIÓN SUPERIOR: FOTO A LA PAR DEL TEXTO (COMO EN LA SEGUNDA FOTO) -->
     <section id="sobre-mi" class="hero-card">
       <div class="hero-flex-container" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
         <div class="hero-profile-container" style="flex-shrink: 0; text-align: center;">
@@ -110,10 +109,7 @@
           
           <div class="about-text">
             <p class="text-body" data-i18n="about_p1">
-              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
-            </p>
-            <p class="text-body" style="margin-top: 10px;" data-i18n="about_p2">
-              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
+              Bachiller en Ciencias y Letras con Orientación en Computación y sólida formación integral. Perfil enfocado en el desarrollo de software, lógica de programación y soporte técnico, complementado con un fuerte interés y vocación hacia la Fisioterapia y la rehabilitación física. Destaco por mi disciplina, capacidad analítica y compromiso humano.
             </p>
           </div>
         </div>
@@ -121,6 +117,29 @@
     </section>
 
     <main class="main-content">
+
+      <!-- SECCIÓN INFERIOR: TRAYECTORIA Y LÍNEA DE TIEMPO (COMO EN LA PRIMERA FOTO) -->
+      <section class="section-card">
+        <div class="about-hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+          <div class="about-text-column">
+            <h2 class="section-title" style="margin-bottom: 16px;">Sobre Mí & Trayectoria</h2>
+            <p class="text-body" style="margin-bottom: 12px;" data-i18n="about_p2">
+              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
+            </p>
+            <p class="text-body" data-i18n="about_p3">
+              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
+            </p>
+          </div>
+
+          <div class="timeline-column" style="background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 class="skills-subtitle" style="margin-bottom: 16px;">Línea de Tiempo Académica</h3>
+            <div class="timeline-content">
+              <p class="text-body" style="font-size: 0.95rem; margin-bottom: 10px;"><strong>Graduación 2026</strong></p>
+              <p class="text-body" style="font-size: 0.9rem; opacity: 0.9;">Bachiller en Ciencias y Letras con Orientación en Computación. Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos (2014 – 2026).</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="proyectos" class="section-card">
         <div class="section-header">
