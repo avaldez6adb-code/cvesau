@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Esaú Valdez | Portafolio de Software</title>
-  <link rel="stylesheet" href="style.css?v=22">
- <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=25">
+  <script src="script.js" defer></script>
 </head>
 <body class="theme-azul">
 
@@ -95,79 +95,25 @@
       </div>
     </header>
 
-    <!-- SECCIÓN DE INICIO CON FOTO A UN LADO Y SOBRE MÍ AL OTRO -->
+    <!-- SECCIÓN DE INICIO: FOTO A LA PAR DE LA INFORMACIÓN DE "SOBRE MÍ" -->
     <section id="inicio" class="hero-card">
-      <div class="hero-flex-container" style="margin-bottom: 24px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
-        <div class="hero-profile-container" style="flex-shrink: 0;">
-          <div class="hero-avatar-img-container">
-            <img src="perfil.jpg" alt="Alejandro Esaú Valdez">
+      <div class="hero-flex-container" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+        <div class="hero-profile-container" style="flex-shrink: 0; text-align: center;">
+          <div class="hero-avatar-img-container" style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-color, #2563eb); margin: 0 auto;">
+            <img src="perfil.jpg" alt="Alejandro Esaú Valdez" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
-        <div class="hero-text-content" style="flex: 1; min-width: 250px;">
-          <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
-          <p class="user-title" data-i18n="hero_subtitle" style="margin-bottom: 12px;">Desarrollador Junior | Bachiller en Computación</p>
+        <div class="hero-text-content" style="flex: 1; min-width: 280px;">
+          <h2 class="user-greeting" data-i18n="hero_greeting" style="font-size: 2rem; margin-bottom: 8px;">Hola, soy Alejandro Esaú Valdez</h2>
+          <p class="user-title" data-i18n="hero_subtitle" style="font-size: 1.1rem; margin-bottom: 16px; color: var(--accent-color, #38bdf8);">Desarrollador Junior | Bachiller en Computación</p>
           
-          <!-- Información del apartado sobre mí integrada directamente al lado de la foto -->
           <div class="about-text">
             <p class="text-body" data-i18n="about_p1">
               Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
             </p>
-            <p class="text-body" style="margin-top: 8px;" data-i18n="about_p2">
+            <p class="text-body" style="margin-top: 10px;" data-i18n="about_p2">
               Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
             </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Línea de tiempo académica en la parte inferior de la misma tarjeta de inicio -->
-      <div class="education-box" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; margin-top: 24px;">
-        <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
-        
-        <div class="timeline-scroll-container">
-          <div class="timeline timeline-animating">
-            
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2014 – 2026</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-              <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2024 – 2025</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-              <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-              <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2014 – 2026</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-              <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2024 – 2025</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-              <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-              <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-              <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-            </div>
-
           </div>
         </div>
       </div>
@@ -244,103 +190,6 @@
         <div class="certificates-scroll-container">
           <div class="certificates-animating">
             
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">OpenEDG JS Institute & Cisco</span>
-                <h3 class="certificate-title">JavaScript Essentials 1</h3>
-              </div>
-              <p class="certificate-issuer">OpenEDG JS Institute & Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_js_desc">
-                Acredita el dominio de sintaxis básica, tipos de datos, estructuras de control, funciones y fundamentos de la programación en JavaScript.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="AWS.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="AWS.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Networking Basics</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_net_desc">
-                Valida conocimientos fundamentales en arquitectura de redes, protocolos de comunicación, direcciones IP y conectividad de sistemas.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionRedes.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionRedes.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Cisco Networking Academy</span>
-                <h3 class="certificate-title">Introduction to Cybersecurity</h3>
-              </div>
-              <p class="certificate-issuer">Cisco</p>
-              <p class="certificate-desc" data-i18n="cert_sec_desc">
-                Cubre conceptos clave sobre protección de datos, amenazas informáticas, privacidad en la red y buenas prácticas de seguridad digital.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IntroduccionCyberseguridad.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IntroduccionCyberseguridad.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title" data-i18n="cert_packet_title">Introducción a Cisco Packet Tracer</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_packet_desc">
-                Acredita el dominio básico en el uso de la herramienta de simulación de redes Cisco Packet Tracer para diseño y análisis de conectividad.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="CiscoPaketTracer.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="CiscoPaketTracer.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">IT Essentials</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_it_desc">
-                Valida conocimientos esenciales en hardware de computadoras, software, ensamblaje de equipos, periféricos y resolución de problemas técnicos.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="IT_Essentials.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="IT_Essentials.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <div class="certificate-item-box">
-              <div class="certificate-header">
-                <span class="badge-year">Colegio Salesiano Don Bosco / Cisco</span>
-                <h3 class="certificate-title">Linux</h3>
-              </div>
-              <p class="certificate-issuer">Cisco Networking Academy</p>
-              <p class="certificate-desc" data-i18n="cert_linux_desc">
-                Cubre conceptos fundamentales sobre sistemas operativos Linux, uso de terminal, gestión de archivos, permisos y comandos esenciales.
-              </p>
-              <div class="pdf-viewer-container">
-                <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
-                  <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
-                </object>
-              </div>
-            </div>
-
-            <!-- Duplicados para el bucle -->
             <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
