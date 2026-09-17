@@ -81,7 +81,6 @@
           <a href="#proyectos" class="nav-link" data-i18n="nav_projects">proyectos</a>
           <a href="#habilidades" class="nav-link" data-i18n="nav_skills">habilidades</a>
           <a href="#certificados" class="nav-link" data-i18n="nav_certificates">certificados</a>
-          <a href="#sobre-mi" class="nav-link" data-i18n="nav_about">sobre mí</a>
           <a href="#contacto" class="nav-link" data-i18n="nav_contact">contacto</a>
         </nav>
 
@@ -96,8 +95,9 @@
       </div>
     </header>
 
+    <!-- SECCIÓN DE INICIO MODIFICADA CON SOBRE MÍ Y TRAYECTORIA -->
     <section id="inicio" class="hero-card">
-      <div class="hero-flex-container">
+      <div class="hero-flex-container" style="margin-bottom: 24px;">
         <div class="hero-profile-container">
           <div class="hero-avatar-img-container">
             <img src="perfil.jpg" alt="Alejandro Esaú Valdez">
@@ -106,6 +106,70 @@
         <div class="hero-text-content">
           <h2 class="user-greeting" data-i18n="hero_greeting">Hola, soy Alejandro Esaú Valdez</h2>
           <p class="user-title" data-i18n="hero_subtitle">Desarrollador Junior | Bachiller en Computación</p>
+        </div>
+      </div>
+
+      <div class="about-education-grid" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px;">
+        <div class="about-text">
+          <h3 class="section-title" style="font-size: 1.3rem; margin-bottom: 12px;" data-i18n="about_title">Sobre Mí & Trayectoria</h3>
+          <p class="text-body" data-i18n="about_p1">
+            Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
+          </p>
+          <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
+            Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
+          </p>
+        </div>
+
+        <div class="education-box">
+          <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
+          
+          <div class="timeline-scroll-container">
+            <div class="timeline timeline-animating">
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2014 – 2026</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2024 – 2025</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2014 – 2026</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
+                <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year">2024 – 2025</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
+                <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
+                <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
+                <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -181,7 +245,6 @@
         <div class="certificates-scroll-container">
           <div class="certificates-animating">
             
-            <!-- BLOQUE 1: Originales -->
             <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
@@ -278,7 +341,7 @@
               </div>
             </div>
 
-            <!-- BLOQUE 2: Duplicados exactos para bucle infinito fluido -->
+            <!-- Duplicados para el bucle -->
             <div class="certificate-item-box">
               <div class="certificate-header">
                 <span class="badge-year">OpenEDG JS Institute & Cisco</span>
@@ -372,74 +435,6 @@
                 <object data="Linux-pdf.pdf" type="application/pdf" width="100%" height="100%">
                   <p style="padding: 20px; text-align: center; color: var(--text-color);">Tu navegador no puede mostrar el PDF. <a href="Linux-pdf.pdf" target="_blank">Descárgalo aquí</a></p>
                 </object>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre-mi" class="section-card">
-        <h2 class="section-title" data-i18n="about_title">Sobre Mí & Trayectoria</h2>
-        
-        <div class="about-education-grid">
-          <div class="about-text">
-            <p class="text-body" data-i18n="about_p1">
-              Soy una persona responsable, altamente disciplinada y comprometida con el desarrollo continuo de software. Mi formación integral de 2014 a 2026 en el <strong>Colegio Salesiano Don Bosco</strong> fortaleció mi ética de trabajo, mi capacidad de adaptación y mi enfoque colaborativo.
-            </p>
-            <p class="text-body" style="margin-top: 12px;" data-i18n="about_p2">
-              Me apasiona la fisioterapia, orientando mi interés hacia la rehabilitación física, el estudio del movimiento humano y el apoyo a las personas para recuperar su bienestar y calidad de vida.
-            </p>
-          </div>
-
-          <div class="education-box">
-            <h3 class="item-title" style="margin-bottom: 10px;" data-i18n="timeline_heading">Línea de Tiempo Académica</h3>
-            
-            <div class="timeline-scroll-container">
-              <div class="timeline timeline-animating">
-                
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2014 – 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2024 – 2025</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2014 – 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step1_title">Formación Integral Salesiana</h4>
-                  <p class="education-desc" data-i18n="t_step1_desc">Trayectoria continua de desarrollo en valores, disciplina y bases académicas en el Colegio Salesiano Don Bosco.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year">2024 – 2025</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="t_step2_title">Certificaciones Profesionales</h4>
-                  <p class="education-desc" data-i18n="t_step2_desc">Acreditación en JavaScript, Redes, Ciberseguridad, Packet Tracer, IT Essentials y Linux.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <span class="timeline-year" data-i18n="edu_year">Graduación 2026</span>
-                  <h4 class="item-title" style="font-size: 1rem;" data-i18n="edu_degree">Bachiller en Ciencias y Letras con Orientación en Computación</h4>
-                  <p class="education-desc" data-i18n="edu_desc">Especializado en fundamentación técnica, lógica computacional y proyectos tecnológicos.</p>
-                </div>
-
               </div>
             </div>
 
